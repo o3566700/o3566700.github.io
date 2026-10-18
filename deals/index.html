@@ -39,6 +39,14 @@ input.grow{flex:1 1 220px}
 .tag{background:var(--accent-bg);color:var(--accent);border-radius:999px;padding:0 8px;font-size:12px}
 .snip{margin-top:6px;font-size:14px;color:var(--fg);opacity:.85;word-break:break-word}
 .period{margin-top:4px;font-size:13px;color:var(--hot)}
+.shopbar{display:none;margin-bottom:10px}
+.shopbar.on{display:block}
+.item{display:flex;gap:12px}
+.item img{width:72px;height:72px;object-fit:contain;border-radius:8px;background:#fff;flex:0 0 auto}
+.price{margin-top:4px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+.price b{color:var(--hot);font-size:17px}
+.price s{color:var(--muted);font-size:13px}
+.off{background:var(--hot-bg);color:var(--hot);border-radius:6px;font-weight:700;font-size:13px;padding:0 6px}
 .links a{color:var(--accent);font-size:12px;margin-right:8px;word-break:break-all}
 mark{background:var(--mark);color:inherit;border-radius:3px;padding:0 1px}
 .empty{text-align:center;color:var(--muted);padding:32px 0}
@@ -84,6 +92,19 @@ details summary{cursor:pointer;color:var(--muted);font-size:13px}
   <button data-tab="fav" aria-pressed="true">⭐ 有興趣</button>
   <button data-tab="hot" aria-pressed="false">🔥 熱門</button>
   <button data-tab="all" aria-pressed="false">全部</button>
+  <button data-tab="shop" aria-pressed="false">🛍 3C 特價</button>
+</div>
+<div class="panel shopbar" id="shopbar">
+  <div class="row chips" id="cats"></div>
+  <div class="row">
+    <label for="site">商店</label>
+    <select id="site"><option value="">全部</option><option>PChome</option><option>momo</option></select>
+    <label for="minoff">至少</label>
+    <select id="minoff"><option value="0.1">9 折以下</option><option value="0.2">8 折以下</option><option value="0.3">7 折以下</option><option value="0.5">5 折以下</option></select>
+    <label for="sort">排序</label>
+    <select id="sort"><option value="off">折扣最多</option><option value="asc">價格低→高</option><option value="desc">價格高→低</option></select>
+  </div>
+  <p class="msg" id="shopnote"></p>
 </div>
 <div id="list"></div>
 </div>
@@ -110,7 +131,7 @@ const TOPICS = {
 const DEFAULTS = {
   topics: "☕ 咖啡飲料|🏪 超商|🍔 美食外送|🎁 免費抽獎",
   custom: "", ban: "問題, 徵, 公告",
-  minpush: "-999", days: "7", tab: "fav"
+  minpush: "-999", days: "7", tab: "fav", site: "", minoff: "0.1", sort: "off", cat: ""
 };
 const store = {
   get(k){ try { const v = localStorage.getItem("deals." + k); return v ?? DEFAULTS[k] ?? ""; } catch { return DEFAULTS[k] ?? ""; } },
@@ -118,6 +139,9 @@ const store = {
 };
 const $ = id => document.getElementById(id);
 let data = { posts: [] };
+let shop = { items: [] };
+const CATS = ["筆電", "3C", "周邊", "通訊", "數位"];
+let cat = store.get("cat");
 let tab = store.get("tab");
 let picked = new Set(store.get("topics").split("|").filter(t => t in TOPICS));
 
@@ -163,6 +187,8 @@ function render(){
   const ban = words($("ban").value).map(norm);
   const terms = $("q").value.trim().split(/\s+/).filter(Boolean);
   const nterms = terms.map(norm);
+  $("shopbar").classList.toggle("on", tab === "shop");
+  if (tab === "shop") return renderShop(groups, terms, nterms);
   const minpush = +$("minpush").value, cutoff = Date.now()/1000 - $("days").value * 86400;
   let posts = data.posts.filter(p => {
     const hay = norm(p.title + " " + stripUrls(p.snippet));
@@ -199,6 +225,51 @@ function render(){
   }).join("") : `<div class="empty">${emptyMsg}</div>`;
 }
 
+function renderCats(){
+  $("cats").innerHTML = ["", ...CATS].map(c =>
+    `<button class="chip" aria-pressed="${c === cat}" data-c="${c}">${c || "全部分類"}</button>`).join("");
+  for (const b of $("cats").children) b.onclick = () => {
+    cat = b.dataset.c; store.set("cat", cat);
+    for (const o of $("cats").children) o.setAttribute("aria-pressed", o === b);
+    render();
+  };
+}
+
+function renderShop(groups, terms, nterms){
+  const site = $("site").value, minoff = +$("minoff").value, sort = $("sort").value;
+  let items = shop.items.filter(it => {
+    const hay = norm(it.name + " " + it.sub);
+    if ((cat && it.cat !== cat) || (site && it.site !== site) || it.off < minoff - 1e-9) return false;
+    if (nterms.some(t => !hay.includes(t))) return false;
+    it._hits = []; it._kw = [];
+    for (const [label, kws] of groups) {
+      const hit = kws.filter(k => hay.includes(norm(k)));
+      if (hit.length) { it._hits.push(label); it._kw.push(...hit); }
+    }
+    return true;
+  });
+  if (sort === "asc") items.sort((a, b) => a.price - b.price);
+  else if (sort === "desc") items.sort((a, b) => b.price - a.price);
+  else items.sort((a, b) => b.off - a.off);
+  const u = shop.updated ? new Date(shop.updated) : null;
+  $("shopnote").textContent = (u ? `更新於 ${u.toLocaleString("zh-TW", { hour12: false })}・` : "")
+    + `顯示 ${items.length} / ${shop.items.length} 件。折扣是跟商店標示的原價比，已排除限時、今日、搶購類商品。`;
+  const money = n => "$" + n.toLocaleString("en-US");
+  $("list").innerHTML = items.length ? items.slice(0, 300).map(it => {
+    const hl = [...it._kw, ...terms];
+    return `
+    <article class="card item${it._hits.length ? " fav" : ""}">
+      ${it.img ? `<img src="${esc(it.img)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}
+      <div style="flex:1;min-width:0">
+        <a class="title" href="${esc(it.url)}" target="_blank" rel="noopener">${highlight(it.name, hl)}</a>
+        ${it.sub ? `<div class="snip">${highlight(it.sub, hl)}</div>` : ""}
+        <div class="price"><b>${money(it.price)}</b><s>${money(it.ori)}</s><span class="off">${Math.round((1 - it.off) * 100) / 10} 折</span>${it.low ? `<span class="msg">券後 ${money(it.low)}</span>` : ""}</div>
+        <div class="meta"><span class="tag">${esc(it.site)}</span><span>${esc(it.cat)}</span>${it._hits.map(h => `<span>⭐${esc(h)}</span>`).join("")}</div>
+      </div>
+    </article>`;
+  }).join("") : `<div class="empty">${shop.items.length ? "沒有符合條件的商品，試試放寬折扣或換分類" : "還沒有電商資料，按「🔄 更新」抓一次"}</div>`;
+}
+
 function setStatus(){
   const u = data.updated ? new Date(data.updated) : null;
   $("status").textContent = u ? `資料更新於 ${u.toLocaleString("zh-TW", { hour12: false })}（${ago(u.getTime()/1000)}）・共 ${data.posts.length} 篇・每 3 小時自動更新` : "尚無資料";
@@ -206,8 +277,13 @@ function setStatus(){
 
 async function load(){
   try {
-    const r = await fetch("data.json?t=" + Date.now(), { cache: "no-store" });
+    const t = Date.now();
+    const [r, rs] = await Promise.all([
+      fetch("data.json?t=" + t, { cache: "no-store" }),
+      fetch("shop.json?t=" + t, { cache: "no-store" }).catch(() => null)
+    ]);
     data = await r.json();
+    if (rs && rs.ok) shop = await rs.json();
     setStatus();
   } catch (e) {
     $("status").textContent = "讀取資料失敗：" + e.message;
@@ -245,7 +321,7 @@ async function update(){
   btn.textContent = "🔄 更新"; btn.disabled = false;
 }
 
-for (const k of ["custom", "ban", "minpush", "days"]) {
+for (const k of ["custom", "ban", "minpush", "days", "site", "minoff", "sort"]) {
   $(k).value = store.get(k);
   if ($(k).value === "" && DEFAULTS[k]) $(k).value = DEFAULTS[k];
   $(k).addEventListener("input", () => { store.set(k, $(k).value); render(); });
@@ -263,6 +339,7 @@ for (const b of document.querySelectorAll("#tabs button")) {
   };
 }
 renderTopics();
+renderCats();
 load();
 </script>
 </body>
