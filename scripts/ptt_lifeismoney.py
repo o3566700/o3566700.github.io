@@ -18,8 +18,8 @@ from pathlib import Path
 BOARD = "Lifeismoney"
 BASE = "https://www.ptt.cc"
 OUT = Path(__file__).resolve().parent.parent / "deals" / "data.json"
-KEEP_DAYS = 7
-MAX_PAGES = 25
+KEEP_DAYS = 30
+MAX_PAGES = 60
 DELAY = 0.4
 # Categories that are rarely a deal; still listed but bodies are not fetched.
 SKIP_BODY = {"問題", "公告", "閒聊", "討論"}

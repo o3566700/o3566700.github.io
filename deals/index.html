@@ -71,7 +71,7 @@ details summary{cursor:pointer;color:var(--muted);font-size:13px}
     <label for="minpush">最少推文</label>
     <select id="minpush"><option value="-999">不限</option><option>0</option><option>5</option><option>10</option><option>20</option><option>50</option></select>
     <label for="days">天數</label>
-    <select id="days"><option>1</option><option>2</option><option selected>3</option><option>7</option></select>
+    <select id="days"><option>1</option><option>3</option><option>7</option><option>14</option><option>30</option></select>
   </div>
   <details id="tokenbox" class="row" style="margin-top:10px">
     <summary>一鍵更新設定（GitHub token）</summary>
@@ -110,7 +110,7 @@ const TOPICS = {
 const DEFAULTS = {
   topics: "☕ 咖啡飲料|🏪 超商|🍔 美食外送|🎁 免費抽獎",
   custom: "", ban: "問題, 徵, 公告",
-  minpush: "-999", days: "3", tab: "fav"
+  minpush: "-999", days: "7", tab: "fav"
 };
 const store = {
   get(k){ try { const v = localStorage.getItem("deals." + k); return v ?? DEFAULTS[k] ?? ""; } catch { return DEFAULTS[k] ?? ""; } },
@@ -247,6 +247,7 @@ async function update(){
 
 for (const k of ["custom", "ban", "minpush", "days"]) {
   $(k).value = store.get(k);
+  if ($(k).value === "" && DEFAULTS[k]) $(k).value = DEFAULTS[k];
   $(k).addEventListener("input", () => { store.set(k, $(k).value); render(); });
 }
 $("q").addEventListener("input", render);
