@@ -103,6 +103,7 @@ details summary{cursor:pointer;color:var(--muted);font-size:13px}
     <select id="minoff"><option value="0.1">9 折以下</option><option value="0.2">8 折以下</option><option value="0.3">7 折以下</option><option value="0.5">5 折以下</option></select>
     <label for="sort">排序</label>
     <select id="sort"><option value="off">折扣最多</option><option value="asc">價格低→高</option><option value="desc">價格高→低</option></select>
+    <label><input type="checkbox" id="refurb"> 含福利品／二手</label>
   </div>
   <p class="msg" id="shopnote"></p>
 </div>
@@ -236,10 +237,10 @@ function renderCats(){
 }
 
 function renderShop(groups, terms, nterms){
-  const site = $("site").value, minoff = +$("minoff").value, sort = $("sort").value;
+  const site = $("site").value, minoff = +$("minoff").value, sort = $("sort").value, refurb = $("refurb").checked;
   let items = shop.items.filter(it => {
     const hay = norm(it.name + " " + it.sub);
-    if ((cat && it.cat !== cat) || (site && it.site !== site) || it.off < minoff - 1e-9) return false;
+    if ((cat && it.cat !== cat) || (site && it.site !== site) || it.off < minoff - 1e-9 || (it.refurb && !refurb)) return false;
     if (nterms.some(t => !hay.includes(t))) return false;
     it._hits = []; it._kw = [];
     for (const [label, kws] of groups) {
@@ -264,7 +265,7 @@ function renderShop(groups, terms, nterms){
         <a class="title" href="${esc(it.url)}" target="_blank" rel="noopener">${highlight(it.name, hl)}</a>
         ${it.sub ? `<div class="snip">${highlight(it.sub, hl)}</div>` : ""}
         <div class="price"><b>${money(it.price)}</b><s>${money(it.ori)}</s><span class="off">${Math.round((1 - it.off) * 100) / 10} 折</span>${it.low ? `<span class="msg">券後 ${money(it.low)}</span>` : ""}</div>
-        <div class="meta"><span class="tag">${esc(it.site)}</span><span>${esc(it.cat)}</span>${it._hits.map(h => `<span>⭐${esc(h)}</span>`).join("")}</div>
+        <div class="meta"><span class="tag">${esc(it.site)}</span><span>${esc(it.cat)}</span>${it.refurb ? "<span>♻ 福利品</span>" : ""}${it._hits.map(h => `<span>⭐${esc(h)}</span>`).join("")}</div>
       </div>
     </article>`;
   }).join("") : `<div class="empty">${shop.items.length ? "沒有符合條件的商品，試試放寬折扣或換分類" : "還沒有電商資料，按「🔄 更新」抓一次"}</div>`;
@@ -330,6 +331,8 @@ $("q").addEventListener("input", render);
 $("token").value = store.get("token");
 $("savetoken").onclick = () => { store.set("token", $("token").value.trim()); $("savetoken").textContent = "已儲存 ✓"; };
 $("refresh").onclick = update;
+$("refurb").checked = store.get("refurb") === "1";
+$("refurb").onchange = () => { store.set("refurb", $("refurb").checked ? "1" : ""); render(); };
 for (const b of document.querySelectorAll("#tabs button")) {
   b.setAttribute("aria-pressed", b.dataset.tab === tab);
   b.onclick = () => {

@@ -34,6 +34,10 @@ CATEGORIES = {
 }
 # Same-day flash sales the user does not want.
 FLASH = re.compile(r"限時|今日|今天|當日|搶購|倒數|閃購|快閃|整點|秒殺|限量搶")
+# Keyword search drags in non-3C things ("平板" → 平板夾 hair straightener) and cases/films.
+NOISE = re.compile(r"離子夾|平板夾|直髮|捲髮|吹風機|驗鈔|保護貼|保護膜|玻璃貼|鋼化膜|手機殼|保護殼|保護套|皮套|包膜")
+REFURB = re.compile(r"福利品|福利機|整新|二手|展示機|拆封|九成新|近全新")
+MAX_OFF = 0.85  # beyond this the "original price" is almost always made up
 
 
 def fetch(url, data=None, headers=None):
@@ -144,9 +148,13 @@ def main():
                 for it in got:
                     if it["price"] < MIN_PRICE or not it["ori"] or it["price"] > it["ori"] * (1 - MIN_OFF):
                         continue
-                    if FLASH.search(it["name"] + " " + it["sub"]):
+                    text = it["name"] + " " + it["sub"]
+                    if FLASH.search(text) or NOISE.search(text):
                         continue
                     it["off"] = round(1 - it["price"] / it["ori"], 3)
+                    if it["off"] > MAX_OFF:
+                        continue
+                    it["refurb"] = bool(REFURB.search(it["name"]))
                     found.setdefault((it["site"], it["id"]), it)
     by_cat = {}
     for it in found.values():
