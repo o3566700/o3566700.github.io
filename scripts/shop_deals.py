@@ -30,12 +30,12 @@ CATEGORIES = {
     "3C": ["螢幕", "SSD", "記憶卡", "隨身碟", "桌上型電腦"],
     "周邊": ["滑鼠", "鍵盤", "耳機", "喇叭", "行動電源", "充電器", "路由器"],
     "通訊": ["手機", "iPhone", "三星 手機", "智慧手錶"],
-    "數位": ["平板", "iPad", "相機", "Switch", "電子書閱讀器"],
+    "數位": ["平板電腦", "iPad", "相機", "Switch", "電子書閱讀器"],
 }
 # Same-day flash sales the user does not want.
 FLASH = re.compile(r"限時|今日|今天|當日|搶購|倒數|閃購|快閃|整點|秒殺|限量搶")
 # Keyword search drags in non-3C things ("平板" → 平板夾 hair straightener) and cases/films.
-NOISE = re.compile(r"離子夾|平板夾|直髮|捲髮|吹風機|驗鈔|保護貼|保護膜|玻璃貼|鋼化膜|手機殼|保護殼|保護套|皮套|包膜")
+NOISE = re.compile(r"離子夾|平板夾|直髮|捲髮|吹風機|驗鈔|保護貼|保護膜|玻璃貼|鋼化膜|手機殼|保護殼|保護套|皮套|包膜|拖把|拖地")
 REFURB = re.compile(r"福利品|福利機|整新|二手|展示機|拆封|九成新|近全新")
 MAX_OFF = 0.85  # beyond this the "original price" is almost always made up
 
