@@ -85,6 +85,7 @@ def parse_index(page):
     return posts, prev.group(1) if prev else None
 
 
+IMG_RE = re.compile(r"\.(jpe?g|png|gif|webp)(\?|$)", re.I)
 PERIOD_RE = re.compile(r"(活動(?:期間|時間|日期)|期限|截止|優惠(?:期間|時間)|即日起)[^\n]{0,60}")
 
 
@@ -101,10 +102,10 @@ def parse_article(page):
     lines = [ln.strip() for ln in text.splitlines()]
     text = "\n".join(ln for ln in lines if ln)
     period = PERIOD_RE.search(text)
-    snippet = re.sub(r"\s+", " ", text)[:220]
+    snippet = re.sub(r"\s+", " ", re.sub(r"https?://\S+", "", text)).strip()[:220]
     seen, uniq = set(), []
     for u in links:
-        if u not in seen and "ptt.cc" not in u and "imgur" not in u:
+        if u not in seen and "ptt.cc" not in u and "imgur" not in u and not IMG_RE.search(u):
             seen.add(u)
             uniq.append(u)
     return snippet, period.group(0).strip() if period else "", uniq[:3]
