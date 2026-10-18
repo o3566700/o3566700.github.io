@@ -19,10 +19,13 @@ button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 button:disabled{opacity:.6;cursor:default}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:12px}
 .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.row+.row{margin-top:8px}
-label{font-size:13px;color:var(--muted)}
+.row+.row{margin-top:10px}
+label,.lbl{font-size:13px;color:var(--muted)}
 input[type=text],input[type=password],select{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:6px 8px;min-width:0}
 input.grow{flex:1 1 220px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border-radius:999px;padding:3px 10px;font-size:14px}
+.chip[aria-pressed=true]{background:var(--accent-bg);border-color:var(--accent);color:var(--accent);font-weight:600}
 .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
 .tabs button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px}
@@ -36,6 +39,14 @@ input.grow{flex:1 1 220px}
 .tag{background:var(--accent-bg);color:var(--accent);border-radius:999px;padding:0 8px;font-size:12px}
 .snip{margin-top:6px;font-size:14px;color:var(--fg);opacity:.85;word-break:break-word}
 .period{margin-top:4px;font-size:13px;color:var(--hot)}
+.shopbar{display:none;margin-bottom:10px}
+.shopbar.on{display:block}
+.item{display:flex;gap:12px}
+.item img{width:72px;height:72px;object-fit:contain;border-radius:8px;background:#fff;flex:0 0 auto}
+.price{margin-top:4px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+.price b{color:var(--hot);font-size:17px}
+.price s{color:var(--muted);font-size:13px}
+.off{background:var(--hot-bg);color:var(--hot);border-radius:6px;font-weight:700;font-size:13px;padding:0 6px}
 .links a{color:var(--accent);font-size:12px;margin-right:8px;word-break:break-all}
 mark{background:var(--mark);color:inherit;border-radius:3px;padding:0 1px}
 .empty{text-align:center;color:var(--muted);padding:32px 0}
@@ -47,15 +58,16 @@ details summary{cursor:pointer;color:var(--muted);font-size:13px}
 <div class="wrap">
 <header>
   <h1>💰 省錢情報</h1>
-  <button id="refresh" class="primary">立即更新</button>
-  <button id="reload">重新載入</button>
+  <button id="refresh" class="primary">🔄 更新</button>
   <div class="sub" id="status">載入中…</div>
 </header>
 
 <div class="panel">
+  <div class="row"><span class="lbl">我有興趣（點選分類，會自動比對相關型號與品牌）</span></div>
+  <div class="row chips" id="topics"></div>
   <div class="row">
-    <label for="fav">我有興趣</label>
-    <input id="fav" class="grow" type="text" placeholder="用逗號分隔，例如：全家, 咖啡, 信用卡">
+    <label for="custom">其他關鍵字</label>
+    <input id="custom" class="grow" type="text" placeholder="用逗號分隔，例如：XM5, 小米, 好市多">
   </div>
   <div class="row">
     <label for="ban">不想看</label>
@@ -63,15 +75,15 @@ details summary{cursor:pointer;color:var(--muted);font-size:13px}
   </div>
   <div class="row">
     <label for="q">搜尋</label>
-    <input id="q" class="grow" type="text" placeholder="標題或內文">
+    <input id="q" class="grow" type="text" placeholder="可空格分開多個字，不分大小寫、忽略 - 和空白">
     <label for="minpush">最少推文</label>
     <select id="minpush"><option value="-999">不限</option><option>0</option><option>5</option><option>10</option><option>20</option><option>50</option></select>
     <label for="days">天數</label>
-    <select id="days"><option>1</option><option>2</option><option selected>3</option><option>7</option></select>
+    <select id="days"><option>1</option><option>3</option><option>7</option><option>14</option><option>30</option></select>
   </div>
-  <details class="row" style="margin-top:10px">
+  <details id="tokenbox" class="row" style="margin-top:10px">
     <summary>一鍵更新設定（GitHub token）</summary>
-    <p class="msg">「立即更新」會觸發 GitHub Actions 重新抓 PTT。請建立一個 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained token</a>：只選這個 repo，權限只開 <b>Actions: Read and write</b>。token 只存在這台瀏覽器。沒設定的話，按鈕會打開 Actions 頁面，再按「Run workflow」即可。</p>
+    <p class="msg">資料每 3 小時會自動更新。想按「🔄 更新」就立刻重抓 PTT，需要設定一次 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained token</a>：Repository access 只選 <b>o3566700.github.io</b>，Permissions 只開 <b>Actions: Read and write</b>。token 只存在這台瀏覽器。</p>
     <div class="row"><input id="token" class="grow" type="password" placeholder="github_pat_…" autocomplete="off"><button id="savetoken">儲存</button></div>
   </details>
 </div>
@@ -80,6 +92,20 @@ details summary{cursor:pointer;color:var(--muted);font-size:13px}
   <button data-tab="fav" aria-pressed="true">⭐ 有興趣</button>
   <button data-tab="hot" aria-pressed="false">🔥 熱門</button>
   <button data-tab="all" aria-pressed="false">全部</button>
+  <button data-tab="shop" aria-pressed="false">🛍 3C 特價</button>
+</div>
+<div class="panel shopbar" id="shopbar">
+  <div class="row chips" id="cats"></div>
+  <div class="row">
+    <label for="site">商店</label>
+    <select id="site"><option value="">全部</option><option>PChome</option><option>momo</option></select>
+    <label for="minoff">至少</label>
+    <select id="minoff"><option value="0.1">9 折以下</option><option value="0.2">8 折以下</option><option value="0.3">7 折以下</option><option value="0.5">5 折以下</option></select>
+    <label for="sort">排序</label>
+    <select id="sort"><option value="off">折扣最多</option><option value="asc">價格低→高</option><option value="desc">價格高→低</option></select>
+    <label><input type="checkbox" id="refurb"> 含福利品／二手</label>
+  </div>
+  <p class="msg" id="shopnote"></p>
 </div>
 <div id="list"></div>
 </div>
@@ -87,10 +113,26 @@ details summary{cursor:pointer;color:var(--muted);font-size:13px}
 <script>
 const REPO = "o3566700/o3566700.github.io";
 const WORKFLOW = "lifeismoney.yml";
+// Each topic expands to brands, models and synonyms so picking "耳機" also catches "WF-1000XM5" or "AirPods".
+const TOPICS = {
+  "🎧 耳機": "耳機, 耳罩, 頭戴式, 入耳式, 降噪, airpods, buds, earbuds, headphone, headset, wf-1000, wh-1000, xm4, xm5, xm6, bose, quietcomfort, jabra, sennheiser, 森海, 鐵三角, audio-technica, beats, soundcore, jbl, 1more, edifier, 漫步者, nothing ear, shokz, 韶音",
+  "☕ 咖啡飲料": "咖啡, 拿鐵, 美式, 星巴克, starbucks, 路易莎, cama, 85度c, 手搖, 飲料, 珍奶, 50嵐, 可不可, 迷客夏, 清心, 麻古, 得正, 五桐號, 茶湯會, 大苑子",
+  "🏪 超商": "7-11, 711, 統一超商, 小七, 全家, 萊爾富, ok超商, opencoupon, 隨買跨店, 寄杯",
+  "🍔 美食外送": "外送, uber eats, ubereats, foodpanda, 熊貓, 麥當勞, 肯德基, 摩斯, 漢堡王, 達美樂, 必勝客, 拿坡里, 披薩, 吃到飽, 餐廳, 早午餐, 壽司, 爭鮮, 藏壽司",
+  "💳 信用卡支付": "信用卡, 回饋, 刷卡, 首刷, 新戶, line pay, linepay, line points, 街口, 全支付, 悠遊付, apple pay, 一卡通, 悠遊卡, icash, 電子支付",
+  "🛒 電商": "蝦皮, momo, pchome, 酷澎, coupang, 博客來, yahoo購物, 雙11, 雙十一, 折價券, 優惠碼, 折扣碼, 序號, 免運",
+  "💻 3C": "筆電, 手機, 平板, iphone, ipad, macbook, 螢幕, ssd, 硬碟, 記憶卡, 隨身碟, 行動電源, 充電器, 充電線, 鍵盤, 滑鼠, 喇叭, 手錶, apple watch, 小米",
+  "🎮 遊戲影音": "steam, epic, 限免, gog, switch, ps5, playstation, xbox, 遊戲, netflix, spotify, youtube premium, disney, kkbox, 訂閱",
+  "⛽ 交通油價": "油價, 加油, 中油, 台塑, 高鐵, 台鐵, 捷運, 計程車, 機票, 航空, 停車, 租車, ubike",
+  "📶 電信": "中華電信, 台灣大, 遠傳, 亞太, 門號, 吃到飽, esim, sim卡, 網卡, 漫遊",
+  "🎁 免費抽獎": "免費, 贈品, 抽獎, 試用, 買一送一, 零元, 索取, 領取",
+  "🧴 生活日用": "全聯, 家樂福, 好市多, costco, 屈臣氏, 康是美, 寶雅, 衛生紙, 洗衣, 日用品, 大創, ikea, 宜家",
+  "🏦 銀行理財": "數位帳戶, 開戶, 活存, 利率, 定存, 高利, 證券, 券商, 基金"
+};
 const DEFAULTS = {
-  fav: "全家, 7-11, 統一, 萊爾富, 咖啡, 買一送一, 免費, 信用卡, 回饋, LINE Points, 悠遊卡, 一卡通, 外送, Uber Eats, foodpanda, 全聯, 好市多, 電信, 蝦皮, momo",
-  ban: "問題, 徵, 公告",
-  minpush: "-999", days: "3", tab: "fav"
+  topics: "☕ 咖啡飲料|🏪 超商|🍔 美食外送|🎁 免費抽獎",
+  custom: "", ban: "問題, 徵, 公告",
+  minpush: "-999", days: "7", tab: "fav", site: "", minoff: "0.1", sort: "off", cat: ""
 };
 const store = {
   get(k){ try { const v = localStorage.getItem("deals." + k); return v ?? DEFAULTS[k] ?? ""; } catch { return DEFAULTS[k] ?? ""; } },
@@ -98,15 +140,26 @@ const store = {
 };
 const $ = id => document.getElementById(id);
 let data = { posts: [] };
+let shop = { items: [] };
+const CATS = ["筆電", "3C", "周邊", "通訊", "數位"];
+let cat = store.get("cat");
 let tab = store.get("tab");
+let picked = new Set(store.get("topics").split("|").filter(t => t in TOPICS));
 
 const words = s => s.split(/[,，、\n]/).map(w => w.trim()).filter(Boolean);
+// Fuzzy normalisation: full-width → half-width, lowercase, drop spaces and separators.
+const SEP = /[\s\-_.·・/]+/g;
+const norm = s => String(s).normalize("NFKC").toLowerCase().replace(SEP, "");
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const IMG = /\.(jpe?g|png|gif|webp)(\?|$)/i;
+const stripUrls = s => (s || "").replace(/https?:\/\/\S+/g, "").replace(/\s+/g, " ").trim();
 function highlight(text, ws){
   const t = esc(text);
-  if (!ws.length) return t;
-  return t.replace(new RegExp("(" + ws.map(w => reEsc(esc(w))).join("|") + ")", "gi"), "<mark>$1</mark>");
+  const parts = ws.map(norm).filter(Boolean).sort((a, b) => b.length - a.length)
+    .map(w => [...esc(w)].map(reEsc).join("[\\s\\-_.·・/]*"));
+  if (!parts.length) return t;
+  return t.replace(new RegExp("(" + parts.join("|") + ")", "gi"), "<mark>$1</mark>");
 }
 function ago(ts){
   const m = Math.floor((Date.now()/1000 - ts) / 60);
@@ -116,41 +169,123 @@ function ago(ts){
 }
 function pushLabel(n){ return n >= 100 ? "爆" : n <= -100 ? "XX" : n < 0 ? "X" + (-n/10) : String(n); }
 
+function renderTopics(){
+  $("topics").innerHTML = Object.keys(TOPICS).map(t =>
+    `<button class="chip" aria-pressed="${picked.has(t)}" data-t="${esc(t)}">${esc(t)}</button>`).join("");
+  for (const b of $("topics").children) b.onclick = () => {
+    const t = b.dataset.t;
+    picked.has(t) ? picked.delete(t) : picked.add(t);
+    store.set("topics", [...picked].join("|"));
+    b.setAttribute("aria-pressed", picked.has(t));
+    render();
+  };
+}
+
 function render(){
-  const fav = words($("fav").value), ban = words($("ban").value);
-  const q = $("q").value.trim().toLowerCase();
+  // Each interest group is [label, keywords]; a post matches a group if any keyword appears.
+  const groups = [...picked].map(t => [t.replace(/^\S+\s/, ""), words(TOPICS[t])])
+    .concat(words($("custom").value).map(w => [w, [w]]));
+  const ban = words($("ban").value).map(norm);
+  const terms = $("q").value.trim().split(/\s+/).filter(Boolean);
+  const nterms = terms.map(norm);
+  $("shopbar").classList.toggle("on", tab === "shop");
+  if (tab === "shop") return renderShop(groups, terms, nterms);
   const minpush = +$("minpush").value, cutoff = Date.now()/1000 - $("days").value * 86400;
-  const lower = s => s.toLowerCase();
   let posts = data.posts.filter(p => {
-    const hay = lower(p.title + " " + (p.snippet || ""));
+    const hay = norm(p.title + " " + stripUrls(p.snippet));
     if (p.ts < cutoff || p.push < minpush) return false;
-    if (ban.some(w => lower(p.title).includes(lower(w)) || lower(p.category) === lower(w))) return false;
-    if (q && !hay.includes(q)) return false;
-    p._hits = fav.filter(w => hay.includes(lower(w)));
+    if (ban.some(w => norm(p.title).includes(w) || norm(p.category) === w)) return false;
+    if (nterms.some(t => !hay.includes(t))) return false;
+    p._hits = []; p._kw = [];
+    for (const [label, kws] of groups) {
+      const hit = kws.filter(k => hay.includes(norm(k)));
+      if (hit.length) { p._hits.push(label); p._kw.push(...hit); }
+    }
     return true;
   });
-  if (tab === "fav") posts = posts.filter(p => p._hits.length).sort((a,b) => b._hits.length - a._hits.length || b.ts - a.ts);
+  if (tab === "fav") posts = posts.filter(p => p._hits.length);
   else if (tab === "hot") posts = posts.filter(p => p.push >= 10).sort((a,b) => b.push - a.push || b.ts - a.ts);
-  const hl = [...fav, ...(q ? [q] : [])];
-  $("list").innerHTML = posts.length ? posts.map(p => `
+  const emptyMsg = !data.posts.length ? "還沒有資料，按「🔄 更新」抓第一次"
+    : tab === "fav" && !groups.length ? "還沒選興趣，點上面的分類或輸入關鍵字"
+    : "沒有符合條件的特價，試試調整關鍵字或天數";
+  $("list").innerHTML = posts.length ? posts.map(p => {
+    const hl = [...p._kw, ...terms];
+    const snip = stripUrls(p.snippet);
+    const links = (p.links || []).filter(u => !IMG.test(u));
+    return `
     <article class="card${p._hits.length ? " fav" : ""}">
       <div class="top">
         <span class="push${p.push >= 20 ? " hot" : ""}">${pushLabel(p.push)}</span>
         <a class="title" href="${esc(p.url)}" target="_blank" rel="noopener">${highlight(p.title, hl)}</a>
       </div>
       ${p.period ? `<div class="period">⏰ ${esc(p.period)}</div>` : ""}
-      ${p.snippet ? `<div class="snip">${highlight(p.snippet, hl)}</div>` : ""}
-      ${p.links && p.links.length ? `<div class="links">${p.links.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\//, "").slice(0, 40))}</a>`).join("")}</div>` : ""}
+      ${snip ? `<div class="snip">${highlight(snip, hl)}</div>` : ""}
+      ${links.length ? `<div class="links">${links.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\//, "").slice(0, 40))}</a>`).join("")}</div>` : ""}
       <div class="meta">${p.category ? `<span class="tag">${esc(p.category)}</span>` : ""}<span>${ago(p.ts)}</span><span>${esc(p.author)}</span>${p._hits.map(h => `<span>⭐${esc(h)}</span>`).join("")}</div>
-    </article>`).join("") : `<div class="empty">${data.posts.length ? "沒有符合條件的特價，試試調整關鍵字或天數" : "還沒有資料，按「立即更新」抓第一次"}</div>`;
+    </article>`;
+  }).join("") : `<div class="empty">${emptyMsg}</div>`;
+}
+
+function renderCats(){
+  $("cats").innerHTML = ["", ...CATS].map(c =>
+    `<button class="chip" aria-pressed="${c === cat}" data-c="${c}">${c || "全部分類"}</button>`).join("");
+  for (const b of $("cats").children) b.onclick = () => {
+    cat = b.dataset.c; store.set("cat", cat);
+    for (const o of $("cats").children) o.setAttribute("aria-pressed", o === b);
+    render();
+  };
+}
+
+function renderShop(groups, terms, nterms){
+  const site = $("site").value, minoff = +$("minoff").value, sort = $("sort").value, refurb = $("refurb").checked;
+  let items = shop.items.filter(it => {
+    const hay = norm(it.name + " " + it.sub);
+    if ((cat && it.cat !== cat) || (site && it.site !== site) || it.off < minoff - 1e-9 || (it.refurb && !refurb)) return false;
+    if (nterms.some(t => !hay.includes(t))) return false;
+    it._hits = []; it._kw = [];
+    for (const [label, kws] of groups) {
+      const hit = kws.filter(k => hay.includes(norm(k)));
+      if (hit.length) { it._hits.push(label); it._kw.push(...hit); }
+    }
+    return true;
+  });
+  if (sort === "asc") items.sort((a, b) => a.price - b.price);
+  else if (sort === "desc") items.sort((a, b) => b.price - a.price);
+  else items.sort((a, b) => b.off - a.off);
+  const u = shop.updated ? new Date(shop.updated) : null;
+  $("shopnote").textContent = (u ? `更新於 ${u.toLocaleString("zh-TW", { hour12: false })}・` : "")
+    + `顯示 ${items.length} / ${shop.items.length} 件。折扣是跟商店標示的原價比，已排除限時、今日、搶購類商品。`;
+  const money = n => "$" + n.toLocaleString("en-US");
+  $("list").innerHTML = items.length ? items.slice(0, 300).map(it => {
+    const hl = [...it._kw, ...terms];
+    return `
+    <article class="card item${it._hits.length ? " fav" : ""}">
+      ${it.img ? `<img src="${esc(it.img)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}
+      <div style="flex:1;min-width:0">
+        <a class="title" href="${esc(it.url)}" target="_blank" rel="noopener">${highlight(it.name, hl)}</a>
+        ${it.sub ? `<div class="snip">${highlight(it.sub, hl)}</div>` : ""}
+        <div class="price"><b>${money(it.price)}</b><s>${money(it.ori)}</s><span class="off">${Math.round((1 - it.off) * 100) / 10} 折</span>${it.low ? `<span class="msg">券後 ${money(it.low)}</span>` : ""}</div>
+        <div class="meta"><span class="tag">${esc(it.site)}</span><span>${esc(it.cat)}</span>${it.refurb ? "<span>♻ 福利品</span>" : ""}${it._hits.map(h => `<span>⭐${esc(h)}</span>`).join("")}</div>
+      </div>
+    </article>`;
+  }).join("") : `<div class="empty">${shop.items.length ? "沒有符合條件的商品，試試放寬折扣或換分類" : "還沒有電商資料，按「🔄 更新」抓一次"}</div>`;
+}
+
+function setStatus(){
+  const u = data.updated ? new Date(data.updated) : null;
+  $("status").textContent = u ? `資料更新於 ${u.toLocaleString("zh-TW", { hour12: false })}（${ago(u.getTime()/1000)}）・共 ${data.posts.length} 篇・每 3 小時自動更新` : "尚無資料";
 }
 
 async function load(){
   try {
-    const r = await fetch("data.json?t=" + Date.now(), { cache: "no-store" });
+    const t = Date.now();
+    const [r, rs] = await Promise.all([
+      fetch("data.json?t=" + t, { cache: "no-store" }),
+      fetch("shop.json?t=" + t, { cache: "no-store" }).catch(() => null)
+    ]);
     data = await r.json();
-    const u = data.updated ? new Date(data.updated) : null;
-    $("status").textContent = u ? `資料更新於 ${u.toLocaleString("zh-TW", { hour12: false })}（${ago(u.getTime()/1000)}）・共 ${data.posts.length} 篇` : "尚無資料";
+    if (rs && rs.ok) shop = await rs.json();
+    setStatus();
   } catch (e) {
     $("status").textContent = "讀取資料失敗：" + e.message;
   }
@@ -158,10 +293,15 @@ async function load(){
   return data.updated;
 }
 
-async function triggerUpdate(){
+async function update(){
+  const btn = $("refresh"), before = await load();
   const token = store.get("token");
-  if (!token) { window.open(`https://github.com/${REPO}/actions/workflows/${WORKFLOW}`, "_blank"); return; }
-  const btn = $("refresh"), before = data.updated;
+  if (!token) {
+    $("tokenbox").open = true;
+    $("tokenbox").scrollIntoView({ behavior: "smooth", block: "center" });
+    $("status").textContent = "已重新讀取現有資料。要讓按鈕直接重抓 PTT，請先在下方設定一次 token。";
+    return;
+  }
   btn.disabled = true; btn.textContent = "更新中…";
   try {
     const r = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/${WORKFLOW}/dispatches`, {
@@ -169,29 +309,30 @@ async function triggerUpdate(){
       headers: { Authorization: "Bearer " + token, Accept: "application/vnd.github+json" },
       body: JSON.stringify({ ref: "main" })
     });
-    if (!r.ok) throw new Error(`GitHub 回應 ${r.status}${r.status === 401 || r.status === 403 ? "（token 無效或權限不足）" : ""}`);
-    $("status").textContent = "已觸發更新，抓取＋網站部署約需 1～3 分鐘…";
-    for (let i = 0; i < 24; i++) {
+    if (!r.ok) throw new Error(`GitHub 回應 ${r.status}${r.status === 401 || r.status === 403 || r.status === 404 ? "（token 無效或權限不足）" : ""}`);
+    for (let i = 1; i <= 24; i++) {
+      $("status").textContent = `正在重抓 PTT 並部署網站，約 1～2 分鐘…（${i * 10 - 10} 秒）`;
       await new Promise(res => setTimeout(res, 10000));
-      if ((await load()) !== before) { btn.textContent = "立即更新"; btn.disabled = false; return; }
-      $("status").textContent = `更新中…已等待 ${(i + 1) * 10} 秒`;
+      if ((await load()) !== before) { $("status").textContent += "・✅ 已更新"; break; }
+      if (i === 24) $("status").textContent = "等太久了，可能還在部署，稍後再按一次「🔄 更新」";
     }
-    $("status").textContent = "等太久了，可能還在部署，稍後按「重新載入」看看";
   } catch (e) {
     $("status").textContent = "更新失敗：" + e.message;
   }
-  btn.textContent = "立即更新"; btn.disabled = false;
+  btn.textContent = "🔄 更新"; btn.disabled = false;
 }
 
-for (const k of ["fav", "ban", "minpush", "days"]) {
+for (const k of ["custom", "ban", "minpush", "days", "site", "minoff", "sort"]) {
   $(k).value = store.get(k);
+  if ($(k).value === "" && DEFAULTS[k]) $(k).value = DEFAULTS[k];
   $(k).addEventListener("input", () => { store.set(k, $(k).value); render(); });
 }
 $("q").addEventListener("input", render);
 $("token").value = store.get("token");
-$("savetoken").onclick = () => { store.set("token", $("token").value.trim()); $("savetoken").textContent = "已儲存"; };
-$("reload").onclick = load;
-$("refresh").onclick = triggerUpdate;
+$("savetoken").onclick = () => { store.set("token", $("token").value.trim()); $("savetoken").textContent = "已儲存 ✓"; };
+$("refresh").onclick = update;
+$("refurb").checked = store.get("refurb") === "1";
+$("refurb").onchange = () => { store.set("refurb", $("refurb").checked ? "1" : ""); render(); };
 for (const b of document.querySelectorAll("#tabs button")) {
   b.setAttribute("aria-pressed", b.dataset.tab === tab);
   b.onclick = () => {
@@ -200,6 +341,8 @@ for (const b of document.querySelectorAll("#tabs button")) {
     render();
   };
 }
+renderTopics();
+renderCats();
 load();
 </script>
 </body>
