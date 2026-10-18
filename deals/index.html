@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>省錢情報</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#1d2330;--muted:#6b7385;--line:#e3e6ec;--accent:#0b7a5c;--accent-bg:#e3f4ee;--hot:#c2410c;--hot-bg:#fdeee4;--mark:#fff1a8}
+@media (prefers-color-scheme:dark){:root{--bg:#12151b;--card:#1b1f27;--fg:#e6e9ef;--muted:#9097a6;--line:#2b313c;--accent:#4cc9a0;--accent-bg:#173a30;--hot:#fb923c;--hot-bg:#3a2516;--mark:#5c4d0f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 system-ui,-apple-system,"Noto Sans TC","PingFang TC",sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:16px}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-bottom:12px}
+h1{font-size:22px;margin:0;flex:1 1 auto}
+.sub{color:var(--muted);font-size:13px;width:100%}
+button,input,select{font:inherit;color:inherit}
+button{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:6px 12px;cursor:pointer}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+button:disabled{opacity:.6;cursor:default}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:12px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.row+.row{margin-top:8px}
+label{font-size:13px;color:var(--muted)}
+input[type=text],input[type=password],select{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:6px 8px;min-width:0}
+input.grow{flex:1 1 220px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.tabs button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px}
+.card.fav{border-left:4px solid var(--accent)}
+.top{display:flex;gap:8px;align-items:flex-start}
+.push{flex:0 0 auto;min-width:34px;text-align:center;border-radius:6px;font-weight:700;font-size:13px;padding:1px 6px;background:var(--bg);color:var(--muted)}
+.push.hot{background:var(--hot-bg);color:var(--hot)}
+.title{flex:1;font-weight:600;color:var(--fg);text-decoration:none;word-break:break-word}
+.title:hover{text-decoration:underline}
+.meta{color:var(--muted);font-size:12px;margin-top:4px;display:flex;flex-wrap:wrap;gap:4px 10px}
+.tag{background:var(--accent-bg);color:var(--accent);border-radius:999px;padding:0 8px;font-size:12px}
+.snip{margin-top:6px;font-size:14px;color:var(--fg);opacity:.85;word-break:break-word}
+.period{margin-top:4px;font-size:13px;color:var(--hot)}
+.links a{color:var(--accent);font-size:12px;margin-right:8px;word-break:break-all}
+mark{background:var(--mark);color:inherit;border-radius:3px;padding:0 1px}
+.empty{text-align:center;color:var(--muted);padding:32px 0}
+details summary{cursor:pointer;color:var(--muted);font-size:13px}
+.msg{font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>💰 省錢情報</h1>
+  <button id="refresh" class="primary">立即更新</button>
+  <button id="reload">重新載入</button>
+  <div class="sub" id="status">載入中…</div>
+</header>
+
+<div class="panel">
+  <div class="row">
+    <label for="fav">我有興趣</label>
+    <input id="fav" class="grow" type="text" placeholder="用逗號分隔，例如：全家, 咖啡, 信用卡">
+  </div>
+  <div class="row">
+    <label for="ban">不想看</label>
+    <input id="ban" class="grow" type="text" placeholder="例如：問題, 徵, 代購">
+  </div>
+  <div class="row">
+    <label for="q">搜尋</label>
+    <input id="q" class="grow" type="text" placeholder="標題或內文">
+    <label for="minpush">最少推文</label>
+    <select id="minpush"><option value="-999">不限</option><option>0</option><option>5</option><option>10</option><option>20</option><option>50</option></select>
+    <label for="days">天數</label>
+    <select id="days"><option>1</option><option>2</option><option selected>3</option><option>7</option></select>
+  </div>
+  <details class="row" style="margin-top:10px">
+    <summary>一鍵更新設定（GitHub token）</summary>
+    <p class="msg">「立即更新」會觸發 GitHub Actions 重新抓 PTT。請建立一個 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained token</a>：只選這個 repo，權限只開 <b>Actions: Read and write</b>。token 只存在這台瀏覽器。沒設定的話，按鈕會打開 Actions 頁面，再按「Run workflow」即可。</p>
+    <div class="row"><input id="token" class="grow" type="password" placeholder="github_pat_…" autocomplete="off"><button id="savetoken">儲存</button></div>
+  </details>
+</div>
+
+<div class="tabs" id="tabs">
+  <button data-tab="fav" aria-pressed="true">⭐ 有興趣</button>
+  <button data-tab="hot" aria-pressed="false">🔥 熱門</button>
+  <button data-tab="all" aria-pressed="false">全部</button>
+</div>
+<div id="list"></div>
+</div>
+
+<script>
+const REPO = "o3566700/o3566700.github.io";
+const WORKFLOW = "lifeismoney.yml";
+const DEFAULTS = {
+  fav: "全家, 7-11, 統一, 萊爾富, 咖啡, 買一送一, 免費, 信用卡, 回饋, LINE Points, 悠遊卡, 一卡通, 外送, Uber Eats, foodpanda, 全聯, 好市多, 電信, 蝦皮, momo",
+  ban: "問題, 徵, 公告",
+  minpush: "-999", days: "3", tab: "fav"
+};
+const store = {
+  get(k){ try { const v = localStorage.getItem("deals." + k); return v ?? DEFAULTS[k] ?? ""; } catch { return DEFAULTS[k] ?? ""; } },
+  set(k, v){ try { localStorage.setItem("deals." + k, v); } catch {} }
+};
+const $ = id => document.getElementById(id);
+let data = { posts: [] };
+let tab = store.get("tab");
+
+const words = s => s.split(/[,，、\n]/).map(w => w.trim()).filter(Boolean);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+function highlight(text, ws){
+  const t = esc(text);
+  if (!ws.length) return t;
+  return t.replace(new RegExp("(" + ws.map(w => reEsc(esc(w))).join("|") + ")", "gi"), "<mark>$1</mark>");
+}
+function ago(ts){
+  const m = Math.floor((Date.now()/1000 - ts) / 60);
+  if (m < 60) return Math.max(m, 0) + " 分鐘前";
+  if (m < 1440) return Math.floor(m/60) + " 小時前";
+  return Math.floor(m/1440) + " 天前";
+}
+function pushLabel(n){ return n >= 100 ? "爆" : n <= -100 ? "XX" : n < 0 ? "X" + (-n/10) : String(n); }
+
+function render(){
+  const fav = words($("fav").value), ban = words($("ban").value);
+  const q = $("q").value.trim().toLowerCase();
+  const minpush = +$("minpush").value, cutoff = Date.now()/1000 - $("days").value * 86400;
+  const lower = s => s.toLowerCase();
+  let posts = data.posts.filter(p => {
+    const hay = lower(p.title + " " + (p.snippet || ""));
+    if (p.ts < cutoff || p.push < minpush) return false;
+    if (ban.some(w => lower(p.title).includes(lower(w)) || lower(p.category) === lower(w))) return false;
+    if (q && !hay.includes(q)) return false;
+    p._hits = fav.filter(w => hay.includes(lower(w)));
+    return true;
+  });
+  if (tab === "fav") posts = posts.filter(p => p._hits.length).sort((a,b) => b._hits.length - a._hits.length || b.ts - a.ts);
+  else if (tab === "hot") posts = posts.filter(p => p.push >= 10).sort((a,b) => b.push - a.push || b.ts - a.ts);
+  const hl = [...fav, ...(q ? [q] : [])];
+  $("list").innerHTML = posts.length ? posts.map(p => `
+    <article class="card${p._hits.length ? " fav" : ""}">
+      <div class="top">
+        <span class="push${p.push >= 20 ? " hot" : ""}">${pushLabel(p.push)}</span>
+        <a class="title" href="${esc(p.url)}" target="_blank" rel="noopener">${highlight(p.title, hl)}</a>
+      </div>
+      ${p.period ? `<div class="period">⏰ ${esc(p.period)}</div>` : ""}
+      ${p.snippet ? `<div class="snip">${highlight(p.snippet, hl)}</div>` : ""}
+      ${p.links && p.links.length ? `<div class="links">${p.links.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\//, "").slice(0, 40))}</a>`).join("")}</div>` : ""}
+      <div class="meta">${p.category ? `<span class="tag">${esc(p.category)}</span>` : ""}<span>${ago(p.ts)}</span><span>${esc(p.author)}</span>${p._hits.map(h => `<span>⭐${esc(h)}</span>`).join("")}</div>
+    </article>`).join("") : `<div class="empty">${data.posts.length ? "沒有符合條件的特價，試試調整關鍵字或天數" : "還沒有資料，按「立即更新」抓第一次"}</div>`;
+}
+
+async function load(){
+  try {
+    const r = await fetch("data.json?t=" + Date.now(), { cache: "no-store" });
+    data = await r.json();
+    const u = data.updated ? new Date(data.updated) : null;
+    $("status").textContent = u ? `資料更新於 ${u.toLocaleString("zh-TW", { hour12: false })}（${ago(u.getTime()/1000)}）・共 ${data.posts.length} 篇` : "尚無資料";
+  } catch (e) {
+    $("status").textContent = "讀取資料失敗：" + e.message;
+  }
+  render();
+  return data.updated;
+}
+
+async function triggerUpdate(){
+  const token = store.get("token");
+  if (!token) { window.open(`https://github.com/${REPO}/actions/workflows/${WORKFLOW}`, "_blank"); return; }
+  const btn = $("refresh"), before = data.updated;
+  btn.disabled = true; btn.textContent = "更新中…";
+  try {
+    const r = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/${WORKFLOW}/dispatches`, {
+      method: "POST",
+      headers: { Authorization: "Bearer " + token, Accept: "application/vnd.github+json" },
+      body: JSON.stringify({ ref: "main" })
+    });
+    if (!r.ok) throw new Error(`GitHub 回應 ${r.status}${r.status === 401 || r.status === 403 ? "（token 無效或權限不足）" : ""}`);
+    $("status").textContent = "已觸發更新，抓取＋網站部署約需 1～3 分鐘…";
+    for (let i = 0; i < 24; i++) {
+      await new Promise(res => setTimeout(res, 10000));
+      if ((await load()) !== before) { btn.textContent = "立即更新"; btn.disabled = false; return; }
+      $("status").textContent = `更新中…已等待 ${(i + 1) * 10} 秒`;
+    }
+    $("status").textContent = "等太久了，可能還在部署，稍後按「重新載入」看看";
+  } catch (e) {
+    $("status").textContent = "更新失敗：" + e.message;
+  }
+  btn.textContent = "立即更新"; btn.disabled = false;
+}
+
+for (const k of ["fav", "ban", "minpush", "days"]) {
+  $(k).value = store.get(k);
+  $(k).addEventListener("input", () => { store.set(k, $(k).value); render(); });
+}
+$("q").addEventListener("input", render);
+$("token").value = store.get("token");
+$("savetoken").onclick = () => { store.set("token", $("token").value.trim()); $("savetoken").textContent = "已儲存"; };
+$("reload").onclick = load;
+$("refresh").onclick = triggerUpdate;
+for (const b of document.querySelectorAll("#tabs button")) {
+  b.setAttribute("aria-pressed", b.dataset.tab === tab);
+  b.onclick = () => {
+    tab = b.dataset.tab; store.set("tab", tab);
+    for (const o of document.querySelectorAll("#tabs button")) o.setAttribute("aria-pressed", o === b);
+    render();
+  };
+}
+load();
+</script>
+</body>
+</html>
