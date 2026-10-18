@@ -23,6 +23,7 @@ DELAY = 0.6
 MIN_OFF = 0.10
 MIN_PRICE = 200
 PER_CAT = 80
+BUDGET = 8 * 60  # seconds; stop early rather than hold up the workflow
 
 CATEGORIES = {
     "筆電": ["筆電", "電競筆電", "MacBook"],
@@ -39,15 +40,15 @@ def fetch(url, data=None, headers=None):
     h = {"User-Agent": UA, "Accept-Language": "zh-TW"}
     h.update(headers or {})
     req = urllib.request.Request(url, data=data, headers=h)
-    for attempt in range(3):
+    for attempt in range(2):
         try:
-            with urllib.request.urlopen(req, timeout=25) as r:
+            with urllib.request.urlopen(req, timeout=15) as r:
                 return r.read().decode("utf-8", "replace")
         except Exception as e:  # noqa: BLE001
-            if attempt == 2:
+            if attempt == 1:
                 raise
-            print(f"retry {url[:80]}: {e}", file=sys.stderr)
-            time.sleep(2 + 2 * attempt)
+            print(f"retry {url[:80]}: {e}", flush=True)
+            time.sleep(3)
 
 
 def num(s):
@@ -126,15 +127,20 @@ def momo(keyword, cat):
 
 def main():
     found, errors = {}, []
+    start = time.time()
     for cat, keywords in CATEGORIES.items():
         for kw in keywords:
             for site, fn in (("PChome", pchome), ("momo", momo)):
+                if time.time() - start > BUDGET:
+                    errors.append(f"time budget reached before {site} {kw}")
+                    continue
                 try:
                     got = fn(kw, cat)
                 except Exception as e:  # noqa: BLE001 - keep going with the other site
                     errors.append(f"{site} {kw}: {e}")
-                    print(errors[-1], file=sys.stderr)
+                    print(errors[-1], flush=True)
                     continue
+                print(f"{site} {kw}: {len(got)} items ({time.time() - start:.0f}s)", flush=True)
                 for it in got:
                     if it["price"] < MIN_PRICE or not it["ori"] or it["price"] > it["ori"] * (1 - MIN_OFF):
                         continue
