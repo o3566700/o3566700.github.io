@@ -35,7 +35,7 @@ CATEGORIES = {
 # Same-day flash sales the user does not want.
 FLASH = re.compile(r"限時|今日|今天|當日|搶購|倒數|閃購|快閃|整點|秒殺|限量搶")
 # Keyword search drags in non-3C things ("平板" → 平板夾 hair straightener) and cases/films.
-NOISE = re.compile(r"離子夾|平板夾|直髮|捲髮|吹風機|驗鈔|保護貼|保護膜|玻璃貼|鋼化膜|手機殼|保護殼|保護套|皮套|包膜|拖把|拖地")
+NOISE = re.compile(r"離子夾|平板夾|直髮|捲髮|吹風機|驗鈔|保護貼|保護膜|玻璃貼|鋼化膜|手機殼|保護殼|保護套|皮套|包膜|拖把|拖地|殼|保護包|內膽包|收納包|背包|相機包|晶鑽")
 REFURB = re.compile(r"福利品|福利機|整新|二手|展示機|拆封|九成新|近全新")
 MAX_OFF = 0.85  # beyond this the "original price" is almost always made up
 
@@ -74,7 +74,8 @@ def pchome(keyword, cat):
     items = []
     for i in range(0, len(ids), 20):
         batch = ids[i:i + 20]
-        url = ("https://ecapi-cdn.pchome.com.tw/ecshop/prodapi/v2/prod/" + ",".join(batch)
+        # "prod&id=a,b" returns every id; "prod/a,b" silently returns only the first.
+        url = ("https://ecapi-cdn.pchome.com.tw/ecshop/prodapi/v2/prod&id=" + ",".join(batch)
                + "&fields=Id,Name,Price,isOnSale,Slogan&_callback=x")
         raw = fetch(url)
         info = json.loads(raw[raw.index("x(") + 2: raw.rindex(");}catch")])
