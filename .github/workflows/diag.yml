@@ -2,10 +2,18 @@ name: diag (temporary)
 on:
   push:
     branches: [claude/cloud-credits-quota-usage-4rcvj7]
-    paths: [scripts/diag.py]
+    paths: [scripts/shop_deals.py]
 jobs:
   diag:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 scripts/diag.py
+      - run: python3 scripts/shop_deals.py | tail -3
+      - run: |
+          python3 - <<'PY'
+          import json, collections
+          d = json.load(open("deals/shop.json"))
+          print(collections.Counter((i["site"], i["cat"]) for i in d["items"]))
+          for i in [x for x in d["items"] if x["site"] == "PChome"][:15]:
+              print(i["cat"], i["price"], i["ori"], i["off"], i["name"][:45])
+          PY

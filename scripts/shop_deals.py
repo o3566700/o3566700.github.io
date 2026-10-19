@@ -74,7 +74,8 @@ def pchome(keyword, cat):
     items = []
     for i in range(0, len(ids), 20):
         batch = ids[i:i + 20]
-        url = ("https://ecapi-cdn.pchome.com.tw/ecshop/prodapi/v2/prod/" + ",".join(batch)
+        # "prod&id=a,b" returns every id; "prod/a,b" silently returns only the first.
+        url = ("https://ecapi-cdn.pchome.com.tw/ecshop/prodapi/v2/prod&id=" + ",".join(batch)
                + "&fields=Id,Name,Price,isOnSale,Slogan&_callback=x")
         raw = fetch(url)
         info = json.loads(raw[raw.index("x(") + 2: raw.rindex(");}catch")])
