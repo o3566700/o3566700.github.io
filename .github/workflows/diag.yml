@@ -1,0 +1,11 @@
+name: diag (temporary)
+on:
+  push:
+    branches: [claude/cloud-credits-quota-usage-4rcvj7]
+    paths: [scripts/diag.py]
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/diag.py
