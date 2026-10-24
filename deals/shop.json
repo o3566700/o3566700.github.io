@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T20:54:18+00:00",
+ "updated": "2026-10-24T23:19:03+00:00",
  "errors": [],
  "items": [
   {
@@ -12,7 +12,7 @@
    "ori": 4980,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11115416",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0011/115/416/11115416_OL.jpg?t=1718687006",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0011/115/416/11115416_OL.jpg?t=1718687006",
    "off": 0.818,
    "refurb": false
   },
@@ -40,7 +40,7 @@
    "ori": 9999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12289812",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0012/289/812/12289812_OL.jpg?t=1734498253",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0012/289/812/12289812_OL.jpg?t=1734498253",
    "off": 0.761,
    "refurb": false
   },
@@ -54,7 +54,7 @@
    "ori": 9999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12289811",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0012/289/811/12289811_OL.jpg?t=1734498253",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0012/289/811/12289811_OL.jpg?t=1734498253",
    "off": 0.741,
    "refurb": false
   },
@@ -68,7 +68,7 @@
    "ori": 9990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11841248",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0011/841/248/11841248_OL.jpg?t=1782381789",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0011/841/248/11841248_OL.jpg?t=1782381789",
    "off": 0.731,
    "refurb": true
   },
@@ -96,7 +96,7 @@
    "ori": 1679,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12919207",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0012/919/207/12919207_OL.jpg?t=1790737940",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0012/919/207/12919207_OL.jpg?t=1790737940",
    "off": 0.655,
    "refurb": false
   },
@@ -124,7 +124,7 @@
    "ori": 6988,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13452892",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/452/892/13452892_OL.jpg?t=1772560160",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0013/452/892/13452892_OL.jpg?t=1772560160",
    "off": 0.648,
    "refurb": false
   },
@@ -138,8 +138,36 @@
    "ori": 1280,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12849559",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0012/849/559/12849559_OL.jpg?t=1789142531",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0012/849/559/12849559_OL.jpg?t=1789142531",
    "off": 0.641,
+   "refurb": false
+  },
+  {
+   "site": "PChome",
+   "cat": "數位",
+   "id": "DYAJKO-A900K8TWP-000",
+   "name": "Apple iPad 7 A2200 32G LTE 福利品",
+   "sub": "",
+   "price": 5600,
+   "ori": 15400,
+   "low": 0,
+   "url": "https://24h.pchome.com.tw/prod/DYAJKO-A900K8TWP",
+   "img": "https://img.pchome.com.tw/cs/items/DYAJKOA900K8TWP/000001_1784710801.jpg",
+   "off": 0.636,
+   "refurb": true
+  },
+  {
+   "site": "PChome",
+   "cat": "筆電",
+   "id": "DCAGW4-A900H0WUP-000",
+   "name": "鋅合金 筆電架 筆電支架 筆電散熱架 筆電散熱支架 銀色短版",
+   "sub": "",
+   "price": 249,
+   "ori": 680,
+   "low": 0,
+   "url": "https://24h.pchome.com.tw/prod/DCAGW4-A900H0WUP",
+   "img": "https://img.pchome.com.tw/cs/items/DCAGW4A900H0WUP/000001_1703129031.jpg",
+   "off": 0.634,
    "refurb": false
   },
   {
@@ -152,7 +180,7 @@
    "ori": 5999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13492597",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/492/597/13492597_OL.jpg?t=1767976363",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0013/492/597/13492597_OL.jpg?t=1767976363",
    "off": 0.619,
    "refurb": false
   },
@@ -168,20 +196,6 @@
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12245407",
    "img": "https://img1.momoshop.com.tw/goodsimg/0012/245/407/12245407_OL.jpg?t=1767608912",
    "off": 0.618,
-   "refurb": false
-  },
-  {
-   "site": "PChome",
-   "cat": "通訊",
-   "id": "DYAIAY-A900K5DGO-000",
-   "name": "Imak GARMIN Forerunner 170 玻璃手錶膜(自帶定位版)",
-   "sub": "",
-   "price": 209,
-   "ori": 509,
-   "low": 198,
-   "url": "https://24h.pchome.com.tw/prod/DYAIAY-A900K5DGO",
-   "img": "https://img.pchome.com.tw/cs/items/DYAIAYA900K5DGO/000001_1782354733.jpg",
-   "off": 0.589,
    "refurb": false
   },
   {
@@ -208,7 +222,7 @@
    "ori": 5990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9400941",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0009/400/941/9400941_OL.jpg?t=1784688109",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0009/400/941/9400941_OL.jpg?t=1784688109",
    "off": 0.586,
    "refurb": false
   },
@@ -222,7 +236,7 @@
    "ori": 1919,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13718582",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/718/582/13718582_OL.jpg?t=1774252310",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0013/718/582/13718582_OL.jpg?t=1774252310",
    "off": 0.584,
    "refurb": false
   },
@@ -238,34 +252,6 @@
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12092116",
    "img": "https://img1.momoshop.com.tw/goodsimg/0012/092/116/12092116_OL.jpg?t=1766564533",
    "off": 0.583,
-   "refurb": false
-  },
-  {
-   "site": "PChome",
-   "cat": "數位",
-   "id": "DYAJKO-A900JETAG-000",
-   "name": "【福利品】Apple iPad 9 平板電腦",
-   "sub": "",
-   "price": 8680,
-   "ori": 20400,
-   "low": 0,
-   "url": "https://24h.pchome.com.tw/prod/DYAJKO-A900JETAG",
-   "img": "https://img.pchome.com.tw/cs/items/DYAJKOA900JETAG/000001_1792662219.jpg",
-   "off": 0.575,
-   "refurb": true
-  },
-  {
-   "site": "momo",
-   "cat": "周邊",
-   "id": "13276697",
-   "name": "【Choetech】氮化鎵GaN PD3007 PD30W快充充電器(小巧身型 高效快充)",
-   "sub": "小巧身型 高效快充",
-   "price": 299,
-   "ori": 700,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13276697",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/276/697/13276697_OL.jpg?t=1780331846",
-   "off": 0.573,
    "refurb": false
   },
   {
@@ -292,22 +278,36 @@
    "ori": 2999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15337500",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/337/500/15337500_OL.jpg?t=1784603152",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/337/500/15337500_OL.jpg?t=1784603152",
    "off": 0.57,
+   "refurb": false
+  },
+  {
+   "site": "momo",
+   "cat": "周邊",
+   "id": "11689064",
+   "name": "【Anker soundcore】Liberty 4 NC 降噪真無線藍芽耳機(頂級降噪 至臻完美)",
+   "sub": "頂級降噪 至臻完美",
+   "price": 2290,
+   "ori": 5200,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11689064",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0011/689/064/11689064_OL.jpg?t=1780051049",
+   "off": 0.56,
    "refurb": false
   },
   {
    "site": "PChome",
    "cat": "數位",
-   "id": "DYAJKO-A900KHK8S-000",
-   "name": "【福利品】Apple iPad 8 (2020) (10.2吋/LTE/128GB) L1 銀色",
+   "id": "DYAJKO-A900J1D0K-000",
+   "name": "【福利品】Apple iPad 9 10.2吋 平板電腦",
    "sub": "",
-   "price": 7800,
-   "ori": 17800,
+   "price": 8980,
+   "ori": 20400,
    "low": 0,
-   "url": "https://24h.pchome.com.tw/prod/DYAJKO-A900KHK8S",
-   "img": "https://img.pchome.com.tw/cs/items/DYAJKOA900KHK8S/000001_1790134681.jpg",
-   "off": 0.562,
+   "url": "https://24h.pchome.com.tw/prod/DYAJKO-A900J1D0K",
+   "img": "https://img.pchome.com.tw/cs/items/DYAJKOA900J1D0K/000001_1781000341.jpg",
+   "off": 0.56,
    "refurb": true
   },
   {
@@ -320,7 +320,7 @@
    "ori": 6760,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13104643",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/104/643/13104643_OL.jpg?t=1787910589",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0013/104/643/13104643_OL.jpg?t=1787910589",
    "off": 0.555,
    "refurb": false
   },
@@ -348,22 +348,8 @@
    "ori": 2500,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10803732",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0010/803/732/10803732_OL.jpg?t=1773628081",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0010/803/732/10803732_OL.jpg?t=1773628081",
    "off": 0.551,
-   "refurb": false
-  },
-  {
-   "site": "PChome",
-   "cat": "周邊",
-   "id": "DYAFF5-A900B1272-000",
-   "name": "COTEetCI哥特斯 15W快充磁吸無線充 Magsafe無線充電器 迷你充電盤 充電座",
-   "sub": "",
-   "price": 499,
-   "ori": 1099,
-   "low": 0,
-   "url": "https://24h.pchome.com.tw/prod/DYAFF5-A900B1272",
-   "img": "https://img.pchome.com.tw/cs/items/DYAFF5A900B1272/000001_1607063218.jpg",
-   "off": 0.546,
    "refurb": false
   },
   {
@@ -396,20 +382,6 @@
   },
   {
    "site": "momo",
-   "cat": "3C",
-   "id": "14533850",
-   "name": "【Samsung 三星】T5 EVO 4TB Type-C USB 3.2 Gen 1 外接式ssd固態硬碟(MU-PH4T0S/WW)",
-   "sub": "",
-   "price": 11988,
-   "ori": 26109,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14533850",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0014/533/850/14533850_OL.jpg?t=1789069145",
-   "off": 0.541,
-   "refurb": false
-  },
-  {
-   "site": "momo",
    "cat": "周邊",
    "id": "15303623",
    "name": "【GUXON】極方塊雙線行動電源 GFC930 固態行動電源 10000mAh 大容量行動電源 可上飛機",
@@ -418,7 +390,7 @@
    "ori": 2580,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15303623",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/303/623/15303623_OL.jpg?t=1791380540",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/303/623/15303623_OL.jpg?t=1791380540",
    "off": 0.54,
    "refurb": false
   },
@@ -453,15 +425,15 @@
   {
    "site": "momo",
    "cat": "周邊",
-   "id": "15261470",
-   "name": "【JINPEI 錦沛】Qi2 25W無線磁吸充電器 MagSafe 蘋果安卓手機 iPhone Airpods",
-   "sub": "Qi2精準磁吸定位",
-   "price": 790,
-   "ori": 1690,
+   "id": "14682661",
+   "name": "【DA】MH136 小電寶 迷你雙線快充行動電源(過BSMI與3C認證/38.5Wh/可上飛機/10000mAh/快充/PD+QC/自帶雙線)",
+   "sub": "滿1件享88折",
+   "price": 695,
+   "ori": 1490,
    "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15261470",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/261/470/15261470_OL.jpg?t=1778753042",
-   "off": 0.533,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14682661",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0014/682/661/14682661_OL.jpg?t=1772775208",
+   "off": 0.534,
    "refurb": false
   },
   {
@@ -481,6 +453,20 @@
   {
    "site": "momo",
    "cat": "周邊",
+   "id": "13526698",
+   "name": "【BOK】手機無線充藍牙喇叭(TR Model 5)",
+   "sub": "藍芽音箱 無線手機充電",
+   "price": 590,
+   "ori": 1250,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13526698",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0013/526/698/13526698_OL.jpg?t=1792706773",
+   "off": 0.528,
+   "refurb": false
+  },
+  {
+   "site": "momo",
+   "cat": "周邊",
    "id": "12980747",
    "name": "【ADATA 威剛】G653 2C/1A 65W GaN氮化鎵 三孔 PD快充充電器(支援筆電/平板/手機同步充電)",
    "sub": "滿1件享88折",
@@ -488,7 +474,7 @@
    "ori": 1299,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12980747",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0012/980/747/12980747_OL.jpg?t=1761576332",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0012/980/747/12980747_OL.jpg?t=1761576332",
    "off": 0.527,
    "refurb": false
   },
@@ -502,7 +488,7 @@
    "ori": 999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12861912",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0012/861/912/12861912_OL.jpg?t=1777442204",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0012/861/912/12861912_OL.jpg?t=1777442204",
    "off": 0.521,
    "refurb": false
   },
@@ -516,7 +502,7 @@
    "ori": 1980,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14874941",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/874/941/14874941_OL.jpg?t=1789491823",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0014/874/941/14874941_OL.jpg?t=1789491823",
    "off": 0.512,
    "refurb": false
   },
@@ -530,7 +516,7 @@
    "ori": 999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10901757",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0010/901/757/10901757_OL.jpg?t=1698224458",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0010/901/757/10901757_OL.jpg?t=1698224458",
    "off": 0.506,
    "refurb": false
   },
@@ -544,7 +530,7 @@
    "ori": 24999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14149989",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/149/989/14149989_OL.jpg?t=1750815646",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0014/149/989/14149989_OL.jpg?t=1750815646",
    "off": 0.505,
    "refurb": false
   },
@@ -558,7 +544,7 @@
    "ori": 1990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15006701",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/006/701/15006701_OL.jpg?t=1772596377",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/006/701/15006701_OL.jpg?t=1772596377",
    "off": 0.503,
    "refurb": false
   },
@@ -572,21 +558,7 @@
    "ori": 3999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14730119",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/730/119/14730119_OL.jpg?t=1768217405",
-   "off": 0.5,
-   "refurb": false
-  },
-  {
-   "site": "momo",
-   "cat": "周邊",
-   "id": "14942205",
-   "name": "【e-Power】一體式藍牙喇叭 BT-300 電腦喇叭 SoundBar 聲霸",
-   "sub": "無線 / 有線 雙用",
-   "price": 599,
-   "ori": 1199,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14942205",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/942/205/14942205_OL.jpg?t=1780555193",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0014/730/119/14730119_OL.jpg?t=1768217405",
    "off": 0.5,
    "refurb": false
   },
@@ -600,9 +572,23 @@
    "ori": 11990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15565054",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/565/054/15565054_OL.jpg?t=1786070140",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0015/565/054/15565054_OL.jpg?t=1786070140",
    "off": 0.5,
    "refurb": true
+  },
+  {
+   "site": "momo",
+   "cat": "3C",
+   "id": "13901967",
+   "name": "【PX 大通】7合1Type c HUB集線器type c Hub 10G 100w瓦 hub 4K 記憶卡 筆電 mac usb 轉接(CX7-21S)",
+   "sub": "3年保固10G快傳100瓦快充",
+   "price": 999,
+   "ori": 1990,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13901967",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0013/901/967/13901967_OL.jpg?t=1789118725",
+   "off": 0.498,
+   "refurb": false
   },
   {
    "site": "momo",
@@ -614,7 +600,7 @@
    "ori": 19229,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14533853",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0014/533/853/14533853_OL.jpg?t=1789069149",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0014/533/853/14533853_OL.jpg?t=1789069149",
    "off": 0.496,
    "refurb": false
   },
@@ -628,23 +614,23 @@
    "ori": 2990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15348911",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/348/911/15348911_OL.jpg?t=1790855087",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/348/911/15348911_OL.jpg?t=1790855087",
    "off": 0.489,
    "refurb": false
   },
   {
-   "site": "PChome",
-   "cat": "通訊",
-   "id": "DYAJ03-A900I50PC-000",
-   "name": "【A級福利品】Apple iPhone 14 Pro (128G)",
-   "sub": "",
-   "price": 14990,
-   "ori": 28900,
+   "site": "momo",
+   "cat": "數位",
+   "id": "10086028",
+   "name": "【NovaPlus】Pencil A7 pro iPad磁吸充電式藍牙觸控筆(支援ipad磁吸充電功能)",
+   "sub": "滿1件折47",
+   "price": 1133,
+   "ori": 2190,
    "low": 0,
-   "url": "https://24h.pchome.com.tw/prod/DYAJ03-A900I50PC",
-   "img": "https://img.pchome.com.tw/cs/items/DYAJ03A900I50PC/000001_1739439975.jpg",
-   "off": 0.481,
-   "refurb": true
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10086028",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0010/086/028/10086028_OL.jpg?t=1774857682",
+   "off": 0.483,
+   "refurb": false
   },
   {
    "site": "momo",
@@ -656,22 +642,8 @@
    "ori": 19999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14132500",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/132/500/14132500_OL.jpg?t=1750296705",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0014/132/500/14132500_OL.jpg?t=1750296705",
    "off": 0.481,
-   "refurb": false
-  },
-  {
-   "site": "momo",
-   "cat": "周邊",
-   "id": "14581923",
-   "name": "【JINPEI 錦沛】65W GaN氮化鎵 超薄型急速充電器 雙Type-C 白色/黑色(快充頭)",
-   "sub": "滿1件享88折",
-   "price": 879,
-   "ori": 1690,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14581923",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/581/923/14581923_OL.jpg?t=1761110664",
-   "off": 0.48,
    "refurb": false
   },
   {
@@ -684,22 +656,22 @@
    "ori": 2080,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15442793",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/442/793/15442793_OL.jpg?t=1785919768",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/442/793/15442793_OL.jpg?t=1785919768",
    "off": 0.476,
    "refurb": false
   },
   {
-   "site": "PChome",
-   "cat": "3C",
-   "id": "DSBC7E-A900IKGS1-000",
-   "name": "Transcend 創見 ESD310C 512G USB 3.2 外接SSD",
-   "sub": "",
-   "price": 5299,
-   "ori": 10000,
+   "site": "momo",
+   "cat": "周邊",
+   "id": "13004902",
+   "name": "【Philips 飛利浦】City系列 TAH7508 降噪藍牙耳罩式耳機(沈浸樂音 魅力非凡)",
+   "sub": "沈浸樂音 魅力非凡",
+   "price": 1790,
+   "ori": 3400,
    "low": 0,
-   "url": "https://24h.pchome.com.tw/prod/DSBC7E-A900IKGS1",
-   "img": "https://img.pchome.com.tw/cs/items/DSBC7EA900IKGS1/000001_1766573967.jpg",
-   "off": 0.47,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13004902",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0013/004/902/13004902_OL.jpg?t=1780339133",
+   "off": 0.474,
    "refurb": false
   },
   {
@@ -712,8 +684,22 @@
    "ori": 1490,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9667906",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0009/667/906/9667906_OL.jpg?t=1771949205",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0009/667/906/9667906_OL.jpg?t=1771949205",
    "off": 0.47,
+   "refurb": false
+  },
+  {
+   "site": "momo",
+   "cat": "3C",
+   "id": "14110045",
+   "name": "【Easy buy 居家生活】碳纖維桌面電競桌100CM-附主機懸掛架(工作桌 電腦桌 辦公桌 電競桌)",
+   "sub": "碳纖維桌面電腦桌-附主機懸掛架",
+   "price": 1548,
+   "ori": 2888,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14110045",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0014/110/045/14110045_OL.jpg?t=1764555786",
+   "off": 0.464,
    "refurb": false
   },
   {
@@ -726,7 +712,7 @@
    "ori": 3280,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13722537",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0013/722/537/13722537_OL.jpg?t=1749013253",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0013/722/537/13722537_OL.jpg?t=1749013253",
    "off": 0.464,
    "refurb": false
   },
@@ -740,35 +726,35 @@
    "ori": 1299,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14074584",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/074/584/14074584_OL.jpg?t=1777442214",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0014/074/584/14074584_OL.jpg?t=1777442214",
    "off": 0.462,
    "refurb": false
   },
   {
    "site": "momo",
-   "cat": "周邊",
-   "id": "15021687",
-   "name": "【e-Power】一體式藍牙喇叭 BT-400 電腦喇叭 SoundBar 聲霸",
-   "sub": "有線/無線 適用",
-   "price": 699,
-   "ori": 1299,
+   "cat": "數位",
+   "id": "14115390",
+   "name": "【JINPEI 錦沛】6K UHD解析度、Vlog旅行專屬、運動、寵物攝影機(贈64GB)",
+   "sub": "最高 6K/ 30 FPS",
+   "price": 5350,
+   "ori": 9900,
    "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15021687",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/021/687/15021687_OL.jpg?t=1780555198",
-   "off": 0.462,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14115390",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0014/115/390/14115390_OL.jpg?t=1760975783",
+   "off": 0.46,
    "refurb": false
   },
   {
    "site": "momo",
-   "cat": "周邊",
-   "id": "11883216",
-   "name": "【Logitech G】G PRO X SUPERLIGHT 2 無線輕量化滑鼠",
-   "sub": "最高折200",
-   "price": 2990,
-   "ori": 5490,
+   "cat": "3C",
+   "id": "15384302",
+   "name": "【喜光全光譜】TIONE PRO 座夾兩用 全光譜LED螢幕護眼檯燈 掛燈",
+   "sub": "打造空間全域照明",
+   "price": 4080,
+   "ori": 7480,
    "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11883216",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0011/883/216/11883216_OL.jpg?t=1784569053",
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15384302",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/384/302/15384302_OL.jpg?t=1791454006",
    "off": 0.455,
    "refurb": false
   },
@@ -782,7 +768,7 @@
    "ori": 2890,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12564727",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0012/564/727/12564727_OL.jpg?t=1710479234",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0012/564/727/12564727_OL.jpg?t=1710479234",
    "off": 0.45,
    "refurb": false
   },
@@ -796,22 +782,8 @@
    "ori": 2890,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13837791",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0013/837/791/13837791_OL.jpg?t=1742888673",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0013/837/791/13837791_OL.jpg?t=1742888673",
    "off": 0.45,
-   "refurb": false
-  },
-  {
-   "site": "momo",
-   "cat": "周邊",
-   "id": "13638580",
-   "name": "【Choetech】B670 27000mAh 數位顯示 PD140W 快充行動電源  97.2Wh/具Wh標示(電力猛獸 精準顯示)",
-   "sub": "",
-   "price": 2990,
-   "ori": 5400,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13638580",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/638/580/13638580_OL.jpg?t=1780331844",
-   "off": 0.446,
    "refurb": false
   },
   {
@@ -824,7 +796,7 @@
    "ori": 899,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14075073",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/075/073/14075073_OL.jpg?t=1781257643",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0014/075/073/14075073_OL.jpg?t=1781257643",
    "off": 0.445,
    "refurb": false
   },
@@ -838,7 +810,7 @@
    "ori": 4470,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13548180",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0013/548/180/13548180_OL.jpg?t=1790905380",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0013/548/180/13548180_OL.jpg?t=1790905380",
    "off": 0.443,
    "refurb": false
   },
@@ -852,7 +824,7 @@
    "ori": 19900,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11719721",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0011/719/721/11719721_OL.jpg?t=1787048065",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0011/719/721/11719721_OL.jpg?t=1787048065",
    "off": 0.442,
    "refurb": true
   },
@@ -880,7 +852,7 @@
    "ori": 1590,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13854719",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/854/719/13854719_OL.jpg?t=1743238967",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0013/854/719/13854719_OL.jpg?t=1743238967",
    "off": 0.44,
    "refurb": false
   },
@@ -908,7 +880,7 @@
    "ori": 1750,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13828298",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/828/298/13828298_OL.jpg?t=1756357316",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0013/828/298/13828298_OL.jpg?t=1756357316",
    "off": 0.434,
    "refurb": false
   },
@@ -922,7 +894,7 @@
    "ori": 3480,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15756057",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/756/057/15756057_OL.jpg?t=1791367906",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/756/057/15756057_OL.jpg?t=1791367906",
    "off": 0.431,
    "refurb": false
   },
@@ -936,7 +908,7 @@
    "ori": 4499,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14443459",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/443/459/14443459_OL.jpg?t=1767129604",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0014/443/459/14443459_OL.jpg?t=1767129604",
    "off": 0.425,
    "refurb": false
   },
@@ -956,6 +928,20 @@
   },
   {
    "site": "momo",
+   "cat": "周邊",
+   "id": "13725925",
+   "name": "【Philips 飛利浦】炫彩RGB強力低音無線藍牙5.3喇叭-TAS2108BK",
+   "sub": "7小時長效續航力，沉浸音樂世界",
+   "price": 1590,
+   "ori": 2690,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13725925",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0013/725/925/13725925_OL.jpg?t=1739954415",
+   "off": 0.409,
+   "refurb": false
+  },
+  {
+   "site": "momo",
    "cat": "3C",
    "id": "13666696",
    "name": "【Gigastone 立達國際】256GB USB-A Type-C雙介面隨身碟 UAC-4400GY (iPhone15以上適用/Android/筆電)",
@@ -964,7 +950,7 @@
    "ori": 1669,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13666696",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0013/666/696/13666696_OL.jpg?t=1789639060",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0013/666/696/13666696_OL.jpg?t=1789639060",
    "off": 0.408,
    "refurb": false
   },
@@ -978,7 +964,7 @@
    "ori": 1499,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13365910",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0013/365/910/13365910_OL.jpg?t=1777054179",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0013/365/910/13365910_OL.jpg?t=1777054179",
    "off": 0.408,
    "refurb": false
   },
@@ -992,8 +978,22 @@
    "ori": 990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12215223",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0012/215/223/12215223_OL.jpg?t=1792592196",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0012/215/223/12215223_OL.jpg?t=1792592196",
    "off": 0.406,
+   "refurb": false
+  },
+  {
+   "site": "momo",
+   "cat": "周邊",
+   "id": "13981026",
+   "name": "【Anker soundcore】AeroFit 2 AI 開放式藍牙耳機(即時翻譯 舒適可調 清晰悅耳)",
+   "sub": "舒適可調 清晰悅耳",
+   "price": 2990,
+   "ori": 5000,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13981026",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0013/981/026/13981026_OL.jpg?t=1780051040",
+   "off": 0.402,
    "refurb": false
   },
   {
@@ -1006,7 +1006,7 @@
    "ori": 5000,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13866592",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/866/592/13866592_OL.jpg?t=1780051042",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0013/866/592/13866592_OL.jpg?t=1780051042",
    "off": 0.402,
    "refurb": false
   },
@@ -1020,7 +1020,7 @@
    "ori": 4490,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13062820",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0013/062/820/13062820_OL.jpg?t=1774344860",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0013/062/820/13062820_OL.jpg?t=1774344860",
    "off": 0.401,
    "refurb": false
   },
@@ -1034,7 +1034,7 @@
    "ori": 999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14565986",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/565/986/14565986_OL.jpg?t=1788148097",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0014/565/986/14565986_OL.jpg?t=1788148097",
    "off": 0.4,
    "refurb": false
   },
@@ -1062,7 +1062,7 @@
    "ori": 999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14478555",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/478/555/14478555_OL.jpg?t=1758628648",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0014/478/555/14478555_OL.jpg?t=1758628648",
    "off": 0.4,
    "refurb": false
   },
@@ -1076,7 +1076,7 @@
    "ori": 17800,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15265182",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/265/182/15265182_OL.jpg?t=1789401684",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/265/182/15265182_OL.jpg?t=1789401684",
    "off": 0.4,
    "refurb": true
   },
@@ -1090,7 +1090,7 @@
    "ori": 2999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15273328",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0015/273/328/15273328_OL.jpg?t=1779112497",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0015/273/328/15273328_OL.jpg?t=1779112497",
    "off": 0.395,
    "refurb": false
   },
@@ -1118,7 +1118,7 @@
    "ori": 2290,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14528145",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0014/528/145/14528145_OL.jpg?t=1786076584",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0014/528/145/14528145_OL.jpg?t=1786076584",
    "off": 0.393,
    "refurb": false
   },
@@ -1132,7 +1132,7 @@
    "ori": 3599,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13964745",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0013/964/745/13964745_OL.jpg?t=1790056288",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0013/964/745/13964745_OL.jpg?t=1790056288",
    "off": 0.389,
    "refurb": false
   },
@@ -1146,7 +1146,7 @@
    "ori": 2890,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15458299",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/458/299/15458299_OL.jpg?t=1791470739",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/458/299/15458299_OL.jpg?t=1791470739",
    "off": 0.384,
    "refurb": false
   },
@@ -1160,7 +1160,7 @@
    "ori": 2400,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13978790",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/978/790/13978790_OL.jpg?t=1791294912",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0013/978/790/13978790_OL.jpg?t=1791294912",
    "off": 0.38,
    "refurb": false
   },
@@ -1174,7 +1174,7 @@
    "ori": 2990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13901977",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0013/901/977/13901977_OL.jpg?t=1789118727",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0013/901/977/13901977_OL.jpg?t=1789118727",
    "off": 0.378,
    "refurb": false
   },
@@ -1188,7 +1188,7 @@
    "ori": 4800,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14040053",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/040/053/14040053_OL.jpg?t=1780051040",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0014/040/053/14040053_OL.jpg?t=1780051040",
    "off": 0.377,
    "refurb": false
   },
@@ -1202,8 +1202,22 @@
    "ori": 19990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15466895",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/466/895/15466895_OL.jpg?t=1783596851",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0015/466/895/15466895_OL.jpg?t=1783596851",
    "off": 0.375,
+   "refurb": false
+  },
+  {
+   "site": "PChome",
+   "cat": "3C",
+   "id": "CAAQ04-A74175341-000",
+   "name": "【CHICHIAU】4吋LCD輕巧型螢幕",
+   "sub": "",
+   "price": 1490,
+   "ori": 2380,
+   "low": 1415,
+   "url": "https://24h.pchome.com.tw/prod/CAAQ04-A74175341",
+   "img": "https://img.pchome.com.tw/cs/items/CAAQ04A74175341/000001_1726734777.jpg",
+   "off": 0.374,
    "refurb": false
   },
   {
@@ -1216,22 +1230,8 @@
    "ori": 2700,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13631277",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/631/277/13631277_OL.jpg?t=1779473323",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0013/631/277/13631277_OL.jpg?t=1779473323",
    "off": 0.374,
-   "refurb": false
-  },
-  {
-   "site": "PChome",
-   "cat": "周邊",
-   "id": "DYAQGF-A900JZKLQ-000",
-   "name": "JBL Tune 530BT 耳罩式藍牙無線耳機",
-   "sub": "",
-   "price": 1690,
-   "ori": 2690,
-   "low": 0,
-   "url": "https://24h.pchome.com.tw/prod/DYAQGF-A900JZKLQ",
-   "img": "https://img.pchome.com.tw/cs/items/DYAQGFA900JZKLQ/000001_1781669081.jpg",
-   "off": 0.372,
    "refurb": false
   },
   {
@@ -1244,7 +1244,7 @@
    "ori": 2099,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13964744",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0013/964/744/13964744_OL.jpg?t=1790056292",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0013/964/744/13964744_OL.jpg?t=1790056292",
    "off": 0.371,
    "refurb": false
   },
@@ -1272,7 +1272,7 @@
    "ori": 859,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13118318",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/118/318/13118318_OL.jpg?t=1789608542",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0013/118/318/13118318_OL.jpg?t=1789608542",
    "off": 0.361,
    "refurb": false
   },
@@ -1286,22 +1286,22 @@
    "ori": 19800,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15265185",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/265/185/15265185_OL.jpg?t=1789149639",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/265/185/15265185_OL.jpg?t=1789149639",
    "off": 0.359,
    "refurb": true
   },
   {
    "site": "momo",
-   "cat": "3C",
-   "id": "2356274",
-   "name": "【ONE 生活】小空間電腦桌/學生書桌(學生電腦桌/MIT/寬60CM)",
-   "sub": "滿1件享93折",
-   "price": 836,
-   "ori": 1299,
+   "cat": "周邊",
+   "id": "13634031",
+   "name": "【Logitech 羅技】POP Icon Keys 無線藍芽鍵盤",
+   "sub": "最高折200",
+   "price": 1290,
+   "ori": 1990,
    "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=2356274",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0002/356/274/2356274_OL.jpg?t=1765876876",
-   "off": 0.356,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13634031",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0013/634/031/13634031_OL.jpg?t=1763346561",
+   "off": 0.352,
    "refurb": false
   },
   {
@@ -1314,8 +1314,22 @@
    "ori": 3990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15699527",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/699/527/15699527_OL.jpg?t=1790904164",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/699/527/15699527_OL.jpg?t=1790904164",
    "off": 0.351,
+   "refurb": false
+  },
+  {
+   "site": "momo",
+   "cat": "周邊",
+   "id": "6247402",
+   "name": "【Logitech 羅技】2入組 M186 無線滑鼠",
+   "sub": "最高折200",
+   "price": 649,
+   "ori": 998,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=6247402",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0006/247/402/6247402_OL.jpg?t=1703063082",
+   "off": 0.35,
    "refurb": false
   },
   {
@@ -1328,7 +1342,21 @@
    "ori": 799,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12259480",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0012/259/480/12259480_OL.jpg?t=1791272163",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0012/259/480/12259480_OL.jpg?t=1791272163",
+   "off": 0.35,
+   "refurb": false
+  },
+  {
+   "site": "PChome",
+   "cat": "通訊",
+   "id": "DYAJJ2-1900KFLC5-000",
+   "name": "(訂閱方案)Apple iPhone 18 Pro (512GB)",
+   "sub": "",
+   "price": 33732,
+   "ori": 51900,
+   "low": 0,
+   "url": "https://24h.pchome.com.tw/prod/DYAJJ2-1900KFLC5",
+   "img": "https://img.pchome.com.tw/cs/items/DYAJJ21900KFLC5/000001_1792659441.jpg",
    "off": 0.35,
    "refurb": false
   },
@@ -1342,7 +1370,7 @@
    "ori": 16900,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11361452",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0011/361/452/11361452_OL.jpg?t=1786992480",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0011/361/452/11361452_OL.jpg?t=1786992480",
    "off": 0.349,
    "refurb": true
   },
@@ -1356,7 +1384,7 @@
    "ori": 999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13666695",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0013/666/695/13666695_OL.jpg?t=1789638988",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0013/666/695/13666695_OL.jpg?t=1789638988",
    "off": 0.344,
    "refurb": false
   },
@@ -1370,7 +1398,7 @@
    "ori": 27900,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14994690",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0014/994/690/14994690_OL.jpg?t=1772094578",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0014/994/690/14994690_OL.jpg?t=1772094578",
    "off": 0.344,
    "refurb": false
   },
@@ -1398,7 +1426,7 @@
    "ori": 3590,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14235426",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0014/235/426/14235426_OL.jpg?t=1765560732",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0014/235/426/14235426_OL.jpg?t=1765560732",
    "off": 0.341,
    "refurb": false
   },
@@ -1412,22 +1440,8 @@
    "ori": 6490,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14951472",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/951/472/14951472_OL.jpg?t=1770704959",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0014/951/472/14951472_OL.jpg?t=1770704959",
    "off": 0.339,
-   "refurb": false
-  },
-  {
-   "site": "momo",
-   "cat": "周邊",
-   "id": "14587509",
-   "name": "【Razer 雷蛇】Basilisk V3 X HyperSpeed 巴塞利斯蛇 X速度版 無線電競滑鼠",
-   "sub": "滿1件享9折",
-   "price": 1519,
-   "ori": 2290,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14587509",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0014/587/509/14587509_OL.jpg?t=1761188172",
-   "off": 0.337,
    "refurb": false
   },
   {
@@ -1440,7 +1454,7 @@
    "ori": 1190,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14636767",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/636/767/14636767_OL.jpg?t=1781263519",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0014/636/767/14636767_OL.jpg?t=1781263519",
    "off": 0.336,
    "refurb": false
   },
@@ -1454,7 +1468,7 @@
    "ori": 5990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13729195",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0013/729/195/13729195_OL.jpg?t=1773679288",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0013/729/195/13729195_OL.jpg?t=1773679288",
    "off": 0.334,
    "refurb": false
   },
@@ -1468,7 +1482,7 @@
    "ori": 2980,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15681660",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/681/660/15681660_OL.jpg?t=1788944923",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/681/660/15681660_OL.jpg?t=1788944923",
    "off": 0.332,
    "refurb": false
   },
@@ -1482,7 +1496,21 @@
    "ori": 4290,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14585829",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/585/829/14585829_OL.jpg?t=1761161342",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0014/585/829/14585829_OL.jpg?t=1761161342",
+   "off": 0.327,
+   "refurb": false
+  },
+  {
+   "site": "PChome",
+   "cat": "周邊",
+   "id": "DRAF02-A900G4YH2-000",
+   "name": "【CS22】WIFI訊號路由器",
+   "sub": "",
+   "price": 599,
+   "ori": 890,
+   "low": 0,
+   "url": "https://24h.pchome.com.tw/prod/DRAF02-A900G4YH2",
+   "img": "https://img.pchome.com.tw/cs/items/DRAF02A900G4YH2/000001_1678870359.jpg",
    "off": 0.327,
    "refurb": false
   },
@@ -1496,7 +1524,7 @@
    "ori": 44900,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14277451",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0014/277/451/14277451_OL.jpg?t=1774430891",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0014/277/451/14277451_OL.jpg?t=1774430891",
    "off": 0.324,
    "refurb": false
   },
@@ -1510,7 +1538,21 @@
    "ori": 1180,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9399625",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0009/399/625/9399625_OL.jpg?t=1743486315",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0009/399/625/9399625_OL.jpg?t=1743486315",
+   "off": 0.323,
+   "refurb": false
+  },
+  {
+   "site": "momo",
+   "cat": "周邊",
+   "id": "14371036",
+   "name": "【KINYO】固態防爆無線充電行動電源 自帶AC apple watch充電(KPB-2310)",
+   "sub": "AC 100-240V全球通用",
+   "price": 1680,
+   "ori": 2480,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14371036",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0014/371/036/14371036_OL.jpg?t=1791195971",
    "off": 0.323,
    "refurb": false
   },
@@ -1524,7 +1566,7 @@
    "ori": 2580,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14960931",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/960/931/14960931_OL.jpg?t=1770615917",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0014/960/931/14960931_OL.jpg?t=1770615917",
    "off": 0.322,
    "refurb": false
   },
@@ -1558,16 +1600,16 @@
   },
   {
    "site": "momo",
-   "cat": "周邊",
-   "id": "13716583",
-   "name": "【Logitech G】PRO X TKL RAPID 磁性類比式鍵軸有線電競鍵盤",
-   "sub": "最高折200",
-   "price": 4490,
-   "ori": 6490,
+   "cat": "3C",
+   "id": "15154849",
+   "name": "【CHIMEI 奇美】24.5吋GO奇機256GB 可攜式+觸控智慧螢幕(GO奇機支架組)",
+   "sub": "滿1件折3689",
+   "price": 22111,
+   "ori": 31990,
    "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13716583",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0013/716/583/13716583_OL.jpg?t=1792594586",
-   "off": 0.308,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15154849",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/154/849/15154849_OL.jpg?t=1792474977",
+   "off": 0.309,
    "refurb": false
   },
   {
@@ -1594,35 +1636,7 @@
    "ori": 10039,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15638639",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/638/639/15638639_OL.jpg?t=1791825725",
-   "off": 0.304,
-   "refurb": false
-  },
-  {
-   "site": "momo",
-   "cat": "3C",
-   "id": "15235463",
-   "name": "【Samsung 三星】T5 EVO 2TB Type-C USB 3.2 Gen 1 外接式ssd固態硬碟(MU-PM2T0G/WW)",
-   "sub": "",
-   "price": 6988,
-   "ori": 10039,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15235463",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/235/463/15235463_OL.jpg?t=1789069146",
-   "off": 0.304,
-   "refurb": false
-  },
-  {
-   "site": "momo",
-   "cat": "周邊",
-   "id": "9107409",
-   "name": "【Tronsmart】Element T6 Max 防水藍牙喇叭(影院級低音實力派)",
-   "sub": "360度環繞音60W大功率喇叭",
-   "price": 2980,
-   "ori": 4280,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9107409",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0009/107/409/9107409_OL.jpg?t=1780051054",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0015/638/639/15638639_OL.jpg?t=1791825725",
    "off": 0.304,
    "refurb": false
   },
@@ -1631,12 +1645,12 @@
    "cat": "3C",
    "id": "15024832",
    "name": "【MSI 微星】Claw 7 AI+ 7吋電競掌機(Ultra 7 258V/32G/512G PCIe SSD/W11/A2VM-002TW)",
-   "sub": "超甜價格錯過沒有!",
+   "sub": "滿1件折6901",
    "price": 22999,
    "ori": 32900,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15024832",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/024/832/15024832_OL.jpg?t=1773845073",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0015/024/832/15024832_OL.jpg?t=1773845073",
    "off": 0.301,
    "refurb": false
   },
@@ -1657,20 +1671,6 @@
   {
    "site": "momo",
    "cat": "周邊",
-   "id": "14286778",
-   "name": "【QCY】Air 輕巧真無線藍牙耳機(輕盈舒適 質感升級)",
-   "sub": "輕盈舒適 質感升級",
-   "price": 699,
-   "ori": 1000,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14286778",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/286/778/14286778_OL.jpg?t=1780339122",
-   "off": 0.301,
-   "refurb": false
-  },
-  {
-   "site": "momo",
-   "cat": "周邊",
    "id": "15005122",
    "name": "【Gigastone 立達國際】2入組 PD/QC3.0 45W雙孔快速充電器PD-6450W(iPhone/手機/平板/快充充電頭)",
    "sub": "單使用C孔最高可達48W",
@@ -1678,7 +1678,7 @@
    "ori": 798,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15005122",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/005/122/15005122_OL.jpg?t=1790143417",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/005/122/15005122_OL.jpg?t=1790143417",
    "off": 0.301,
    "refurb": false
   },
@@ -1694,6 +1694,20 @@
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10854734",
    "img": "https://img1.momoshop.com.tw/goodsimg/0010/854/734/10854734_OL.jpg?t=1780334661",
    "off": 0.3,
+   "refurb": false
+  },
+  {
+   "site": "PChome",
+   "cat": "數位",
+   "id": "DGADAV-A900K7JW3-000",
+   "name": "即可拍相機 氧氣相機 透明相機 傻瓜相機  Oxygen Camera 可重複使用 ISO200",
+   "sub": "",
+   "price": 1390,
+   "ori": 1980,
+   "low": 0,
+   "url": "https://24h.pchome.com.tw/prod/DGADAV-A900K7JW3",
+   "img": "https://img.pchome.com.tw/cs/items/DGADAVA900K7JW3/000001_1783654957.jpg",
+   "off": 0.298,
    "refurb": false
   },
   {
@@ -1734,7 +1748,7 @@
    "ori": 11990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15006415",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/006/415/15006415_OL.jpg?t=1783001852",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/006/415/15006415_OL.jpg?t=1783001852",
    "off": 0.288,
    "refurb": false
   },
@@ -1748,22 +1762,8 @@
    "ori": 11990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15006419",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/006/419/15006419_OL.jpg?t=1783001853",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/006/419/15006419_OL.jpg?t=1783001853",
    "off": 0.288,
-   "refurb": false
-  },
-  {
-   "site": "PChome",
-   "cat": "數位",
-   "id": "DSBC1Q-A900BMV1V-000",
-   "name": "台灣製TAKEWAY平板電腦架 平板電腦座支架T-TH01適Apple蘋果iPad 2 3 4 min air",
-   "sub": "",
-   "price": 499,
-   "ori": 700,
-   "low": 0,
-   "url": "https://24h.pchome.com.tw/prod/DSBC1Q-A900BMV1V",
-   "img": "https://img.pchome.com.tw/cs/items/DSBC1QA900BMV1V/000001_1787213833.jpg",
-   "off": 0.287,
    "refurb": false
   },
   {
@@ -1790,7 +1790,7 @@
    "ori": 5999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14889295",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0014/889/295/14889295_OL.jpg?t=1791478481",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0014/889/295/14889295_OL.jpg?t=1791478481",
    "off": 0.285,
    "refurb": false
   },
@@ -1823,20 +1823,6 @@
    "refurb": false
   },
   {
-   "site": "PChome",
-   "cat": "通訊",
-   "id": "DYAGHW-A900JPCYP-000",
-   "name": "三星S26+碳纖維拉絲紋防摔軟殼套_黑",
-   "sub": "",
-   "price": 399,
-   "ori": 550,
-   "low": 0,
-   "url": "https://24h.pchome.com.tw/prod/DYAGHW-A900JPCYP",
-   "img": "https://img.pchome.com.tw/cs/items/DYAGHWA900JPCYP/000001_1770176835.jpg",
-   "off": 0.275,
-   "refurb": false
-  },
-  {
    "site": "momo",
    "cat": "數位",
    "id": "13635230",
@@ -1846,7 +1832,7 @@
    "ori": 7299,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13635230",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/635/230/13635230_OL.jpg?t=1770169132",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0013/635/230/13635230_OL.jpg?t=1770169132",
    "off": 0.274,
    "refurb": false
   },
@@ -1860,7 +1846,7 @@
    "ori": 10990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15036614",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/036/614/15036614_OL.jpg?t=1785590966",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0015/036/614/15036614_OL.jpg?t=1785590966",
    "off": 0.273,
    "refurb": false
   },
@@ -1874,7 +1860,7 @@
    "ori": 2199,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15028970",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/028/970/15028970_OL.jpg?t=1781721208",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/028/970/15028970_OL.jpg?t=1781721208",
    "off": 0.273,
    "refurb": false
   },
@@ -1888,7 +1874,7 @@
    "ori": 1599,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15712122",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/712/122/15712122_OL.jpg?t=1790855087",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/712/122/15712122_OL.jpg?t=1790855087",
    "off": 0.269,
    "refurb": false
   },
@@ -1902,7 +1888,7 @@
    "ori": 1090,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=7709210",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0007/709/210/7709210_OL.jpg?t=1761530271",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0007/709/210/7709210_OL.jpg?t=1761530271",
    "off": 0.267,
    "refurb": false
   },
@@ -1944,7 +1930,7 @@
    "ori": 3490,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13901382",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/901/382/13901382_OL.jpg?t=1747285341",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0013/901/382/13901382_OL.jpg?t=1747285341",
    "off": 0.261,
    "refurb": false
   },
@@ -1958,7 +1944,7 @@
    "ori": 2680,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9351734",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0009/351/734/9351734_OL.jpg?t=1703816873",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0009/351/734/9351734_OL.jpg?t=1703816873",
    "off": 0.261,
    "refurb": false
   },
@@ -1972,7 +1958,7 @@
    "ori": 1090,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12316732",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0012/316/732/12316732_OL.jpg?t=1748581257",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0012/316/732/12316732_OL.jpg?t=1748581257",
    "off": 0.26,
    "refurb": false
   },
@@ -2019,6 +2005,20 @@
    "refurb": false
   },
   {
+   "site": "PChome",
+   "cat": "周邊",
+   "id": "QBAB2O-A9009TAAF-000",
+   "name": "Wharfedale 落地式喇叭 D330",
+   "sub": "",
+   "price": 21500,
+   "ori": 28900,
+   "low": 0,
+   "url": "https://24h.pchome.com.tw/prod/QBAB2O-A9009TAAF",
+   "img": "https://img.pchome.com.tw/cs/items/QBAB2OA9009TAAF/000001_1550564622.jpg",
+   "off": 0.256,
+   "refurb": false
+  },
+  {
    "site": "momo",
    "cat": "3C",
    "id": "10601822",
@@ -2028,7 +2028,7 @@
    "ori": 1598,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10601822",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0010/601/822/10601822_OL.jpg?t=1721268686",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0010/601/822/10601822_OL.jpg?t=1721268686",
    "off": 0.253,
    "refurb": false
   },
@@ -2042,35 +2042,7 @@
    "ori": 3990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14949515",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0014/949/515/14949515_OL.jpg?t=1790905348",
-   "off": 0.251,
-   "refurb": false
-  },
-  {
-   "site": "momo",
-   "cat": "周邊",
-   "id": "12793095",
-   "name": "【Logitech G】G502 X Lightspeed 高效能無線電競滑鼠",
-   "sub": "最高折200",
-   "price": 2990,
-   "ori": 3990,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12793095",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0012/793/095/12793095_OL.jpg?t=1770361378",
-   "off": 0.251,
-   "refurb": false
-  },
-  {
-   "site": "momo",
-   "cat": "周邊",
-   "id": "14584756",
-   "name": "【Logitech G】G321 LIGHTSPEED雙模無線遊戲耳機",
-   "sub": "210 公克輕盈舒適",
-   "price": 1490,
-   "ori": 1990,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14584756",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/584/756/14584756_OL.jpg?t=1761909338",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0014/949/515/14949515_OL.jpg?t=1790905348",
    "off": 0.251,
    "refurb": false
   },
@@ -2084,7 +2056,7 @@
    "ori": 399,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14886416",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/886/416/14886416_OL.jpg?t=1790685674",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0014/886/416/14886416_OL.jpg?t=1790685674",
    "off": 0.251,
    "refurb": false
   },
@@ -2098,7 +2070,7 @@
    "ori": 43900,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13636508",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0013/636/508/13636508_OL.jpg?t=1778809330",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0013/636/508/13636508_OL.jpg?t=1778809330",
    "off": 0.251,
    "refurb": false
   },
@@ -2117,17 +2089,31 @@
    "refurb": false
   },
   {
+   "site": "PChome",
+   "cat": "數位",
+   "id": "QAAQ67-A9007PU08-000",
+   "name": "JJC立體相機包內膽包OC-MC1GR,特戰迷彩,中",
+   "sub": "",
+   "price": 510,
+   "ori": 680,
+   "low": 0,
+   "url": "https://24h.pchome.com.tw/prod/QAAQ67-A9007PU08",
+   "img": "https://img.pchome.com.tw/cs/items/QAAQ67A9007PU08/000001_1697627553.jpg",
+   "off": 0.25,
+   "refurb": false
+  },
+  {
    "site": "momo",
    "cat": "周邊",
-   "id": "14144121",
-   "name": "【OPPO】官方旗艦 Enco Buds3 真無線耳機",
-   "sub": "12.4mm複合式鍍鈦震膜動圈",
-   "price": 899,
-   "ori": 1199,
+   "id": "13317080",
+   "name": "【Gigastone 立達國際】GaN 45W氮化鎵Type-C三孔快充充電器+C to C充電傳輸線(支援iPhone17/16/筆電充電頭)",
+   "sub": "iPhone17必備快充充電組",
+   "price": 599,
+   "ori": 798,
    "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14144121",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/144/121/14144121_OL.jpg?t=1752642137",
-   "off": 0.25,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13317080",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0013/317/080/13317080_OL.jpg?t=1759822071",
+   "off": 0.249,
    "refurb": false
   },
   {
@@ -2154,7 +2140,7 @@
    "ori": 2990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15348909",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/348/909/15348909_OL.jpg?t=1790866351",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/348/909/15348909_OL.jpg?t=1790866351",
    "off": 0.248,
    "refurb": false
   },
@@ -2168,7 +2154,7 @@
    "ori": 35980,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11189125",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0011/189/125/11189125_OL.jpg?t=1692483074",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0011/189/125/11189125_OL.jpg?t=1692483074",
    "off": 0.245,
    "refurb": false
   },
@@ -2182,7 +2168,7 @@
    "ori": 2899,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15663341",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/663/341/15663341_OL.jpg?t=1788503182",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0015/663/341/15663341_OL.jpg?t=1788503182",
    "off": 0.241,
    "refurb": false
   },
@@ -2196,7 +2182,7 @@
    "ori": 1680,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12119906",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0012/119/906/12119906_OL.jpg?t=1792465167",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0012/119/906/12119906_OL.jpg?t=1792465167",
    "off": 0.238,
    "refurb": false
   },
@@ -2224,22 +2210,22 @@
    "ori": 2990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14822691",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0014/822/691/14822691_OL.jpg?t=1775732777",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0014/822/691/14822691_OL.jpg?t=1775732777",
    "off": 0.238,
    "refurb": false
   },
   {
-   "site": "momo",
-   "cat": "周邊",
-   "id": "6206427",
-   "name": "【Logitech G】G502 Hero 電競有線滑鼠",
-   "sub": "最高折200",
-   "price": 1290,
-   "ori": 1690,
+   "site": "PChome",
+   "cat": "3C",
+   "id": "DGAG0H-A900IZ985-000",
+   "name": "SanDisk CREATOR SD UHS-II 記憶卡 128GB(公司貨)",
+   "sub": "",
+   "price": 4290,
+   "ori": 5599,
    "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=6206427",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0006/206/427/6206427_OL.jpg?t=1770361365",
-   "off": 0.237,
+   "url": "https://24h.pchome.com.tw/prod/DGAG0H-A900IZ985",
+   "img": "https://img.pchome.com.tw/cs/items/DGAG0HA900IZ985/000001_1767928796.jpg",
+   "off": 0.234,
    "refurb": false
   },
   {
@@ -2252,7 +2238,7 @@
    "ori": 10039,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14533856",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0014/533/856/14533856_OL.jpg?t=1789069152",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0014/533/856/14533856_OL.jpg?t=1789069152",
    "off": 0.234,
    "refurb": false
   },
@@ -2271,6 +2257,20 @@
    "refurb": false
   },
   {
+   "site": "PChome",
+   "cat": "周邊",
+   "id": "DPAE04-A900GRXXV-000",
+   "name": "AIRPULSE A80 主動式喇叭 蒂芬尼藍",
+   "sub": "",
+   "price": 22900,
+   "ori": 29900,
+   "low": 22300,
+   "url": "https://24h.pchome.com.tw/prod/DPAE04-A900GRXXV",
+   "img": "https://img.pchome.com.tw/cs/items/DPAE04A900GRXXV/000001_1698579272.jpg",
+   "off": 0.234,
+   "refurb": false
+  },
+  {
    "site": "momo",
    "cat": "周邊",
    "id": "11455866",
@@ -2280,7 +2280,7 @@
    "ori": 2990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11455866",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0011/455/866/11455866_OL.jpg?t=1770199450",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0011/455/866/11455866_OL.jpg?t=1770199450",
    "off": 0.234,
    "refurb": false
   },
@@ -2301,20 +2301,6 @@
   {
    "site": "momo",
    "cat": "周邊",
-   "id": "15039225",
-   "name": "【CHOZEN】超薄磁吸固態行動電源10000mAh｜15W固態快充｜安全防爆｜旋轉支架｜航空可攜｜三色任選 E-PW22",
-   "sub": "極輕薄.極安全｜輕鬆帶著走",
-   "price": 1680,
-   "ori": 2190,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15039225",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/039/225/15039225_OL.jpg?t=1776083810",
-   "off": 0.233,
-   "refurb": false
-  },
-  {
-   "site": "momo",
-   "cat": "周邊",
    "id": "15007102",
    "name": "【Anker】官方授權直營 A121A 70W GaN 3孔快充充電器(黑/白/可充筆電/平板/NS2/iPhone17系列/S26系列)",
    "sub": "挑戰世界最小?!業界最低溫",
@@ -2322,7 +2308,7 @@
    "ori": 1290,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15007102",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/007/102/15007102_OL.jpg?t=1790956678",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/007/102/15007102_OL.jpg?t=1790956678",
    "off": 0.233,
    "refurb": false
   },
@@ -2336,7 +2322,7 @@
    "ori": 2999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14023599",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0014/023/599/14023599_OL.jpg?t=1784028758",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0014/023/599/14023599_OL.jpg?t=1784028758",
    "off": 0.233,
    "refurb": false
   },
@@ -2350,7 +2336,7 @@
    "ori": 7299,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15012419",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/012/419/15012419_OL.jpg?t=1792034504",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/012/419/15012419_OL.jpg?t=1792034504",
    "off": 0.233,
    "refurb": false
   },
@@ -2364,7 +2350,7 @@
    "ori": 6508,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8146068",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0008/146/068/8146068_OL.jpg?t=1773310066",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0008/146/068/8146068_OL.jpg?t=1773310066",
    "off": 0.232,
    "refurb": false
   },
@@ -2378,7 +2364,7 @@
    "ori": 2590,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=7487701",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0007/487/701/7487701_OL.jpg?t=1774600061",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0007/487/701/7487701_OL.jpg?t=1774600061",
    "off": 0.232,
    "refurb": false
   },
@@ -2392,22 +2378,8 @@
    "ori": 10388,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8146069",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0008/146/069/8146069_OL.jpg?t=1773310068",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0008/146/069/8146069_OL.jpg?t=1773310068",
    "off": 0.231,
-   "refurb": false
-  },
-  {
-   "site": "PChome",
-   "cat": "3C",
-   "id": "DQAUF2-A900KJH2F-000",
-   "name": "【佳美多】升降架 顯示器增高架 電腦螢幕架 桌面增高架 顯示器底座 可調節螢幕架 高度可調",
-   "sub": "",
-   "price": 2403,
-   "ori": 3099,
-   "low": 0,
-   "url": "https://24h.pchome.com.tw/prod/DQAUF2-A900KJH2F",
-   "img": "https://img.pchome.com.tw/cs/items/DQAUF2A900KJH2F/000001_1791277324.jpg",
-   "off": 0.225,
    "refurb": false
   },
   {
@@ -2420,7 +2392,7 @@
    "ori": 12900,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15227097",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/227/097/15227097_OL.jpg?t=1781075865",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/227/097/15227097_OL.jpg?t=1781075865",
    "off": 0.225,
    "refurb": false
   },
@@ -2434,7 +2406,7 @@
    "ori": 4880,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13659449",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0013/659/449/13659449_OL.jpg?t=1737608734",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0013/659/449/13659449_OL.jpg?t=1737608734",
    "off": 0.225,
    "refurb": false
   },
@@ -2471,7 +2443,7 @@
    "cat": "筆電",
    "id": "15059252",
    "name": "【Lenovo】15.6吋Ryzen 3輕薄筆電(IdeaPad Slim 3/R3-7320U/8G/512G/W11)",
-   "sub": "滿1件折1000",
+   "sub": "",
    "price": 13990,
    "ori": 17990,
    "low": 0,
@@ -2490,7 +2462,7 @@
    "ori": 6299,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13635231",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0013/635/231/13635231_OL.jpg?t=1762753871",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0013/635/231/13635231_OL.jpg?t=1762753871",
    "off": 0.222,
    "refurb": false
   },
@@ -2504,7 +2476,7 @@
    "ori": 6299,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14604027",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/604/027/14604027_OL.jpg?t=1775012249",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0014/604/027/14604027_OL.jpg?t=1775012249",
    "off": 0.222,
    "refurb": false
   },
@@ -2518,7 +2490,7 @@
    "ori": 7299,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14349557",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/349/557/14349557_OL.jpg?t=1790927091",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0014/349/557/14349557_OL.jpg?t=1790927091",
    "off": 0.219,
    "refurb": false
   },
@@ -2546,7 +2518,7 @@
    "ori": 23990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12608515",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0012/608/515/12608515_OL.jpg?t=1787238329",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0012/608/515/12608515_OL.jpg?t=1787238329",
    "off": 0.217,
    "refurb": false
   },
@@ -2560,7 +2532,7 @@
    "ori": 22990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14051153",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0014/051/153/14051153_OL.jpg?t=1792675333",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0014/051/153/14051153_OL.jpg?t=1792675333",
    "off": 0.217,
    "refurb": false
   },
@@ -2574,7 +2546,7 @@
    "ori": 2499,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10346468",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0010/346/468/10346468_OL.jpg?t=1784871363",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0010/346/468/10346468_OL.jpg?t=1784871363",
    "off": 0.216,
    "refurb": false
   },
@@ -2594,6 +2566,20 @@
   },
   {
    "site": "momo",
+   "cat": "數位",
+   "id": "14916876",
+   "name": "【Nintendo 任天堂】NS2 Switch 2瑪利歐賽車世界(台灣公司貨-中文版)",
+   "sub": "繁體中文版",
+   "price": 1790,
+   "ori": 2280,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14916876",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0014/916/876/14916876_OL.jpg?t=1769421422",
+   "off": 0.215,
+   "refurb": false
+  },
+  {
+   "site": "momo",
    "cat": "筆電",
    "id": "15631805",
    "name": "【ASUS 華碩】包鼠組★15.6吋Core 5輕薄筆電(Core 5-315/16G/512G SSD/W11/VivoBook X1504MA)",
@@ -2604,6 +2590,20 @@
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15631805",
    "img": "https://img1.momoshop.com.tw/goodsimg/0015/631/805/15631805_OL.jpg?t=1790220465",
    "off": 0.214,
+   "refurb": false
+  },
+  {
+   "site": "PChome",
+   "cat": "周邊",
+   "id": "DSBC3N-A900HKIRR-000",
+   "name": "Philips 飛利浦   多功能十合一螢幕顯示行動電源DLP4347C   4色可選",
+   "sub": "",
+   "price": 1580,
+   "ori": 1999,
+   "low": 0,
+   "url": "https://24h.pchome.com.tw/prod/DSBC3N-A900HKIRR",
+   "img": "https://img.pchome.com.tw/cs/items/DSBC3NA900HKIRR/000001_1740406251.jpg",
+   "off": 0.21,
    "refurb": false
   },
   {
@@ -2630,8 +2630,22 @@
    "ori": 10980,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14041550",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0014/041/550/14041550_OL.jpg?t=1747879809",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0014/041/550/14041550_OL.jpg?t=1747879809",
    "off": 0.205,
+   "refurb": false
+  },
+  {
+   "site": "PChome",
+   "cat": "周邊",
+   "id": "QAAM3Y-A9007NWC0-000",
+   "name": "Just Mobile Highway Max 2.4A雙USB鋁質車充",
+   "sub": "",
+   "price": 790,
+   "ori": 990,
+   "low": 0,
+   "url": "https://24h.pchome.com.tw/prod/QAAM3Y-A9007NWC0",
+   "img": "https://img.pchome.com.tw/cs/items/QAAM3YA9007NWC0/000001_1778486254.jpg",
+   "off": 0.202,
    "refurb": false
   },
   {
@@ -2658,7 +2672,7 @@
    "ori": 990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14912195",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/912/195/14912195_OL.jpg?t=1789111086",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0014/912/195/14912195_OL.jpg?t=1789111086",
    "off": 0.202,
    "refurb": false
   },
@@ -2672,21 +2686,7 @@
    "ori": 349,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=7877136",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0007/877/136/7877136_OL.jpg?t=1768463300",
-   "off": 0.201,
-   "refurb": false
-  },
-  {
-   "site": "PChome",
-   "cat": "周邊",
-   "id": "DSAR0V-A900H7LLA-000",
-   "name": "羅技 Wave Keys 人體工學鍵盤 - 玫瑰粉",
-   "sub": "",
-   "price": 1990,
-   "ori": 2490,
-   "low": 0,
-   "url": "https://24h.pchome.com.tw/prod/DSAR0V-A900H7LLA",
-   "img": "https://img.pchome.com.tw/cs/items/DSAR0VA900H7LLA/000001_1776400127.jpg",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0007/877/136/7877136_OL.jpg?t=1768463300",
    "off": 0.201,
    "refurb": false
   },
@@ -2700,7 +2700,7 @@
    "ori": 2490,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12109815",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0012/109/815/12109815_OL.jpg?t=1783338678",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0012/109/815/12109815_OL.jpg?t=1783338678",
    "off": 0.201,
    "refurb": false
   },
@@ -2719,6 +2719,20 @@
    "refurb": false
   },
   {
+   "site": "PChome",
+   "cat": "筆電",
+   "id": "DSBC1T-A900J1GRJ-000",
+   "name": "【台灣代理公司貨 免運費】筆電散熱支架 鋁合金筆電支架 摺疊筆電架 散熱架",
+   "sub": "",
+   "price": 399,
+   "ori": 499,
+   "low": 0,
+   "url": "https://24h.pchome.com.tw/prod/DSBC1T-A900J1GRJ",
+   "img": "https://img.pchome.com.tw/cs/items/DSBC1TA900J1GRJ/000001_1784018183.jpg",
+   "off": 0.2,
+   "refurb": false
+  },
+  {
    "site": "momo",
    "cat": "3C",
    "id": "6849822",
@@ -2728,7 +2742,7 @@
    "ori": 999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=6849822",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0006/849/822/6849822_OL.jpg?t=1768463306",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0006/849/822/6849822_OL.jpg?t=1768463306",
    "off": 0.2,
    "refurb": false
   },
@@ -2742,21 +2756,7 @@
    "ori": 799,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10389042",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0010/389/042/10389042_OL.jpg?t=1722803642",
-   "off": 0.2,
-   "refurb": false
-  },
-  {
-   "site": "PChome",
-   "cat": "周邊",
-   "id": "DCBE1S-A900IBNR9-000",
-   "name": "MP-5000ALB 口袋型快充行動電源 黑色",
-   "sub": "",
-   "price": 799,
-   "ori": 999,
-   "low": 0,
-   "url": "https://24h.pchome.com.tw/prod/DCBE1S-A900IBNR9",
-   "img": "https://img.pchome.com.tw/cs/items/DCBE1SA900IBNR9/000001_1791424298.jpg",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0010/389/042/10389042_OL.jpg?t=1722803642",
    "off": 0.2,
    "refurb": false
   },
@@ -2770,7 +2770,7 @@
    "ori": 499,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=7871399",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0007/871/399/7871399_OL.jpg?t=1770704956",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0007/871/399/7871399_OL.jpg?t=1770704956",
    "off": 0.2,
    "refurb": false
   },
@@ -2798,7 +2798,7 @@
    "ori": 22490,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15524770",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/524/770/15524770_OL.jpg?t=1785121414",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0015/524/770/15524770_OL.jpg?t=1785121414",
    "off": 0.2,
    "refurb": false
   },
@@ -2812,8 +2812,22 @@
    "ori": 19990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15475578",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/475/578/15475578_OL.jpg?t=1783965905",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0015/475/578/15475578_OL.jpg?t=1783965905",
    "off": 0.2,
+   "refurb": false
+  },
+  {
+   "site": "PChome",
+   "cat": "3C",
+   "id": "DQAUF2-A900KJH2N-000",
+   "name": "【佳美多】電腦螢幕架 顯示器增高架 升降架 桌面增高架 顯示器底座 可調節螢幕架 簡約 辦公桌面必備",
+   "sub": "",
+   "price": 2403,
+   "ori": 2999,
+   "low": 0,
+   "url": "https://24h.pchome.com.tw/prod/DQAUF2-A900KJH2N",
+   "img": "https://img.pchome.com.tw/cs/items/DQAUF2A900KJH2N/000001_1791277482.jpg",
+   "off": 0.199,
    "refurb": false
   },
   {
@@ -2833,6 +2847,34 @@
   {
    "site": "momo",
    "cat": "3C",
+   "id": "10950355",
+   "name": "【PHILIPS 飛利浦照明】66219 品笛二代全光譜智慧螢幕掛燈 iD pro(PD052 一揮即亮)",
+   "sub": "滿1件享97折",
+   "price": 2094,
+   "ori": 2599,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10950355",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0010/950/355/10950355_OL.jpg?t=1789567946",
+   "off": 0.194,
+   "refurb": false
+  },
+  {
+   "site": "momo",
+   "cat": "周邊",
+   "id": "14417242",
+   "name": "【BOSE】QuietComfort Ultra 消噪耳機 II 黑色(第二代)",
+   "sub": "台灣官方授權賣場",
+   "price": 12900,
+   "ori": 15800,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14417242",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0014/417/242/14417242_OL.jpg?t=1791875275",
+   "off": 0.184,
+   "refurb": false
+  },
+  {
+   "site": "momo",
+   "cat": "3C",
    "id": "12788604",
    "name": "【BenQ】ScreenBar Pro螢幕智能掛燈-入席偵測版(太空黑)",
    "sub": "滿1件享95折",
@@ -2840,7 +2882,7 @@
    "ori": 4990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12788604",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0012/788/604/12788604_OL.jpg?t=1785858695",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0012/788/604/12788604_OL.jpg?t=1785858695",
    "off": 0.183,
    "refurb": false
   },
@@ -2859,17 +2901,17 @@
    "refurb": false
   },
   {
-   "site": "PChome",
+   "site": "momo",
    "cat": "周邊",
-   "id": "DCAN2Q-A900FBPRO-000",
-   "name": "ACER MOUSE RS宏碁碳纖維滑鼠",
-   "sub": "",
-   "price": 3280,
-   "ori": 3990,
-   "low": 3040,
-   "url": "https://24h.pchome.com.tw/prod/DCAN2Q-A900FBPRO",
-   "img": "https://img.pchome.com.tw/cs/items/DCAN2QA900FBPRO/000001_1658721127.jpg",
-   "off": 0.178,
+   "id": "15748081",
+   "name": "【SHOKZ】OpenRun Air 2 S610 專業運動耳機(三色)",
+   "sub": "雙麥克風，搭配 AI 通話降噪",
+   "price": 4490,
+   "ori": 5490,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15748081",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0015/748/081/15748081_OL.jpg?t=1790731846",
+   "off": 0.182,
    "refurb": false
   },
   {
@@ -2924,7 +2966,7 @@
    "ori": 580,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14321497",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/321/497/14321497_OL.jpg?t=1791196333",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0014/321/497/14321497_OL.jpg?t=1791196333",
    "off": 0.172,
    "refurb": false
   },
@@ -2985,20 +3027,6 @@
    "refurb": false
   },
   {
-   "site": "PChome",
-   "cat": "3C",
-   "id": "DSABUF-A900JDFAC-000",
-   "name": "Samsung 三星S40FG752EC 40吋 40吋 Odyssey G7 曲面電競顯示器 電腦螢幕顯示器",
-   "sub": "",
-   "price": 24900,
-   "ori": 29900,
-   "low": 23655,
-   "url": "https://24h.pchome.com.tw/prod/DSABUF-A900JDFAC",
-   "img": "https://img.pchome.com.tw/cs/items/DSABUFA900JDFAC/000001_1761207357.jpg",
-   "off": 0.167,
-   "refurb": false
-  },
-  {
    "site": "momo",
    "cat": "3C",
    "id": "14425326",
@@ -3008,7 +3036,7 @@
    "ori": 3588,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14425326",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/425/326/14425326_OL.jpg?t=1766486470",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0014/425/326/14425326_OL.jpg?t=1766486470",
    "off": 0.167,
    "refurb": false
   },
@@ -3022,7 +3050,7 @@
    "ori": 599,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=6849821",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0006/849/821/6849821_OL.jpg?t=1768463303",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0006/849/821/6849821_OL.jpg?t=1768463303",
    "off": 0.167,
    "refurb": false
   },
@@ -3037,6 +3065,34 @@
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15252665",
    "img": "https://img1.momoshop.com.tw/goodsimg/0015/252/665/15252665_OL.jpg?t=1789457407",
+   "off": 0.167,
+   "refurb": false
+  },
+  {
+   "site": "momo",
+   "cat": "周邊",
+   "id": "11820580",
+   "name": "【Logitech 羅技】Pebble 2 Combo 無線藍牙鍵盤滑鼠組 K380S+M350S(石墨灰)",
+   "sub": "最高折200",
+   "price": 1790,
+   "ori": 2148,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11820580",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0011/820/580/11820580_OL.jpg?t=1763347763",
+   "off": 0.167,
+   "refurb": false
+  },
+  {
+   "site": "momo",
+   "cat": "數位",
+   "id": "12832088",
+   "name": "【JINPEI 錦沛】真5K解析度、SONY Starvis 微型運動攝影機、觸控螢幕、防水型手震 、APP傳輸(贈64GB)",
+   "sub": "SONY 感光晶片",
+   "price": 3250,
+   "ori": 3900,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12832088",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0012/832/088/12832088_OL.jpg?t=1761027744",
    "off": 0.167,
    "refurb": false
   },
@@ -3078,7 +3134,7 @@
    "ori": 46429,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15411581",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/411/581/15411581_OL.jpg?t=1785144161",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/411/581/15411581_OL.jpg?t=1785144161",
    "off": 0.16,
    "refurb": false
   },
@@ -3106,7 +3162,7 @@
    "ori": 47429,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15710242",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/710/242/15710242_OL.jpg?t=1789660443",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/710/242/15710242_OL.jpg?t=1789660443",
    "off": 0.157,
    "refurb": false
   },
@@ -3120,22 +3176,22 @@
    "ori": 32980,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13689091",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0013/689/091/13689091_OL.jpg?t=1747198879",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0013/689/091/13689091_OL.jpg?t=1747198879",
    "off": 0.156,
    "refurb": false
   },
   {
    "site": "momo",
-   "cat": "數位",
-   "id": "14721816",
-   "name": "【7Artisan 七工匠】AF85mm F1.8 全片幅自動對焦鏡頭(正成公司貨)",
-   "sub": "滿1件享94折",
-   "price": 8037,
-   "ori": 9500,
+   "cat": "周邊",
+   "id": "15047268",
+   "name": "【小米】官方旗艦館 Xiaomi 自帶線行動電源 10000 口袋版-二入組(灰藍色/淺咖色 顏色任選)",
+   "sub": "",
+   "price": 930,
+   "ori": 1098,
    "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14721816",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0014/721/816/14721816_OL.jpg?t=1764143433",
-   "off": 0.154,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15047268",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/047/268/15047268_OL.jpg?t=1773654175",
+   "off": 0.153,
    "refurb": false
   },
   {
@@ -3148,8 +3204,22 @@
    "ori": 16980,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10668237",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0010/668/237/10668237_OL.jpg?t=1792676246",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0010/668/237/10668237_OL.jpg?t=1792676246",
    "off": 0.153,
+   "refurb": false
+  },
+  {
+   "site": "momo",
+   "cat": "周邊",
+   "id": "13226407",
+   "name": "【JLab】FLEX 開放式耳夾藍牙耳機",
+   "sub": "美國運動耳機銷售冠軍耳夾開放式",
+   "price": 1680,
+   "ori": 1980,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13226407",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0013/226/407/13226407_OL.jpg?t=1780022265",
+   "off": 0.152,
    "refurb": false
   },
   {
@@ -3162,7 +3232,7 @@
    "ori": 55900,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15562340",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/562/340/15562340_OL.jpg?t=1786001704",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0015/562/340/15562340_OL.jpg?t=1786001704",
    "off": 0.152,
    "refurb": false
   },
@@ -3176,7 +3246,7 @@
    "ori": 42900,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15610211",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/610/211/15610211_OL.jpg?t=1787132815",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0015/610/211/15610211_OL.jpg?t=1787132815",
    "off": 0.152,
    "refurb": false
   },
@@ -3246,7 +3316,7 @@
    "ori": 11790,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14952607",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0014/952/607/14952607_OL.jpg?t=1791478485",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0014/952/607/14952607_OL.jpg?t=1791478485",
    "off": 0.152,
    "refurb": false
   },
@@ -3260,7 +3330,7 @@
    "ori": 1999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15147525",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0015/147/525/15147525_OL.jpg?t=1776155766",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0015/147/525/15147525_OL.jpg?t=1776155766",
    "off": 0.15,
    "refurb": false
   },
@@ -3275,6 +3345,20 @@
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=7643826",
    "img": "https://img1.momoshop.com.tw/goodsimg/0007/643/826/7643826_OL.jpg?t=1766549718",
+   "off": 0.15,
+   "refurb": false
+  },
+  {
+   "site": "momo",
+   "cat": "周邊",
+   "id": "11455870",
+   "name": "【Logitech 羅技】MX Keys S無線智能鍵盤(藍牙鍵盤、薄膜鍵盤)",
+   "sub": "最高折200",
+   "price": 3390,
+   "ori": 3990,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11455870",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0011/455/870/11455870_OL.jpg?t=1770199480",
    "off": 0.15,
    "refurb": false
   },
@@ -3330,21 +3414,7 @@
    "ori": 93999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15212214",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/212/214/15212214_OL.jpg?t=1790238110",
-   "off": 0.149,
-   "refurb": false
-  },
-  {
-   "site": "momo",
-   "cat": "3C",
-   "id": "14934755",
-   "name": "【小米】官方旗艦館 Xiaomi 2K 電競螢幕 G27Qi 2026(27型/2K/200Hz/1ms/IPS)",
-   "sub": "10月週年慶限定 現折700",
-   "price": 3999,
-   "ori": 4699,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14934755",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/934/755/14934755_OL.jpg?t=1785911435",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/212/214/15212214_OL.jpg?t=1790238110",
    "off": 0.149,
    "refurb": false
   },
@@ -3358,7 +3428,7 @@
    "ori": 3280,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11388034",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0011/388/034/11388034_OL.jpg?t=1787047226",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0011/388/034/11388034_OL.jpg?t=1787047226",
    "off": 0.149,
    "refurb": false
   },
@@ -3470,7 +3540,7 @@
    "ori": 46999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15062066",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/062/066/15062066_OL.jpg?t=1773944582",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/062/066/15062066_OL.jpg?t=1773944582",
    "off": 0.136,
    "refurb": false
   },
@@ -3498,7 +3568,7 @@
    "ori": 7490,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13934632",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0013/934/632/13934632_OL.jpg?t=1790879846",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0013/934/632/13934632_OL.jpg?t=1790879846",
    "off": 0.134,
    "refurb": false
   },
@@ -3512,7 +3582,7 @@
    "ori": 44999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15678468",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/678/468/15678468_OL.jpg?t=1792421045",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/678/468/15678468_OL.jpg?t=1792421045",
    "off": 0.133,
    "refurb": false
   },
@@ -3526,7 +3596,7 @@
    "ori": 4799,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14247638",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0014/247/638/14247638_OL.jpg?t=1787556831",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0014/247/638/14247638_OL.jpg?t=1787556831",
    "off": 0.133,
    "refurb": false
   },
@@ -3540,7 +3610,21 @@
    "ori": 1499,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15770661",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0015/770/661/15770661_OL.jpg?t=1791277380",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0015/770/661/15770661_OL.jpg?t=1791277380",
+   "off": 0.133,
+   "refurb": false
+  },
+  {
+   "site": "momo",
+   "cat": "通訊",
+   "id": "15722714",
+   "name": "65W帶線充電頭組 【honor 榮耀】Magic V6 5G 7.95吋(16G/512G/高通S8 Elite/原廠直營雙保固意外險+延保)",
+   "sub": "滿1件折8601",
+   "price": 57989,
+   "ori": 66878,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15722714",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0015/722/714/15722714_OL.jpg?t=1790221061",
    "off": 0.133,
    "refurb": false
   },
@@ -3554,22 +3638,8 @@
    "ori": 3680,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15313370",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0015/313/370/15313370_OL.jpg?t=1787550190",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/313/370/15313370_OL.jpg?t=1787550190",
    "off": 0.133,
-   "refurb": false
-  },
-  {
-   "site": "momo",
-   "cat": "筆電",
-   "id": "15132043",
-   "name": "【Apple】MacBook Pro 14吋 M5 Pro晶片  15核心CPU 16核心GPU 24G 2TB SSD",
-   "sub": "滿1件折13512",
-   "price": 88888,
-   "ori": 102400,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15132043",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0015/132/043/15132043_OL.jpg?t=1782807446",
-   "off": 0.132,
    "refurb": false
   },
   {
@@ -3582,7 +3652,7 @@
    "ori": 69999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12832085",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0012/832/085/12832085_OL.jpg?t=1748062921",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0012/832/085/12832085_OL.jpg?t=1748062921",
    "off": 0.132,
    "refurb": false
   },
@@ -3596,7 +3666,7 @@
    "ori": 2290,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15546128",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0015/546/128/15546128_OL.jpg?t=1785489141",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/546/128/15546128_OL.jpg?t=1785489141",
    "off": 0.131,
    "refurb": false
   },
@@ -3610,7 +3680,7 @@
    "ori": 57429,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15631981",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/631/981/15631981_OL.jpg?t=1790929950",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/631/981/15631981_OL.jpg?t=1790929950",
    "off": 0.129,
    "refurb": false
   },
@@ -3624,7 +3694,7 @@
    "ori": 59999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12832084",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0012/832/084/12832084_OL.jpg?t=1748062921",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0012/832/084/12832084_OL.jpg?t=1748062921",
    "off": 0.129,
    "refurb": false
   },
@@ -3638,7 +3708,7 @@
    "ori": 39999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15299932",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/299/932/15299932_OL.jpg?t=1779796496",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/299/932/15299932_OL.jpg?t=1779796496",
    "off": 0.125,
    "refurb": false
   },
@@ -3666,7 +3736,7 @@
    "ori": 11999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14414193",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0014/414/193/14414193_OL.jpg?t=1762312593",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0014/414/193/14414193_OL.jpg?t=1762312593",
    "off": 0.125,
    "refurb": false
   },
@@ -3680,7 +3750,7 @@
    "ori": 52429,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15631968",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/631/968/15631968_OL.jpg?t=1790929702",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/631/968/15631968_OL.jpg?t=1790929702",
    "off": 0.123,
    "refurb": false
   },
@@ -3713,20 +3783,6 @@
    "refurb": false
   },
   {
-   "site": "PChome",
-   "cat": "3C",
-   "id": "DCBE24-A900AVUMA-000",
-   "name": "【SanDisk】Ultra microSD UHS-I 128GB 記憶卡",
-   "sub": "",
-   "price": 729,
-   "ori": 829,
-   "low": 0,
-   "url": "https://24h.pchome.com.tw/prod/DCBE24-A900AVUMA",
-   "img": "https://img.pchome.com.tw/cs/items/DCBE24A900AVUMA/000001_1792625986.jpg",
-   "off": 0.121,
-   "refurb": false
-  },
-  {
    "site": "momo",
    "cat": "筆電",
    "id": "15059122",
@@ -3736,8 +3792,22 @@
    "ori": 49990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15059122",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/059/122/15059122_OL.jpg?t=1791202383",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/059/122/15059122_OL.jpg?t=1791202383",
    "off": 0.12,
+   "refurb": false
+  },
+  {
+   "site": "PChome",
+   "cat": "周邊",
+   "id": "DCAN0K-A900J7T3T-000",
+   "name": "【A4 Bloody】L65 MAX (已激活) 輕量RGB電競滑鼠",
+   "sub": "",
+   "price": 1490,
+   "ori": 1690,
+   "low": 0,
+   "url": "https://24h.pchome.com.tw/prod/DCAN0K-A900J7T3T",
+   "img": "https://img.pchome.com.tw/cs/items/DCAN0KA900J7T3T/000001_1759384059.jpg",
+   "off": 0.118,
    "refurb": false
   },
   {
@@ -3750,7 +3820,7 @@
    "ori": 1690,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15647203",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0015/647/203/15647203_OL.jpg?t=1788365273",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0015/647/203/15647203_OL.jpg?t=1788365273",
    "off": 0.118,
    "refurb": false
   },
@@ -3764,7 +3834,7 @@
    "ori": 59999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15607792",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/607/792/15607792_OL.jpg?t=1788319124",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/607/792/15607792_OL.jpg?t=1788319124",
    "off": 0.117,
    "refurb": false
   },
@@ -3834,36 +3904,8 @@
    "ori": 37980,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=6925859",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0006/925/859/6925859_OL.jpg?t=1787715553",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0006/925/859/6925859_OL.jpg?t=1787715553",
    "off": 0.116,
-   "refurb": false
-  },
-  {
-   "site": "momo",
-   "cat": "3C",
-   "id": "14934756",
-   "name": "【小米】官方旗艦館 Xiaomi 電競曲面螢幕 G34WQi 2026(34型/WQHD/180Hz/1ms/VA)",
-   "sub": "滿1件享95折",
-   "price": 6554,
-   "ori": 7399,
-   "low": 0,
-   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14934756",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/934/756/14934756_OL.jpg?t=1785911433",
-   "off": 0.114,
-   "refurb": false
-  },
-  {
-   "site": "PChome",
-   "cat": "3C",
-   "id": "DSBC0V-A900GTQXC-000",
-   "name": "SONY 索尼 TOUGH SF-M128T 記憶卡 【128GB/UHS-II/R277/W150】公司貨",
-   "sub": "",
-   "price": 7980,
-   "ori": 8999,
-   "low": 0,
-   "url": "https://24h.pchome.com.tw/prod/DSBC0V-A900GTQXC",
-   "img": "https://img.pchome.com.tw/cs/items/DSBC0VA900GTQXC/000001_1775649528.jpg",
-   "off": 0.113,
    "refurb": false
   },
   {
@@ -3876,7 +3918,7 @@
    "ori": 21500,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15339427",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0015/339/427/15339427_OL.jpg?t=1780563250",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0015/339/427/15339427_OL.jpg?t=1780563250",
    "off": 0.112,
    "refurb": false
   },
@@ -3890,7 +3932,7 @@
    "ori": 4499,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14754187",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0014/754/187/14754187_OL.jpg?t=1770979928",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0014/754/187/14754187_OL.jpg?t=1770979928",
    "off": 0.111,
    "refurb": false
   },
@@ -3904,7 +3946,7 @@
    "ori": 4499,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15728392",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/728/392/15728392_OL.jpg?t=1792144202",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0015/728/392/15728392_OL.jpg?t=1792144202",
    "off": 0.111,
    "refurb": false
   },
@@ -3946,7 +3988,7 @@
    "ori": 54999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15607846",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/607/846/15607846_OL.jpg?t=1788464252",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/607/846/15607846_OL.jpg?t=1788464252",
    "off": 0.109,
    "refurb": false
   },
@@ -3960,7 +4002,7 @@
    "ori": 54999,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15307998",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/307/998/15307998_OL.jpg?t=1780543673",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/307/998/15307998_OL.jpg?t=1780543673",
    "off": 0.109,
    "refurb": false
   },
@@ -3974,7 +4016,7 @@
    "ori": 17170,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15636899",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/636/899/15636899_OL.jpg?t=1787819207",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/636/899/15636899_OL.jpg?t=1787819207",
    "off": 0.106,
    "refurb": false
   },
@@ -3988,8 +4030,22 @@
    "ori": 1890,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14139348",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0014/139/348/14139348_OL.jpg?t=1791445588",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0014/139/348/14139348_OL.jpg?t=1791445588",
    "off": 0.106,
+   "refurb": false
+  },
+  {
+   "site": "PChome",
+   "cat": "3C",
+   "id": "DGAG8S-A900ALUMO-000",
+   "name": "SanDisk Extreme Pro CF 64GB 記憶卡 1500MB/S (公司貨)",
+   "sub": "",
+   "price": 4480,
+   "ori": 4999,
+   "low": 0,
+   "url": "https://24h.pchome.com.tw/prod/DGAG8S-A900ALUMO",
+   "img": "https://img.pchome.com.tw/cs/items/DGAG8SA900ALUMO/000001_1766480159.jpg",
+   "off": 0.104,
    "refurb": false
   },
   {
@@ -4002,7 +4058,7 @@
    "ori": 2888,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14776229",
-   "img": "https://img3.momoshop.com.tw/goodsimg/0014/776/229/14776229_OL.jpg?t=1767016314",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0014/776/229/14776229_OL.jpg?t=1767016314",
    "off": 0.104,
    "refurb": false
   },
@@ -4030,7 +4086,7 @@
    "ori": 52900,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11038846",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0011/038/846/11038846_OL.jpg?t=1782118942",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0011/038/846/11038846_OL.jpg?t=1782118942",
    "off": 0.104,
    "refurb": false
   },
@@ -4044,8 +4100,22 @@
    "ori": 78990,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14801784",
-   "img": "https://img4.momoshop.com.tw/goodsimg/0014/801/784/14801784_OL.jpg?t=1792674798",
+   "img": "https://img3.momoshop.com.tw/goodsimg/0014/801/784/14801784_OL.jpg?t=1792674798",
    "off": 0.101,
+   "refurb": false
+  },
+  {
+   "site": "momo",
+   "cat": "筆電",
+   "id": "15557242",
+   "name": "【Herschel】官方直營 Peanuts®Snoopy史努比聯名系列- Anchor Sleeve14吋防撞筆電包(兩色任選)",
+   "sub": "史努比迷必收",
+   "price": 1782,
+   "ori": 1980,
+   "low": 0,
+   "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15557242",
+   "img": "https://img1.momoshop.com.tw/goodsimg/0015/557/242/15557242_OL.jpg?t=1787191427",
+   "off": 0.1,
    "refurb": false
   },
   {
@@ -4072,7 +4142,7 @@
    "ori": 49900,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15245915",
-   "img": "https://img2.momoshop.com.tw/goodsimg/0015/245/915/15245915_OL.jpg?t=1779187563",
+   "img": "https://img4.momoshop.com.tw/goodsimg/0015/245/915/15245915_OL.jpg?t=1779187563",
    "off": 0.1,
    "refurb": false
   },
@@ -4100,7 +4170,7 @@
    "ori": 2090,
    "low": 0,
    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14072285",
-   "img": "https://img1.momoshop.com.tw/goodsimg/0014/072/285/14072285_OL.jpg?t=1762440397",
+   "img": "https://img2.momoshop.com.tw/goodsimg/0014/072/285/14072285_OL.jpg?t=1762440397",
    "off": 0.1,
    "refurb": false
   }
