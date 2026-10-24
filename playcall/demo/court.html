@@ -45,12 +45,12 @@ const canvas = document.getElementById('c');
 const arena = createArena(canvas);
 const { THREE, scene, camera } = arena;
 
-// ---------- 球員：HD-2D 點陣角色（art/hd2d，6 欄 × 12 列：正面 6 種動作 + 背面 6 種動作，每格 48×88） ----------
-const SHEET = { cols: 6, rows: 12, cellW: 48, cellH: 88, feet: 2.5, anims: ['idle', 'run', 'dribble', 'shoot', 'defend', 'pass'] };
+// ---------- 球員：HD-2D 點陣角色（art/hd2d，6 欄 × 12 列：正面 6 種動作 + 背面 6 種動作，每格 64×128） ----------
+const SHEET = { cols: 6, rows: 12, cellW: 64, cellH: 128, feet: 2.5, anims: ['idle', 'run', 'dribble', 'shoot', 'defend', 'pass'] };
 const FPS = { idle: 5, run: 12, dribble: 12, shoot: 10, defend: 8, pass: 10 };
 // HD-2D 的角色會刻意比場景放大，手機上才看得清楚
 const PLAYER_SCALE = 1.4;
-const M_PER_PX = (1.88 / 50) * PLAYER_SCALE; // Brunson 50px 高 = 1.88m
+const M_PER_PX = (1.88 / 54) * PLAYER_SCALE; // Brunson 54px 高 = 1.88m（其他人的身高差已在點陣圖裡誇張化）
 const loader = new THREE.TextureLoader();
 
 const shadowTex = (() => {

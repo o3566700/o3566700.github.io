@@ -7,7 +7,7 @@
       "ht 為英吋、wt 為磅，取自官方名單印象值，待核對。",
       "game 為遊戲用的手調值（0-99），沒有直接對應的真實命中率時才使用，理由寫在 why。",
       "look 為點陣圖外型（膚色/髮型/鬍子/體型），憑印象設定，可直接改。",
-      "sprite = HD-2D 點陣角色外型（pixelchar.js）：height 為含頭總身高像素、skin 膚色、hair/beard/eyes 髮型鬍子眼神、build 體型、reach 臂長倍率、extras 配件。"
+      "sprite = HD-2D 點陣角色外型（pixelchar.js）：trait 招牌特徵、height 含頭總身高像素、sw/ww 肩寬/腰寬、arm/leg 手腳粗細、reach 臂長倍率、legRatio 腿佔身體比例、skin/hair/beard/eyes/jaw 五官、extras 配件。特徵刻意誇張化，方便小尺寸辨識。"
     ]
   },
   "teams": [
@@ -64,13 +64,18 @@
           },
           "why": "防守是先發中最弱的一環；矮但壯，碰撞耐受度高。",
           "sprite": {
-            "height": 50,
+            "trait": "超矮超寬、整頭辮子、濃下巴鬍、睏睏的眼睛",
+            "height": 54,
+            "sw": 21,
+            "ww": 17,
+            "arm": 6,
+            "leg": 7,
+            "reach": 0.95,
+            "legRatio": 0.5,
             "skin": "#B9805A",
             "hair": "cornrows",
             "beard": "chin",
             "eyes": "sleepy",
-            "build": "stocky",
-            "reach": 1.0,
             "extras": [
               "wristR"
             ]
@@ -114,12 +119,18 @@
           },
           "why": "82 場全勤（鐵人被動的依據），頂級側翼防守。",
           "sprite": {
-            "height": 57,
+            "trait": "細瘦、手臂長到誇張",
+            "height": 66,
+            "sw": 15,
+            "ww": 11,
+            "arm": 5,
+            "leg": 5,
+            "reach": 1.6,
+            "legRatio": 0.58,
             "skin": "#6E432B",
             "hair": "short",
-            "beard": "light",
-            "build": "slim",
-            "reach": 1.15,
+            "beard": "stubble",
+            "eyes": "normal",
             "extras": []
           }
         },
@@ -163,13 +174,22 @@
           },
           "why": "後衛身材卻是籃板主力；3P% 高但出手少，AI 投三分傾向要低。",
           "sprite": {
-            "height": 53,
+            "trait": "超大一團鬍子、護膝、兇狠眉毛",
+            "height": 59,
+            "sw": 19,
+            "ww": 15,
+            "arm": 6,
+            "leg": 6,
+            "reach": 1.0,
+            "legRatio": 0.54,
             "skin": "#9A6440",
             "hair": "short",
-            "beard": "thick",
-            "build": "stocky",
-            "reach": 1.0,
-            "extras": []
+            "beard": "huge",
+            "eyes": "intense",
+            "extras": [
+              "kneeL",
+              "kneeR"
+            ]
           }
         },
         {
@@ -211,12 +231,19 @@
           },
           "why": "隊上抄截第一，強壯的鎖防側翼。",
           "sprite": {
-            "height": 58,
+            "trait": "肌肉塊頭最大、頭顯得小、落腮鬍",
+            "height": 66,
+            "sw": 25,
+            "ww": 17,
+            "arm": 8,
+            "leg": 7,
+            "reach": 1.1,
+            "legRatio": 0.54,
             "skin": "#5E3A26",
             "hair": "fade",
             "beard": "full",
-            "build": "muscular",
-            "reach": 1.05,
+            "eyes": "normal",
+            "jaw": "square",
             "extras": []
           }
         },
@@ -259,12 +286,19 @@
           },
           "why": "籃板聯盟第 2；投射長人；護框弱（0.5 BLK）。",
           "sprite": {
-            "height": 63,
+            "trait": "高壯、淺膚色、整條手臂刺青、平頭",
+            "height": 74,
+            "sw": 22,
+            "ww": 17,
+            "arm": 6,
+            "leg": 7,
+            "reach": 1.05,
+            "legRatio": 0.56,
             "skin": "#CB9B73",
             "hair": "buzz",
-            "beard": "short",
-            "build": "big",
-            "reach": 1.0,
+            "beard": "boxed",
+            "eyes": "normal",
+            "jaw": "square",
             "extras": [
               "tattoo"
             ]
@@ -327,12 +361,18 @@
           },
           "why": "全場最快；三分偏弱、切入終結強。",
           "sprite": {
-            "height": 51,
+            "trait": "瘦小、腿長、細八字鬍",
+            "height": 58,
+            "sw": 14,
+            "ww": 11,
+            "arm": 4,
+            "leg": 4,
+            "reach": 1.0,
+            "legRatio": 0.62,
             "skin": "#6A4129",
             "hair": "short",
             "beard": "mustache",
-            "build": "slim",
-            "reach": 1.0,
+            "eyes": "normal",
             "extras": []
           }
         },
@@ -373,13 +413,19 @@
           },
           "why": "隊上助攻最多；強壯、愛衝撞的後衛。",
           "sprite": {
-            "height": 57,
+            "trait": "寬肩方下巴、年輕臉",
+            "height": 64,
+            "sw": 22,
+            "ww": 15,
+            "arm": 6,
+            "leg": 6,
+            "reach": 1.02,
+            "legRatio": 0.55,
             "skin": "#5A3825",
             "hair": "fade",
             "beard": "none",
-            "build": "muscular",
-            "reach": 1.02,
-            "young": true,
+            "eyes": "normal",
+            "jaw": "square",
             "extras": []
           }
         },
@@ -423,13 +469,20 @@
           },
           "why": "新秀；明星賽後三分 48%（26 場），可做成「第四節手感上升」。",
           "sprite": {
-            "height": 56,
+            "trait": "娃娃臉、大圓眼、紅臉頰、高筒襪",
+            "height": 62,
+            "sw": 17,
+            "ww": 13,
+            "arm": 5,
+            "leg": 5,
+            "reach": 1.0,
+            "legRatio": 0.56,
             "skin": "#8E5C3B",
             "hair": "short",
             "beard": "none",
-            "build": "normal",
-            "reach": 1.0,
-            "young": true,
+            "eyes": "big",
+            "jaw": "round",
+            "cheeks": true,
             "extras": [
               "socksHigh"
             ]
@@ -474,12 +527,18 @@
           },
           "why": "純射手；兩分效率低，AI 應偏好三分。",
           "sprite": {
-            "height": 56,
+            "trait": "頭頂一大叢扭扭頭、細瘦",
+            "height": 62,
+            "sw": 15,
+            "ww": 12,
+            "arm": 4,
+            "leg": 5,
+            "reach": 1.05,
+            "legRatio": 0.58,
             "skin": "#93603E",
             "hair": "twists",
             "beard": "mustache",
-            "build": "slim",
-            "reach": 1.02,
+            "eyes": "normal",
             "extras": []
           }
         },
@@ -518,13 +577,18 @@
           },
           "why": "史上首位全票 DPOY，3.1 BLK；身高極高但偏瘦，碰撞吃虧。",
           "sprite": {
-            "height": 70,
+            "trait": "誇張地高、細得像竹竿、手垂到膝蓋",
+            "height": 96,
+            "sw": 16,
+            "ww": 11,
+            "arm": 5,
+            "leg": 5,
+            "reach": 1.75,
+            "legRatio": 0.62,
             "skin": "#5A3A28",
             "hair": "curly",
             "beard": "none",
-            "build": "slim",
-            "reach": 1.35,
-            "young": true,
+            "eyes": "normal",
             "extras": []
           }
         }
