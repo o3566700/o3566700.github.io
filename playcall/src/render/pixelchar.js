@@ -415,9 +415,21 @@ function drawArm(buf, arm, S, P, side) {
     const a = [arm.elbow[0] + (arm.wrist[0] - arm.elbow[0]) * 0.65, arm.elbow[1] + (arm.wrist[1] - arm.elbow[1]) * 0.65];
     for (const [k, c] of capsule(a, arm.wrist, r + 0.6, P.band)) px.set(k, c);
   }
-  // 手掌：圓圓的連指手套形
-  for (const [k, c] of capsule(arm.hand, arm.hand, r + 1.0, P.skin)) px.set(k, c);
   buf.paint(px);
+  // 手掌另外畫成獨立零件：和手臂之間有描邊分開，顏色稍亮，加上拇指
+  const dir = [arm.hand[0] - arm.wrist[0], arm.hand[1] - arm.wrist[1]];
+  const len = Math.hypot(...dir) || 1;
+  const ux = dir[0] / len, uy = dir[1] / len;
+  const c = [arm.hand[0] + ux * 0.8, arm.hand[1] + uy * 0.8];
+  const hand = new Map();
+  for (const [k, col] of capsule(c, c, r + 1.1, [P.skin[0], P.skin[0], P.skin[1]])) hand.set(k, col);
+  // 拇指：往前方（右）凸出一格
+  const tx = Math.round(c[0] + -uy * (r + 1.6) + 1), ty = Math.round(c[1] + ux * (r + 1.6) * 0.3);
+  hand.set(`${tx},${ty}`, P.skin[1]);
+  // 指縫：靠末端一列暗色，讓手掌有形
+  const fx = Math.round(c[0] + ux * (r + 0.6)), fy = Math.round(c[1] + uy * (r + 0.6));
+  if (hand.has(`${fx},${fy}`)) hand.set(`${fx},${fy}`, P.skin[2]);
+  buf.paint(hand);
 }
 
 // ---------- 姿勢 ----------
