@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PLAYCALL 球場</title>
+<style>
+  :root { --bg: #0b0c12; --fg: #f2efe8; --nyk: #1f6fd0; --sas: #c4ced4; --accent: #f58426; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); font-family: system-ui, sans-serif; overflow: hidden; }
+  #wrap { position: relative; height: 100%; max-width: 520px; margin: 0 auto; }
+  canvas { display: block; width: 100%; height: 100%; }
+  .score { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 0; border-radius: 8px; overflow: hidden;
+           font-weight: 700; font-size: 15px; box-shadow: 0 2px 10px rgba(0,0,0,.5); letter-spacing: .5px; }
+  .score span { padding: 6px 10px; background: rgba(12,13,20,.85); }
+  .score .nyk { background: var(--nyk); }
+  .score .sas { background: #2b2b33; color: var(--sas); }
+  .score .clock { color: var(--accent); }
+  .ctrl { position: absolute; bottom: 14px; left: 0; right: 0; display: flex; justify-content: center; gap: 8px; padding: 0 16px; }
+  button { background: rgba(28,30,40,.9); color: var(--fg); border: 1px solid #454a5c; border-radius: 10px; padding: 10px 14px; font-size: 14px; }
+  #fps { position: absolute; top: 14px; right: 12px; font: 12px ui-monospace, monospace; opacity: .6; }
+  .note { position: absolute; top: 52px; left: 0; right: 0; text-align: center; font-size: 12px; opacity: .55; }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="c"></canvas>
+  <div class="score"><span class="nyk">NYK 12</span><span class="clock">Q2 0:41</span><span class="sas">SAS 10</span></div>
+  <div class="note">球員為暫代點陣圖，HD-2D 美術完成後替換</div>
+  <div id="fps"></div>
+  <div class="ctrl">
+    <button id="side">攻守換邊</button>
+    <button id="fx">特效：開</button>
+  </div>
+</div>
+<script type="module">
+import { createArena, rimPos } from '../src/render/arena.js';
+
+const canvas = document.getElementById('c');
+const arena = createArena(canvas);
+const { THREE, scene, camera } = arena;
+
+// ---------- 暫代球員（舊的程式點陣圖：4 欄 × 5 列，每格 20×44） ----------
+const SHEET = { cols: 4, rows: 5, cellW: 20, cellH: 44, anims: { idle: [0, 2], run: [1, 4], dribble: [2, 4], shoot: [3, 4], defend: [4, 2] } };
+// HD-2D 的角色會刻意比場景放大，手機上才看得清楚
+const PLAYER_SCALE = 1.4;
+const M_PER_PX = (1.88 / 22) * PLAYER_SCALE; // Brunson 22px 高 = 1.88m
+const loader = new THREE.TextureLoader();
+
+const shadowTex = (() => {
+  const c = document.createElement('canvas'); c.width = c.height = 64;
+  const g = c.getContext('2d'); const grd = g.createRadialGradient(32, 32, 4, 32, 32, 30);
+  grd.addColorStop(0, 'rgba(0,0,0,0.55)'); grd.addColorStop(1, 'rgba(0,0,0,0)');
+  g.fillStyle = grd; g.fillRect(0, 0, 64, 64);
+  return new THREE.CanvasTexture(c);
+})();
+const shadowMat = new THREE.MeshBasicMaterial({ map: shadowTex, transparent: true, depthWrite: false });
+
+function makePlayer(id) {
+  const tex = loader.load(`../art/sprites/${id}.png`);
+  tex.magFilter = THREE.NearestFilter; tex.minFilter = THREE.NearestFilter; tex.colorSpace = THREE.SRGBColorSpace;
+  tex.repeat.set(1 / SHEET.cols, 1 / SHEET.rows);
+  const w = SHEET.cellW * M_PER_PX, h = SHEET.cellH * M_PER_PX;
+  const geo = new THREE.PlaneGeometry(w, h);
+  geo.translate(0, h / 2 - 2 * M_PER_PX, 0); // 腳底（格子底部往上 2px）對齊原點
+  const mesh = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tex, alphaTest: 0.5, roughness: 1, side: THREE.DoubleSide, emissive: 0xffffff, emissiveMap: tex, emissiveIntensity: 0.55 }));
+  const shadow = new THREE.Mesh(new THREE.PlaneGeometry(1.1 * PLAYER_SCALE, 0.55 * PLAYER_SCALE), shadowMat);
+  shadow.rotation.x = -Math.PI / 2; shadow.position.y = 0.01;
+  const grp = new THREE.Group(); grp.add(mesh, shadow); scene.add(grp);
+  return { id, grp, mesh, tex, anim: 'idle', animT: 0, pos: new THREE.Vector3(), prev: new THREE.Vector3(), face: 1 };
+}
+
+function setFrame(p, dt) {
+  const [row, n] = SHEET.anims[p.anim];
+  p.animT += dt;
+  const fps = p.anim === 'idle' ? 3 : p.anim === 'shoot' ? 7 : 9;
+  const f = p.anim === 'shoot' ? Math.min(n - 1, Math.floor(p.animT * fps)) : Math.floor(p.animT * fps) % n;
+  p.tex.offset.set(f / SHEET.cols, 1 - (row + 1) / SHEET.rows);
+}
+
+// 進攻座標以「往上方籃框（z = -12.7）進攻」表示；換邊時鏡像
+const offense = ['nyk_11', 'nyk_25', 'nyk_3', 'nyk_8', 'nyk_32'].map(makePlayer);
+const defense = ['sas_4', 'sas_5', 'sas_2', 'sas_24', 'sas_1'].map(makePlayer);
+const routes = [
+  [[0, -5.6], [-1.8, -6.2], [1.6, -6.0]],          // Brunson 弧頂運球
+  [[5.6, -8.6], [6.6, -12.6], [5.6, -8.6]],         // Bridges 右翼 ↔ 右底角
+  [[-6.6, -12.4], [-5.4, -8.8], [-6.6, -12.4]],     // Hart 左底角 ↔ 左翼
+  [[-3.0, -9.6], [-1.2, -6.8], [-3.0, -9.6]],       // Anunoby 高位
+  [[1.9, -11.2], [-1.9, -11.2], [0.9, -7.4]],       // Towns 低位 ↔ 擋拆
+];
+const rim = rimPos(-1);
+offense.forEach((p, i) => { p.route = routes[i]; p.leg = 0; p.legT = Math.random() * 2; p.pos.set(routes[i][0][0], 0, routes[i][0][1]); });
+defense.forEach((p, i) => { p.mark = offense[i]; p.pos.copy(offense[i].pos); });
+
+// 球
+const ball = new THREE.Mesh(new THREE.SphereGeometry(0.12, 12, 8), new THREE.MeshStandardMaterial({ color: 0xe2712a, emissive: 0x3a1200, roughness: 0.6 }));
+scene.add(ball);
+const ballShadow = new THREE.Mesh(new THREE.PlaneGeometry(0.4, 0.4), shadowMat);
+ballShadow.rotation.x = -Math.PI / 2; ballShadow.position.y = 0.012; scene.add(ballShadow);
+
+// 進球火花
+const sparks = [];
+const sparkMat = new THREE.MeshBasicMaterial({ color: new THREE.Color(2.5, 2.2, 1.4), transparent: true, blending: THREE.AdditiveBlending, depthWrite: false });
+function burst(at) {
+  for (let i = 0; i < 26; i++) {
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(0.08, 0.08), sparkMat.clone());
+    m.position.copy(at);
+    m.userData.v = new THREE.Vector3((Math.random() - 0.5) * 3, Math.random() * 3 + 1, (Math.random() - 0.5) * 3);
+    m.userData.life = 0.7 + Math.random() * 0.4;
+    scene.add(m); sparks.push(m);
+  }
+}
+
+let shot = null; // { t, from, to }
+let shotTimer = 4;
+const brunson = offense[0];
+
+function mirror(v) {
+  // 換邊時把進攻座標鏡像到另一個半場；鏡頭轉場期間平滑過渡
+  return new THREE.Vector3(v.x * mirrorK, v.y, v.z * mirrorK);
+}
+let mirrorK = 1;
+
+function step(dt, time) {
+  const targetK = arena.side < 0 ? 1 : -1;
+  mirrorK += (targetK - mirrorK) * Math.min(1, dt * 2.2);
+
+  // 進攻：沿路線移動，到點後停一下
+  for (const p of offense) {
+    p.prev.copy(p.pos);
+    if (p === brunson && shot && shot.t < 0.45) { p.anim = 'shoot'; continue; }
+    const [tx, tz] = p.route[(p.leg + 1) % p.route.length];
+    const dx = tx - p.pos.x, dz = tz - p.pos.z, d = Math.hypot(dx, dz);
+    if (d > 0.1) {
+      const sp = p === brunson ? 2.2 : 3.2;
+      p.pos.x += (dx / d) * Math.min(d, sp * dt);
+      p.pos.z += (dz / d) * Math.min(d, sp * dt);
+      p.anim = p === brunson ? 'dribble' : 'run';
+    } else {
+      p.legT -= dt;
+      p.anim = p === brunson ? 'dribble' : 'idle';
+      if (p.legT <= 0) { p.leg = (p.leg + 1) % p.route.length; p.legT = 1.2 + Math.random() * 1.5; }
+    }
+  }
+  // 防守：站在對手與籃框之間
+  for (const p of defense) {
+    p.prev.copy(p.pos);
+    const m = p.mark.pos;
+    const toRim = new THREE.Vector3(rim.x - m.x, 0, rim.z - m.z).normalize();
+    const want = new THREE.Vector3(m.x + toRim.x * 1.1, 0, m.z + toRim.z * 1.1);
+    const delta = want.sub(p.pos);
+    const d = delta.length();
+    p.pos.addScaledVector(delta, Math.min(1, (dt * 3.5) / Math.max(d, 0.001)) * Math.min(d, 1));
+    p.anim = 'defend';
+  }
+
+  // 投籃
+  shotTimer -= dt;
+  if (!shot && shotTimer <= 0) { shot = { t: 0 }; brunson.animT = 0; }
+  if (shot) {
+    shot.t += dt;
+    if (shot.t > 0.45 && !shot.from) shot.from = mirror(brunson.pos).add(new THREE.Vector3(0, 2.6, 0));
+    if (shot.t > 1.6) { shot = null; shotTimer = 5 + Math.random() * 2; }
+  }
+
+  // 球位置
+  const bp = mirror(brunson.pos);
+  if (shot && shot.from) {
+    const k = Math.min(1, (shot.t - 0.45) / 1.0);
+    const to = mirror(rim);
+    ball.position.lerpVectors(shot.from, to, k);
+    ball.position.y = THREE.MathUtils.lerp(shot.from.y, to.y, k) + Math.sin(k * Math.PI) * 2.6;
+    if (k >= 1 && !shot.scored) { shot.scored = true; burst(to); arena.hoops[arena.side < 0 ? 0 : 1].userData.net.scale.y = 1.4; }
+    if (k >= 1) ball.position.y = to.y - (shot.t - 1.45) * 6;
+  } else {
+    const bounce = Math.abs(Math.sin(time * 9));
+    const right = new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld, 0);
+    ball.position.copy(bp).addScaledVector(right, 0.32 * brunson.face);
+    ball.position.y = 0.12 + bounce * 0.75;
+  }
+  ballShadow.position.set(ball.position.x, 0.012, ball.position.z);
+  arena.hoops.forEach((h) => (h.userData.net.scale.y += (1 - h.userData.net.scale.y) * Math.min(1, dt * 6)));
+
+  // 更新所有球員：位置、看板朝向、左右翻轉、動畫格
+  const camRight = new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld, 0);
+  for (const p of [...offense, ...defense]) {
+    const world = mirror(p.pos);
+    const vel = world.clone().sub(p.grp.position);
+    p.grp.position.copy(world);
+    p.mesh.rotation.y = Math.atan2(camera.position.x - world.x, camera.position.z - world.z);
+    const sx = vel.dot(camRight);
+    if (Math.abs(sx) > 0.002) p.face = sx > 0 ? 1 : -1;
+    if (p.anim === 'defend') p.face = 1;
+    p.mesh.scale.x = p.face;
+    setFrame(p, dt);
+  }
+  // 火花
+  for (let i = sparks.length - 1; i >= 0; i--) {
+    const s = sparks[i];
+    s.userData.life -= dt;
+    s.userData.v.y -= 6 * dt;
+    s.position.addScaledVector(s.userData.v, dt);
+    s.quaternion.copy(camera.quaternion);
+    s.material.opacity = Math.max(0, s.userData.life);
+    if (s.userData.life <= 0) { scene.remove(s); sparks.splice(i, 1); }
+  }
+}
+
+// ---------- 迴圈與控制 ----------
+window.addEventListener('resize', arena.resize);
+arena.resize();
+document.getElementById('side').onclick = () => arena.switchSide();
+let fxOn = true;
+document.getElementById('fx').onclick = (e) => { fxOn = !fxOn; arena.setEffects(fxOn); e.target.textContent = `特效：${fxOn ? '開' : '關'}`; };
+
+let last = performance.now(), frames = 0, fpsT = 0, time = 0;
+const fpsEl = document.getElementById('fps');
+function tick(dt, render = true) {
+  time += dt;
+  step(dt, time);
+  arena.update(dt, time, render);
+}
+// 自動截圖用：固定步長推進，只畫最後一格
+window.advance = (sec, stepSec = 1 / 30) => {
+  const n = Math.max(1, Math.round(sec / stepSec));
+  for (let i = 0; i < n; i++) tick(stepSec, i === n - 1);
+};
+window.arena = arena;
+function loop(now) {
+  const dt = Math.min(0.05, (now - last) / 1000); last = now;
+  if (!window.__capture) tick(dt);
+  frames++; fpsT += dt; if (fpsT > 1) { fpsEl.textContent = `${frames} fps`; frames = 0; fpsT = 0; }
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+window.ready = true;
+</script>
+</body>
+</html>
