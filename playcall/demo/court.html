@@ -32,8 +32,7 @@
 <div id="wrap">
   <canvas id="c"></canvas>
   <div class="score"><span class="nyk">NYK 12</span><span class="clock">Q2 0:41</span><span class="sas">SAS 10</span></div>
-  <div class="note">球員為暫代點陣圖，HD-2D 美術完成後替換</div>
-  <div id="fps"></div>
+    <div id="fps"></div>
   <div class="ctrl">
     <button id="side">攻守換邊</button>
     <button id="fx">特效：開</button>
@@ -46,11 +45,12 @@ const canvas = document.getElementById('c');
 const arena = createArena(canvas);
 const { THREE, scene, camera } = arena;
 
-// ---------- 暫代球員（舊的程式點陣圖：4 欄 × 5 列，每格 20×44） ----------
-const SHEET = { cols: 4, rows: 5, cellW: 20, cellH: 44, anims: { idle: [0, 2], run: [1, 4], dribble: [2, 4], shoot: [3, 4], defend: [4, 2] } };
+// ---------- 球員：HD-2D 點陣角色（art/hd2d，6 欄 × 12 列：正面 6 種動作 + 背面 6 種動作，每格 48×88） ----------
+const SHEET = { cols: 6, rows: 12, cellW: 48, cellH: 88, feet: 2.5, anims: ['idle', 'run', 'dribble', 'shoot', 'defend', 'pass'] };
+const FPS = { idle: 5, run: 12, dribble: 12, shoot: 10, defend: 8, pass: 10 };
 // HD-2D 的角色會刻意比場景放大，手機上才看得清楚
 const PLAYER_SCALE = 1.4;
-const M_PER_PX = (1.88 / 22) * PLAYER_SCALE; // Brunson 22px 高 = 1.88m
+const M_PER_PX = (1.88 / 50) * PLAYER_SCALE; // Brunson 50px 高 = 1.88m
 const loader = new THREE.TextureLoader();
 
 const shadowTex = (() => {
@@ -63,24 +63,25 @@ const shadowTex = (() => {
 const shadowMat = new THREE.MeshBasicMaterial({ map: shadowTex, transparent: true, depthWrite: false });
 
 function makePlayer(id) {
-  const tex = loader.load(`../art/sprites/${id}.png`);
+  const tex = loader.load(`../art/hd2d/${id}.png`);
   tex.magFilter = THREE.NearestFilter; tex.minFilter = THREE.NearestFilter; tex.colorSpace = THREE.SRGBColorSpace;
   tex.repeat.set(1 / SHEET.cols, 1 / SHEET.rows);
   const w = SHEET.cellW * M_PER_PX, h = SHEET.cellH * M_PER_PX;
   const geo = new THREE.PlaneGeometry(w, h);
-  geo.translate(0, h / 2 - 2 * M_PER_PX, 0); // 腳底（格子底部往上 2px）對齊原點
+  geo.translate(0, h / 2 - SHEET.feet * M_PER_PX, 0); // 腳底對齊原點
   const mesh = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tex, alphaTest: 0.5, roughness: 1, side: THREE.DoubleSide, emissive: 0xffffff, emissiveMap: tex, emissiveIntensity: 0.55 }));
   const shadow = new THREE.Mesh(new THREE.PlaneGeometry(1.1 * PLAYER_SCALE, 0.55 * PLAYER_SCALE), shadowMat);
   shadow.rotation.x = -Math.PI / 2; shadow.position.y = 0.01;
   const grp = new THREE.Group(); grp.add(mesh, shadow); scene.add(grp);
-  return { id, grp, mesh, tex, anim: 'idle', animT: 0, pos: new THREE.Vector3(), prev: new THREE.Vector3(), face: 1 };
+  return { id, grp, mesh, tex, anim: 'idle', animT: 0, pos: new THREE.Vector3(), prev: new THREE.Vector3(), face: 1, dir: 0 };
 }
 
 function setFrame(p, dt) {
-  const [row, n] = SHEET.anims[p.anim];
+  // dir：0 = 正面（朝鏡頭），1 = 背面（往籃框方向跑）
+  const row = p.dir * SHEET.anims.length + SHEET.anims.indexOf(p.anim);
   p.animT += dt;
-  const fps = p.anim === 'idle' ? 3 : p.anim === 'shoot' ? 7 : 9;
-  const f = p.anim === 'shoot' ? Math.min(n - 1, Math.floor(p.animT * fps)) : Math.floor(p.animT * fps) % n;
+  const n = SHEET.cols;
+  const f = p.anim === 'shoot' ? Math.min(n - 1, Math.floor(p.animT * FPS.shoot)) : Math.floor(p.animT * FPS[p.anim]) % n;
   p.tex.offset.set(f / SHEET.cols, 1 - (row + 1) / SHEET.rows);
 }
 
@@ -189,6 +190,7 @@ function step(dt, time) {
 
   // 更新所有球員：位置、看板朝向、左右翻轉、動畫格
   const camRight = new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld, 0);
+  const camFwd = new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld, 2).negate().setY(0).normalize();
   for (const p of [...offense, ...defense]) {
     const world = mirror(p.pos);
     const vel = world.clone().sub(p.grp.position);
@@ -196,6 +198,10 @@ function step(dt, time) {
     p.mesh.rotation.y = Math.atan2(camera.position.x - world.x, camera.position.z - world.z);
     const sx = vel.dot(camRight);
     if (Math.abs(sx) > 0.002) p.face = sx > 0 ? 1 : -1;
+    // 往畫面上方（遠離鏡頭）移動時用背面圖
+    const away = vel.dot(camFwd);
+    if (Math.abs(away) > 0.004) p.dir = away > 0 ? 1 : 0;
+    if (p.anim === 'defend' || p.anim === 'shoot') p.dir = p.anim === 'defend' ? 0 : 1;
     if (p.anim === 'defend') p.face = 1;
     p.mesh.scale.x = p.face;
     setFrame(p, dt);

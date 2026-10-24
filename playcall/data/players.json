@@ -6,7 +6,8 @@
       "real.p2 由 FGM/FGA 與 3PM/3PA 推算；est 列出的欄位是估計值，拿到完整數據後要替換。",
       "ht 為英吋、wt 為磅，取自官方名單印象值，待核對。",
       "game 為遊戲用的手調值（0-99），沒有直接對應的真實命中率時才使用，理由寫在 why。",
-      "look 為點陣圖外型（膚色/髮型/鬍子/體型），憑印象設定，可直接改。"
+      "look 為點陣圖外型（膚色/髮型/鬍子/體型），憑印象設定，可直接改。",
+      "sprite = HD-2D 點陣角色外型（pixelchar.js）：height 為含頭總身高像素、skin 膚色、hair/beard/eyes 髮型鬍子眼神、build 體型、reach 臂長倍率、extras 配件。"
     ]
   },
   "teams": [
@@ -20,7 +21,12 @@
         "shorts": "#FFFFFF",
         "trim": "#006BB6",
         "trim2": "#F58426",
-        "shoes": "#F2F2F2"
+        "shoes": "#F2F2F2",
+        "number": "#1F5FAE",
+        "numberEdge": "#F58426",
+        "sock": "#F4F4F4",
+        "accent": "#1F5FAE",
+        "band": "#F58426"
       },
       "players": [
         {
@@ -56,7 +62,19 @@
             "spd": 80,
             "str": 72
           },
-          "why": "防守是先發中最弱的一環；矮但壯，碰撞耐受度高。"
+          "why": "防守是先發中最弱的一環；矮但壯，碰撞耐受度高。",
+          "sprite": {
+            "height": 50,
+            "skin": "#B9805A",
+            "hair": "cornrows",
+            "beard": "chin",
+            "eyes": "sleepy",
+            "build": "stocky",
+            "reach": 1.0,
+            "extras": [
+              "wristR"
+            ]
+          }
         },
         {
           "id": "nyk_25",
@@ -94,7 +112,16 @@
             "spd": 78,
             "str": 60
           },
-          "why": "82 場全勤（鐵人被動的依據），頂級側翼防守。"
+          "why": "82 場全勤（鐵人被動的依據），頂級側翼防守。",
+          "sprite": {
+            "height": 57,
+            "skin": "#6E432B",
+            "hair": "short",
+            "beard": "light",
+            "build": "slim",
+            "reach": 1.15,
+            "extras": []
+          }
         },
         {
           "id": "nyk_3",
@@ -134,7 +161,16 @@
             "spd": 78,
             "str": 80
           },
-          "why": "後衛身材卻是籃板主力；3P% 高但出手少，AI 投三分傾向要低。"
+          "why": "後衛身材卻是籃板主力；3P% 高但出手少，AI 投三分傾向要低。",
+          "sprite": {
+            "height": 53,
+            "skin": "#9A6440",
+            "hair": "short",
+            "beard": "thick",
+            "build": "stocky",
+            "reach": 1.0,
+            "extras": []
+          }
         },
         {
           "id": "nyk_8",
@@ -173,7 +209,16 @@
             "spd": 75,
             "str": 88
           },
-          "why": "隊上抄截第一，強壯的鎖防側翼。"
+          "why": "隊上抄截第一，強壯的鎖防側翼。",
+          "sprite": {
+            "height": 58,
+            "skin": "#5E3A26",
+            "hair": "fade",
+            "beard": "full",
+            "build": "muscular",
+            "reach": 1.05,
+            "extras": []
+          }
         },
         {
           "id": "nyk_32",
@@ -212,7 +257,18 @@
             "spd": 60,
             "str": 90
           },
-          "why": "籃板聯盟第 2；投射長人；護框弱（0.5 BLK）。"
+          "why": "籃板聯盟第 2；投射長人；護框弱（0.5 BLK）。",
+          "sprite": {
+            "height": 63,
+            "skin": "#CB9B73",
+            "hair": "buzz",
+            "beard": "short",
+            "build": "big",
+            "reach": 1.0,
+            "extras": [
+              "tattoo"
+            ]
+          }
         }
       ]
     },
@@ -226,7 +282,12 @@
         "shorts": "#2B2B33",
         "trim": "#C4CED4",
         "trim2": "#FFFFFF",
-        "shoes": "#1A1A1A"
+        "shoes": "#1A1A1A",
+        "number": "#EEF1F3",
+        "numberEdge": "#7E8890",
+        "sock": "#2B2B33",
+        "accent": "#C4CED4",
+        "band": "#C4CED4"
       },
       "players": [
         {
@@ -264,7 +325,16 @@
             "spd": 97,
             "str": 55
           },
-          "why": "全場最快；三分偏弱、切入終結強。"
+          "why": "全場最快；三分偏弱、切入終結強。",
+          "sprite": {
+            "height": 51,
+            "skin": "#6A4129",
+            "hair": "short",
+            "beard": "mustache",
+            "build": "slim",
+            "reach": 1.0,
+            "extras": []
+          }
         },
         {
           "id": "sas_5",
@@ -301,7 +371,17 @@
             "spd": 82,
             "str": 85
           },
-          "why": "隊上助攻最多；強壯、愛衝撞的後衛。"
+          "why": "隊上助攻最多；強壯、愛衝撞的後衛。",
+          "sprite": {
+            "height": 57,
+            "skin": "#5A3825",
+            "hair": "fade",
+            "beard": "none",
+            "build": "muscular",
+            "reach": 1.02,
+            "young": true,
+            "extras": []
+          }
         },
         {
           "id": "sas_2",
@@ -341,7 +421,19 @@
             "spd": 82,
             "str": 75
           },
-          "why": "新秀；明星賽後三分 48%（26 場），可做成「第四節手感上升」。"
+          "why": "新秀；明星賽後三分 48%（26 場），可做成「第四節手感上升」。",
+          "sprite": {
+            "height": 56,
+            "skin": "#8E5C3B",
+            "hair": "short",
+            "beard": "none",
+            "build": "normal",
+            "reach": 1.0,
+            "young": true,
+            "extras": [
+              "socksHigh"
+            ]
+          }
         },
         {
           "id": "sas_24",
@@ -380,7 +472,16 @@
             "spd": 76,
             "str": 60
           },
-          "why": "純射手；兩分效率低，AI 應偏好三分。"
+          "why": "純射手；兩分效率低，AI 應偏好三分。",
+          "sprite": {
+            "height": 56,
+            "skin": "#93603E",
+            "hair": "twists",
+            "beard": "mustache",
+            "build": "slim",
+            "reach": 1.02,
+            "extras": []
+          }
         },
         {
           "id": "sas_1",
@@ -415,7 +516,17 @@
             "spd": 68,
             "str": 70
           },
-          "why": "史上首位全票 DPOY，3.1 BLK；身高極高但偏瘦，碰撞吃虧。"
+          "why": "史上首位全票 DPOY，3.1 BLK；身高極高但偏瘦，碰撞吃虧。",
+          "sprite": {
+            "height": 70,
+            "skin": "#5A3A28",
+            "hair": "curly",
+            "beard": "none",
+            "build": "slim",
+            "reach": 1.35,
+            "young": true,
+            "extras": []
+          }
         }
       ]
     }
