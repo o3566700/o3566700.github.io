@@ -488,7 +488,7 @@ export function renderFrame(player, colors, anim, f, dir) {
   const T = Math.round(body * (1 - (S.legRatio || 0.56)));
   const legLen = body - T - 4; // 扣掉鞋高
   const L1 = Math.round(legLen * 0.5), L2 = legLen - L1;
-  const armLen = T * 1.05 * (S.reach || 1);
+  const armLen = T * 0.78 * (S.reach || 1); // Q 版手短：一般人垂手只到腰下
   const A1 = Math.round(armLen * 0.5), A2 = Math.round(armLen * 0.5);
 
   const cx = 31 + p.shift;
