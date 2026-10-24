@@ -294,6 +294,28 @@ function drawHead(buf, ox, oy, dir, S, P) {
   buf.paint(px);
 }
 
+// 照片頭（NBA Jam 作法）：head = { w, h, data: RGBA }。
+// 正面直接貼上照片轉的點陣頭；背面用同一個輪廓填頭髮色，下緣留一點後頸皮膚。
+function drawPhotoHead(buf, ox, oy, dir, head, P) {
+  const px = new Map();
+  const { w, h, data } = head;
+  for (let y = 0; y < h; y++)
+    for (let x = 0; x < w; x++) {
+      const i = (y * w + x) * 4;
+      if (data[i + 3] < 128) continue;
+      if (dir === 'front') {
+        px.set(`${ox + x},${oy + y}`, [data[i], data[i + 1], data[i + 2]]);
+        continue;
+      }
+      const isEdge = data[i] < 50 && data[i + 1] < 40 && data[i + 2] < 50; // 原本的外框
+      const u = x / w;
+      let col = P.hair[u < 0.22 ? 0 : u > 0.72 ? 2 : 1];
+      if (y > h * 0.8) col = P.skin[u > 0.65 ? 2 : 1];
+      px.set(`${ox + x},${oy + y}`, isEdge ? OUTLINE : col);
+    }
+  buf.paint(px);
+}
+
 // ---------- 身體 ----------
 function drawTorso(buf, J, dir, P, num) {
   const { shL, shR, hipL, hipR, neckX } = J;
@@ -478,9 +500,9 @@ const vec = (deg, len) => {
 };
 
 // ---------- 組合一格 ----------
-export function renderFrame(player, colors, anim, f, dir) {
+export function renderFrame(player, colors, anim, f, dir, photoHead = null) {
   const S = player.sprite;
-  const P = palette(S, colors);
+  const P = palette(photoHead ? { ...S, skin: photoHead.skin, hairColor: photoHead.hair } : S, colors);
   const p = pose(anim, f, S.reach || 1);
   const buf = new Buf();
 
@@ -527,7 +549,12 @@ export function renderFrame(player, colors, anim, f, dir) {
   const armA = mkArm(shR[0] - Math.floor(S.arm / 3), p.armA);
   const armB = mkArm(shL[0] + Math.floor(S.arm / 3), p.armB);
 
-  const order = dir === 'front' ? ['armA', 'legA', 'legB', 'shorts', 'torso', 'head', 'armB'] : ['legA', 'legB', 'shorts', 'armA', 'armB', 'torso', 'head'];
+  // 正面時近側手畫在最前面；但手舉過頭（投籃）時改畫在頭後面，才不會擋住臉
+  const raised = Math.abs(p.armB[0]) > 120;
+  const order =
+    dir === 'front'
+      ? ['armA', 'legA', 'legB', 'shorts', 'torso', ...(raised ? ['armB', 'head'] : ['head', 'armB'])]
+      : ['legA', 'legB', 'shorts', 'armA', 'armB', 'torso', 'head'];
   for (const part of order) {
     if (part === 'armA') drawArm(buf, armA, S, P, dir === 'front' ? 'L' : 'R');
     if (part === 'armB') drawArm(buf, armB, S, P, dir === 'front' ? 'R' : 'L');
@@ -537,7 +564,8 @@ export function renderFrame(player, colors, anim, f, dir) {
     if (part === 'torso') drawTorso(buf, J, dir, P, player.num);
     if (part === 'head') {
       buf.paint(capsule([cx + lean, shY - 3], [cx + lean, shY + 1], 2.5, P.skin), false); // 脖子
-      drawHead(buf, cx + lean - 9, shY - HH - 1, dir, S, P);
+      if (photoHead) drawPhotoHead(buf, cx + lean - Math.floor(photoHead.w / 2) + 1, shY - photoHead.h + 1, dir, photoHead, P);
+      else drawHead(buf, cx + lean - 9, shY - HH - 1, dir, S, P);
     }
   }
   buf.outline();
@@ -568,7 +596,7 @@ function palette(S, colors) {
 }
 
 // 整張 sprite sheet：12 列（正面 6 種動作、背面 6 種動作）× 6 欄
-export function renderSheet(player, colors) {
+export function renderSheet(player, colors, photoHead = null) {
   const w = CELL_W * FRAMES;
   const h = CELL_H * ANIMS.length * DIRS.length;
   const data = new Uint8ClampedArray(w * h * 4);
@@ -578,7 +606,7 @@ export function renderSheet(player, colors) {
       const row = di * ANIMS.length + ai;
       hands[`${dir}.${anim}`] = [];
       for (let f = 0; f < FRAMES; f++) {
-        const { rgba, hand } = renderFrame(player, colors, anim, f, dir);
+        const { rgba, hand } = renderFrame(player, colors, anim, f, dir, photoHead);
         hands[`${dir}.${anim}`].push(hand);
         for (let y = 0; y < CELL_H; y++) data.set(rgba.subarray(y * CELL_W * 4, (y + 1) * CELL_W * 4), ((row * CELL_H + y) * w + f * CELL_W) * 4);
       }

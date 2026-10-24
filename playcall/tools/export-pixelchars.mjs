@@ -41,11 +41,24 @@ function png(w, h, rgba) {
 const data = JSON.parse(fs.readFileSync(path.join(root, 'data', 'players.json')));
 fs.mkdirSync(outDir, { recursive: true });
 const meta = { cellW: CELL_W, cellH: CELL_H, frames: FRAMES, anims: ANIMS, dirs: DIRS, hands: {} };
+// 有照片頭（art/portraits/{id}_head.json，由 photo2pixel.py 產生）就另外輸出一份照片頭版本到
+// art/portraits/hd2d/（照片有肖像權，該資料夾不提交）；遊戲會優先讀照片頭版本。
+const photoDir = path.join(root, 'art', 'portraits');
+const photoOut = path.join(photoDir, 'hd2d');
 for (const team of data.teams)
   for (const p of team.players) {
     const s = renderSheet(p, team.colors);
     fs.writeFileSync(path.join(outDir, `${p.id}.png`), png(s.width, s.height, s.data));
     meta.hands[p.id] = s.hands;
+    const headFile = path.join(photoDir, `${p.id}_head.json`);
+    if (fs.existsSync(headFile)) {
+      const h = JSON.parse(fs.readFileSync(headFile));
+      const head = { ...h, data: new Uint8Array(Buffer.from(h.data, 'base64')) };
+      const ps = renderSheet(p, team.colors, head);
+      fs.mkdirSync(photoOut, { recursive: true });
+      fs.writeFileSync(path.join(photoOut, `${p.id}.png`), png(ps.width, ps.height, ps.data));
+      console.log(`  ${p.id}: photo head version`);
+    }
   }
 fs.writeFileSync(path.join(outDir, 'sheets.json'), JSON.stringify(meta) + '\n');
 console.log(`exported ${Object.keys(meta.hands).length} sheets to ${path.relative(process.cwd(), outDir)}`);

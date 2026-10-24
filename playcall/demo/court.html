@@ -63,7 +63,10 @@ const shadowTex = (() => {
 const shadowMat = new THREE.MeshBasicMaterial({ map: shadowTex, transparent: true, depthWrite: false });
 
 function makePlayer(id) {
-  const tex = loader.load(`../art/hd2d/${id}.png`);
+  // 優先用照片頭版本（art/portraits/hd2d，本機才有），沒有就用手畫版
+  const tex = loader.load(`../art/portraits/hd2d/${id}.png`, undefined, undefined, () => {
+    loader.load(`../art/hd2d/${id}.png`, (t) => { tex.image = t.image; tex.needsUpdate = true; });
+  });
   tex.magFilter = THREE.NearestFilter; tex.minFilter = THREE.NearestFilter; tex.colorSpace = THREE.SRGBColorSpace;
   tex.repeat.set(1 / SHEET.cols, 1 / SHEET.rows);
   const w = SHEET.cellW * M_PER_PX, h = SHEET.cellH * M_PER_PX;

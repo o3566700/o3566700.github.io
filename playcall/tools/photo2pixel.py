@@ -9,16 +9,18 @@
   6. 加 1px 深色外框
 
 用法：python3 photo2pixel.py 照片.jpg 輸出前綴
-輸出：{前綴}_head.png（遊戲角色用頭，HEAD×HEAD）、{前綴}_portrait.png（球員卡頭像，64×64）、
+輸出：{前綴}_head.png / _head.json（遊戲角色用頭，24×28）、{前綴}_portrait.png（球員卡頭像，64×64）、
       {前綴}_closeup.png（招牌技特寫，96×96）
 照片有肖像權與著作權，只放在本機或私人雲端，不要提交到 repo。
 """
+import base64
+import json
 import sys
 
 import cv2
 import numpy as np
 
-HEAD = 24
+HEAD_W, HEAD_H = 24, 28
 PORTRAIT = 64
 CLOSEUP = 96
 OUTLINE = (34, 18, 26)  # BGR
@@ -84,24 +86,26 @@ def quantize(small, alpha, k):
     return cv2.cvtColor(out.reshape(small.shape).astype(np.uint8), cv2.COLOR_LAB2BGR)
 
 
-def pixelate(img, alpha, box, size, k, feature_pts):
+def pixelate(img, alpha, box, size, k, feature_pts, height=None):
+    """box 區域縮成 size×height 點陣（height 省略時為正方形），回傳含 1px 外框的 BGRA。"""
     x0, y0, x1, y1 = box
+    hgt = height or size
     crop = img[y0:y1, x0:x1]
     a = alpha[y0:y1, x0:x1]
-    small = cv2.resize(crop, (size, size), interpolation=cv2.INTER_AREA)
-    sa = cv2.resize(a, (size, size), interpolation=cv2.INTER_AREA)
+    small = cv2.resize(crop, (size, hgt), interpolation=cv2.INTER_AREA)
+    sa = cv2.resize(a, (size, hgt), interpolation=cv2.INTER_AREA)
     sa = np.where(sa > 110, 255, 0).astype(np.uint8)
     small = quantize(small, sa, k)
     # 五官加深：眼睛、嘴巴所在的像素壓暗，旁邊留亮點
-    sx, sy = size / (x1 - x0), size / (y1 - y0)
+    sx, sy = size / (x1 - x0), hgt / (y1 - y0)
     for (px, py, kind) in feature_pts:
         cx, cy = int((px - x0) * sx), int((py - y0) * sy)
-        if 0 <= cx < size and 0 <= cy < size:
+        if 0 <= cx < size and 0 <= cy < hgt:
             c = small[cy, cx].astype(np.int32)
             small[cy, cx] = np.clip(c * (0.35 if kind == 'eye' else 0.6), 0, 255).astype(np.uint8)
     # 外框
     rgba = np.dstack([small, sa])
-    pad = np.zeros((size + 2, size + 2, 4), np.uint8)
+    pad = np.zeros((hgt + 2, size + 2, 4), np.uint8)
     pad[1:-1, 1:-1] = rgba
     ring = cv2.dilate(np.pad(sa, 1), np.array([[0, 1, 0], [1, 1, 1], [0, 1, 0]], np.uint8)) - np.pad(sa, 1)
     pad[ring > 0] = (*OUTLINE, 255)
@@ -128,6 +132,7 @@ def main(src, prefix):
     img = cv2.imread(src)
     face = detect_face(img)
     alpha = cutout(img, face)
+    orig = img
     img = enhance(img)
     fx, fy, fw, fh = face
     pts = features(img, face)
@@ -139,16 +144,34 @@ def main(src, prefix):
         x0, y0 = max(0, min(w - s, x0)), max(0, min(h - s, y0))
         return x0, y0, x0 + s, y0 + s
 
-    # 遊戲用頭：臉 + 頭髮，略往上取
-    head = pixelate(img, alpha, square(fx + fw / 2, fy + fh * 0.42, fw * 1.55), HEAD, 10, pts)
+    # 遊戲用頭（NBA Jam 作法：真實照片的頭貼在小人身上）：只取頭頂到下巴，不含脖子與肩膀
+    cols = alpha[:, fx:fx + fw].max(axis=1)
+    top = int(np.argmax(cols > 0))
+    chin = int(fy + fh * 1.06)
+    hh = chin - top
+    hw = int(hh * HEAD_W / HEAD_H)
+    hx0 = max(0, int(fx + fw / 2 - hw / 2))
+    head_alpha = alpha.copy()
+    head_alpha[chin:] = 0
+    head = pixelate(img, head_alpha, (hx0, top, hx0 + hw, chin), HEAD_W, 20, pts, HEAD_H)
+    # 給點陣角色用的膚色、髮色（取臉頰與頭頂的中位數）
+    skin = np.median(orig[int(fy + fh * 0.55):int(fy + fh * 0.7), int(fx + fw * 0.2):int(fx + fw * 0.35)].reshape(-1, 3), axis=0)
+    hair_px = orig[top:top + max(4, int(fh * 0.12)), int(fx + fw * 0.3):int(fx + fw * 0.7)].reshape(-1, 3)
+    hair = np.median(hair_px, axis=0)
     # 球員卡頭像：頭 + 肩膀
     portrait = pixelate(img, alpha, square(fx + fw / 2, fy + fh * 0.85, fw * 2.6), PORTRAIT, 16, pts)
     # 招牌技特寫：較大、顏色較多
     closeup = pixelate(img, alpha, square(fx + fw / 2, fy + fh * 0.75, fw * 2.3), CLOSEUP, 24, pts)
     cv2.imwrite(f'{prefix}_head.png', head)  # BGRA
+    # 給 Node 匯出工具讀的頭像資料（RGBA base64）與取樣色
+    hex_ = lambda bgr: '#%02x%02x%02x' % (int(bgr[2]), int(bgr[1]), int(bgr[0]))
+    rgba = cv2.cvtColor(head, cv2.COLOR_BGRA2RGBA)
+    with open(f'{prefix}_head.json', 'w') as f:
+        json.dump({'w': rgba.shape[1], 'h': rgba.shape[0], 'data': base64.b64encode(rgba.tobytes()).decode(),
+                   'skin': hex_(skin), 'hair': hex_(hair)}, f)
     cv2.imwrite(f'{prefix}_portrait.png', portrait)
     cv2.imwrite(f'{prefix}_closeup.png', closeup)
-    print(f'{prefix}: head {head.shape[1]}x{head.shape[0]}, portrait {portrait.shape[1]}x{portrait.shape[0]}')
+    print(f'{prefix}: head {head.shape[1]}x{head.shape[0]}, skin {hex_(skin)}, hair {hex_(hair)}')
 
 
 if __name__ == '__main__':
