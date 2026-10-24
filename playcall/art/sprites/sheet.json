@@ -1,0 +1,11 @@
+{
+  "cellW": 20,
+  "cellH": 44,
+  "anims": {
+    "idle": 2,
+    "run": 4,
+    "dribble": 4,
+    "shoot": 4,
+    "defend": 2
+  }
+}

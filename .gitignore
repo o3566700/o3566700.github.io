@@ -1,1 +1,5 @@
 __pycache__/
+
+# 球員真實照片與由照片轉成的點陣頭像有肖像權/著作權，不提交
+playcall/art/ref/
+playcall/art/portraits/
