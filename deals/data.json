@@ -1,13 +1,28 @@
 {
  "board": "Lifeismoney",
- "updated": "2026-10-25T23:17:06+00:00",
+ "updated": "2026-10-26T04:48:45+00:00",
  "posts": [
+  {
+   "id": "M.1792981659.A.C79",
+   "title": "[情報] 拿坡里 雞會難得 6烤雞+2烤翅209",
+   "category": "情報",
+   "reply": false,
+   "push": 13,
+   "author": "emuless",
+   "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1792981659.A.C79.html",
+   "ts": 1792981659,
+   "snippet": "發文時可用 Ctrl+Y 刪除以下提醒 發文需要有省錢點。 拿坡里「雞會難得」限時登場！ 活動期間：10/26～2026/11/12 6塊烤雞＋2支普羅旺斯烤雞翅 內用/外帶 特價 $209 圖中有寫明6塊烤雞是2腿2排2翅 2烤翅是兩隻三節翅 可是之前的小披薩+12翅裡面的翅就是三節翅分兩段",
+   "period": "活動期間：10/26～2026/11/12",
+   "links": [
+    "https://www.facebook.com/photo/?fbid=1580521090770197&amp;set=a.642264414595874"
+   ]
+  },
   {
    "id": "M.1792956220.A.718",
    "title": "[公告] 水桶",
    "category": "公告",
    "reply": false,
-   "push": 0,
+   "push": 2,
    "author": "psychohero",
    "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1792956220.A.718.html",
    "ts": 1792956220,
@@ -20,7 +35,7 @@
    "title": "[情報] TiPlus9100 2TB Gen5 SSD $8120",
    "category": "情報",
    "reply": false,
-   "push": 3,
+   "push": 6,
    "author": "arced",
    "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1792942817.A.B87.html",
    "ts": 1792942817,
@@ -33,7 +48,7 @@
    "title": "[情報] soundcore Aeroclip 耳夾式耳機$2196",
    "category": "情報",
    "reply": false,
-   "push": 5,
+   "push": 6,
    "author": "Bastille",
    "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1792926333.A.519.html",
    "ts": 1792926333,
@@ -59,7 +74,7 @@
    "title": "[情報] 26號 0點 巧克力乳8點open point",
    "category": "情報",
    "reply": false,
-   "push": 25,
+   "push": 33,
    "author": "psychohero",
    "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1792863796.A.2BF.html",
    "ts": 1792863796,
@@ -87,7 +102,7 @@
    "title": "[討論] 購買蝦皮家電 何時買比較便宜?",
    "category": "討論",
    "reply": false,
-   "push": 22,
+   "push": 23,
    "author": "BABYINCAR",
    "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1792851697.A.564.html",
    "ts": 1792851697,
@@ -115,7 +130,7 @@
    "title": "[情報] 10/26-11/1汽、柴油價格維持不調整",
    "category": "情報",
    "reply": false,
-   "push": 35,
+   "push": 38,
    "author": "laptic",
    "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1792836387.A.BBB.html",
    "ts": 1792836387,
@@ -197,7 +212,7 @@
    "title": "[情報] Momo簽到 簽滿27點",
    "category": "情報",
    "reply": false,
-   "push": 49,
+   "push": 50,
    "author": "x21886012",
    "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1792692467.A.C61.html",
    "ts": 1792692467,
@@ -357,7 +372,7 @@
    "title": "[情報]街口支付綁華南銀行帳戶 消費享10%街口幣",
    "category": "情報",
    "reply": false,
-   "push": 39,
+   "push": 40,
    "author": "facebooook",
    "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1792536020.A.141.html",
    "ts": 1792536020,
@@ -2615,19 +2630,6 @@
    "links": [
     "https://www.cpc.com.tw/News_Content.aspx?n=28&amp;sms=8920&amp;s=112870"
    ]
-  },
-  {
-   "id": "M.1790379456.A.639",
-   "title": "[情報] 全聯週末買一送一 9/26～9/27",
-   "category": "情報",
-   "reply": false,
-   "push": 58,
-   "author": "asd63312337",
-   "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1790379456.A.639.html",
-   "ts": 1790379456,
-   "snippet": "全聯週末買一送一 9/26～9/27 不知道茱蒂絲餅乾好吃嗎？ 另外喜歡喝湯寶濃湯的也可以買",
-   "period": "",
-   "links": []
   }
  ]
 }
