@@ -1,0 +1,11 @@
+{
+  "_note": "全身圖 art/src/nyk_11_full.png 上的關節座標（像素）。A = 畫面右側（角色左手腳，遠側）；B = 畫面左側（角色右手腳，近側）。",
+  "image": "art/src/nyk_11_full.png",
+  "joints": {
+    "waist": [415, 740], "pelvis": [415, 830], "neck": [415, 448], "headTop": [420, 210],
+    "shoulderA": [512, 492], "elbowA": [552, 705], "wristA": [548, 800], "handA": [556, 890],
+    "shoulderB": [287, 492], "elbowB": [224, 705], "wristB": [242, 800], "handB": [270, 890],
+    "hipA": [468, 805], "kneeA": [447, 1020], "ankleA": [452, 1188], "toeA": [550, 1250],
+    "hipB": [360, 805], "kneeB": [332, 1012], "ankleB": [302, 1196], "toeB": [352, 1285]
+  }
+}

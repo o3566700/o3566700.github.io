@@ -1,0 +1,598 @@
+{
+  "_meta": {
+    "season": "2025-26 regular season",
+    "notes": [
+      "real = 真實數據（每場平均、命中率為 0-1）。來源：StatMuse、RealGM、CBS Sports、CraftedNBA、Land of Basketball（2026-10 透過搜尋取得）。",
+      "real.p2 由 FGM/FGA 與 3PM/3PA 推算；est 列出的欄位是估計值，拿到完整數據後要替換。",
+      "ht 為英吋、wt 為磅，取自官方名單印象值，待核對。",
+      "game 為遊戲用的手調值（0-99），沒有直接對應的真實命中率時才使用，理由寫在 why。",
+      "look 為點陣圖外型（膚色/髮型/鬍子/體型），憑印象設定，可直接改。",
+      "sprite = HD-2D 點陣角色外型（pixelchar.js）：trait 招牌特徵、height 含頭總身高像素、sw/ww 肩寬/腰寬、arm/leg 手腳粗細、reach 臂長倍率、legRatio 腿佔身體比例、skin/hair/beard/eyes/jaw 五官、extras 配件。特徵刻意誇張化，方便小尺寸辨識。"
+    ]
+  },
+  "teams": [
+    {
+      "id": "NYK",
+      "name": "New York Knicks",
+      "colors": {
+        "primary": "#006BB6",
+        "secondary": "#F58426",
+        "jersey": "#FFFFFF",
+        "shorts": "#FFFFFF",
+        "trim": "#006BB6",
+        "trim2": "#F58426",
+        "shoes": "#F2F2F2",
+        "number": "#1F5FAE",
+        "numberEdge": "#F58426",
+        "sock": "#F4F4F4",
+        "accent": "#1F5FAE",
+        "band": "#F58426"
+      },
+      "players": [
+        {
+          "id": "nyk_11",
+          "name": "Jalen Brunson",
+          "num": 11,
+          "pos": "PG",
+          "ht": 74,
+          "wt": 190,
+          "look": {
+            "skin": "medium",
+            "hair": "short",
+            "beard": "light",
+            "build": "stocky"
+          },
+          "real": {
+            "g": 74,
+            "pts": 26.0,
+            "reb": 3.3,
+            "ast": 6.8,
+            "stl": 0.8,
+            "blk": 0.1,
+            "fg": 0.467,
+            "p3": 0.369,
+            "p3a": 7.1,
+            "fga": 19.9,
+            "p2": 0.522,
+            "ft": 0.841
+          },
+          "est": [],
+          "game": {
+            "def": 55,
+            "spd": 80,
+            "str": 72
+          },
+          "why": "防守是先發中最弱的一環；矮但壯，碰撞耐受度高。",
+          "sprite": {
+            "trait": "超矮超寬、整頭辮子、濃下巴鬍、睏睏的眼睛",
+            "height": 54,
+            "sw": 21,
+            "ww": 17,
+            "arm": 6,
+            "leg": 7,
+            "reach": 0.95,
+            "legRatio": 0.5,
+            "skin": "#B9805A",
+            "hair": "cornrows",
+            "beard": "chin",
+            "eyes": "sleepy",
+            "extras": [
+              "wristR"
+            ]
+          }
+        },
+        {
+          "id": "nyk_25",
+          "name": "Mikal Bridges",
+          "num": 25,
+          "pos": "SG",
+          "ht": 78,
+          "wt": 209,
+          "look": {
+            "skin": "dark",
+            "hair": "short",
+            "beard": "none",
+            "build": "slim"
+          },
+          "real": {
+            "g": 82,
+            "pts": 14.4,
+            "reb": 3.8,
+            "ast": 3.7,
+            "stl": 1.3,
+            "blk": null,
+            "fg": 0.49,
+            "p3": 0.371,
+            "p3a": 5.1,
+            "fga": 11.7,
+            "p2": 0.58,
+            "ft": null
+          },
+          "est": [
+            "blk",
+            "ft"
+          ],
+          "game": {
+            "def": 85,
+            "spd": 78,
+            "str": 60
+          },
+          "why": "82 場全勤（鐵人被動的依據），頂級側翼防守。",
+          "sprite": {
+            "trait": "細瘦、手臂長到誇張",
+            "height": 66,
+            "sw": 15,
+            "ww": 11,
+            "arm": 5,
+            "leg": 5,
+            "reach": 1.3,
+            "legRatio": 0.58,
+            "skin": "#6E432B",
+            "hair": "short",
+            "beard": "stubble",
+            "eyes": "normal",
+            "extras": []
+          }
+        },
+        {
+          "id": "nyk_3",
+          "name": "Josh Hart",
+          "num": 3,
+          "pos": "SF",
+          "ht": 76,
+          "wt": 215,
+          "look": {
+            "skin": "medium",
+            "hair": "short",
+            "beard": "goatee",
+            "build": "stocky"
+          },
+          "real": {
+            "g": 66,
+            "pts": 12.0,
+            "reb": 7.4,
+            "ast": 4.8,
+            "stl": 1.1,
+            "blk": 0.3,
+            "fg": 0.508,
+            "p3": 0.413,
+            "p3a": 3.0,
+            "fga": 9.5,
+            "p2": 0.549,
+            "ft": null
+          },
+          "est": [
+            "p3a",
+            "fga",
+            "p2",
+            "ft"
+          ],
+          "game": {
+            "def": 78,
+            "spd": 78,
+            "str": 80
+          },
+          "why": "後衛身材卻是籃板主力；3P% 高但出手少，AI 投三分傾向要低。",
+          "sprite": {
+            "trait": "超大一團鬍子、護膝、兇狠眉毛",
+            "height": 59,
+            "sw": 19,
+            "ww": 15,
+            "arm": 6,
+            "leg": 6,
+            "reach": 1.0,
+            "legRatio": 0.54,
+            "skin": "#9A6440",
+            "hair": "short",
+            "beard": "huge",
+            "eyes": "intense",
+            "extras": [
+              "kneeL",
+              "kneeR"
+            ]
+          }
+        },
+        {
+          "id": "nyk_8",
+          "name": "OG Anunoby",
+          "num": 8,
+          "pos": "PF",
+          "ht": 79,
+          "wt": 240,
+          "look": {
+            "skin": "dark",
+            "hair": "short",
+            "beard": "full",
+            "build": "muscular"
+          },
+          "real": {
+            "g": 67,
+            "pts": 16.7,
+            "reb": 5.3,
+            "ast": 2.2,
+            "stl": 1.6,
+            "blk": 0.7,
+            "fg": 0.484,
+            "p3": 0.386,
+            "p3a": 6.0,
+            "fga": 12.5,
+            "p2": 0.574,
+            "ft": null
+          },
+          "est": [
+            "fga",
+            "p2",
+            "ft"
+          ],
+          "game": {
+            "def": 88,
+            "spd": 75,
+            "str": 88
+          },
+          "why": "隊上抄截第一，強壯的鎖防側翼。",
+          "sprite": {
+            "trait": "肌肉塊頭最大、頭顯得小、落腮鬍",
+            "height": 66,
+            "sw": 25,
+            "ww": 17,
+            "arm": 8,
+            "leg": 7,
+            "reach": 1.05,
+            "legRatio": 0.54,
+            "skin": "#5E3A26",
+            "hair": "fade",
+            "beard": "full",
+            "eyes": "normal",
+            "jaw": "square",
+            "extras": []
+          }
+        },
+        {
+          "id": "nyk_32",
+          "name": "Karl-Anthony Towns",
+          "num": 32,
+          "pos": "C",
+          "ht": 84,
+          "wt": 248,
+          "look": {
+            "skin": "light",
+            "hair": "buzz",
+            "beard": "light",
+            "build": "big"
+          },
+          "real": {
+            "g": 75,
+            "pts": 20.1,
+            "reb": 11.9,
+            "ast": 3.0,
+            "stl": 0.9,
+            "blk": 0.5,
+            "fg": 0.501,
+            "p3": 0.368,
+            "p3a": 5.5,
+            "fga": 14.5,
+            "p2": 0.582,
+            "ft": 0.858
+          },
+          "est": [
+            "p3a",
+            "fga",
+            "p2"
+          ],
+          "game": {
+            "def": 62,
+            "spd": 60,
+            "str": 90
+          },
+          "why": "籃板聯盟第 2；投射長人；護框弱（0.5 BLK）。",
+          "sprite": {
+            "trait": "高壯、淺膚色、整條手臂刺青、平頭",
+            "height": 74,
+            "sw": 22,
+            "ww": 17,
+            "arm": 6,
+            "leg": 7,
+            "reach": 1.05,
+            "legRatio": 0.56,
+            "skin": "#CB9B73",
+            "hair": "buzz",
+            "beard": "boxed",
+            "eyes": "normal",
+            "jaw": "square",
+            "extras": [
+              "tattoo"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "SAS",
+      "name": "San Antonio Spurs",
+      "colors": {
+        "primary": "#000000",
+        "secondary": "#C4CED4",
+        "jersey": "#2B2B33",
+        "shorts": "#2B2B33",
+        "trim": "#C4CED4",
+        "trim2": "#FFFFFF",
+        "shoes": "#1A1A1A",
+        "number": "#EEF1F3",
+        "numberEdge": "#7E8890",
+        "sock": "#2B2B33",
+        "accent": "#C4CED4",
+        "band": "#C4CED4"
+      },
+      "players": [
+        {
+          "id": "sas_4",
+          "name": "De'Aaron Fox",
+          "num": 4,
+          "pos": "PG",
+          "ht": 75,
+          "wt": 185,
+          "look": {
+            "skin": "dark",
+            "hair": "short",
+            "beard": "light",
+            "build": "slim"
+          },
+          "real": {
+            "g": 72,
+            "pts": 18.6,
+            "reb": 3.8,
+            "ast": 6.2,
+            "stl": 1.2,
+            "blk": 0.3,
+            "fg": 0.486,
+            "p3": 0.332,
+            "p3a": 5.5,
+            "fga": 14.5,
+            "p2": 0.589,
+            "ft": null
+          },
+          "est": [
+            "ft"
+          ],
+          "game": {
+            "def": 70,
+            "spd": 97,
+            "str": 55
+          },
+          "why": "全場最快；三分偏弱、切入終結強。",
+          "sprite": {
+            "trait": "瘦小、腿長、細八字鬍",
+            "height": 58,
+            "sw": 14,
+            "ww": 11,
+            "arm": 4,
+            "leg": 4,
+            "reach": 1.0,
+            "legRatio": 0.62,
+            "skin": "#6A4129",
+            "hair": "short",
+            "beard": "mustache",
+            "eyes": "normal",
+            "extras": []
+          }
+        },
+        {
+          "id": "sas_5",
+          "name": "Stephon Castle",
+          "num": 5,
+          "pos": "SG",
+          "ht": 78,
+          "wt": 215,
+          "look": {
+            "skin": "dark",
+            "hair": "short",
+            "beard": "none",
+            "build": "muscular"
+          },
+          "real": {
+            "g": 68,
+            "pts": 16.7,
+            "reb": 5.3,
+            "ast": 7.4,
+            "stl": 1.1,
+            "blk": 0.3,
+            "fg": 0.471,
+            "p3": 0.332,
+            "p3a": 3.6,
+            "fga": 12.0,
+            "p2": 0.536,
+            "ft": null
+          },
+          "est": [
+            "ft"
+          ],
+          "game": {
+            "def": 80,
+            "spd": 82,
+            "str": 85
+          },
+          "why": "隊上助攻最多；強壯、愛衝撞的後衛。",
+          "sprite": {
+            "trait": "寬肩方下巴、年輕臉",
+            "height": 64,
+            "sw": 22,
+            "ww": 15,
+            "arm": 6,
+            "leg": 6,
+            "reach": 1.02,
+            "legRatio": 0.55,
+            "skin": "#5A3825",
+            "hair": "fade",
+            "beard": "none",
+            "eyes": "normal",
+            "jaw": "square",
+            "extras": []
+          }
+        },
+        {
+          "id": "sas_2",
+          "name": "Dylan Harper",
+          "num": 2,
+          "pos": "SF",
+          "ht": 77,
+          "wt": 215,
+          "look": {
+            "skin": "medium",
+            "hair": "short",
+            "beard": "none",
+            "build": "normal"
+          },
+          "real": {
+            "g": 69,
+            "pts": 11.8,
+            "reb": 3.4,
+            "ast": 3.9,
+            "stl": 0.8,
+            "blk": 0.3,
+            "fg": 0.505,
+            "p3": 0.343,
+            "p3a": 2.5,
+            "fga": 9.5,
+            "p2": 0.562,
+            "ft": null
+          },
+          "est": [
+            "p3a",
+            "fga",
+            "p2",
+            "ft"
+          ],
+          "game": {
+            "def": 65,
+            "spd": 82,
+            "str": 75
+          },
+          "why": "新秀；明星賽後三分 48%（26 場），可做成「第四節手感上升」。",
+          "sprite": {
+            "trait": "娃娃臉、大圓眼、紅臉頰、高筒襪",
+            "height": 62,
+            "sw": 17,
+            "ww": 13,
+            "arm": 5,
+            "leg": 5,
+            "reach": 1.0,
+            "legRatio": 0.56,
+            "skin": "#8E5C3B",
+            "hair": "short",
+            "beard": "none",
+            "eyes": "big",
+            "jaw": "round",
+            "cheeks": true,
+            "extras": [
+              "socksHigh"
+            ]
+          }
+        },
+        {
+          "id": "sas_24",
+          "name": "Devin Vassell",
+          "num": 24,
+          "pos": "PF",
+          "ht": 77,
+          "wt": 200,
+          "look": {
+            "skin": "medium",
+            "hair": "twists",
+            "beard": "none",
+            "build": "slim"
+          },
+          "real": {
+            "g": 67,
+            "pts": 13.9,
+            "reb": 4.0,
+            "ast": 2.5,
+            "stl": 0.9,
+            "blk": 0.4,
+            "fg": 0.437,
+            "p3": 0.384,
+            "p3a": 6.0,
+            "fga": 11.0,
+            "p2": 0.501,
+            "ft": 0.815
+          },
+          "est": [
+            "p3a",
+            "fga",
+            "p2"
+          ],
+          "game": {
+            "def": 68,
+            "spd": 76,
+            "str": 60
+          },
+          "why": "純射手；兩分效率低，AI 應偏好三分。",
+          "sprite": {
+            "trait": "頭頂一大叢扭扭頭、細瘦",
+            "height": 62,
+            "sw": 15,
+            "ww": 12,
+            "arm": 4,
+            "leg": 5,
+            "reach": 1.05,
+            "legRatio": 0.58,
+            "skin": "#93603E",
+            "hair": "twists",
+            "beard": "mustache",
+            "eyes": "normal",
+            "extras": []
+          }
+        },
+        {
+          "id": "sas_1",
+          "name": "Victor Wembanyama",
+          "num": 1,
+          "pos": "C",
+          "ht": 88,
+          "wt": 235,
+          "look": {
+            "skin": "dark",
+            "hair": "curly",
+            "beard": "none",
+            "build": "slim"
+          },
+          "real": {
+            "g": 64,
+            "pts": 25.0,
+            "reb": 11.5,
+            "ast": 3.1,
+            "stl": 1.0,
+            "blk": 3.1,
+            "fg": 0.512,
+            "p3": 0.349,
+            "p3a": 5.5,
+            "fga": 16.9,
+            "p2": 0.588,
+            "ft": 0.827
+          },
+          "est": [],
+          "game": {
+            "def": 99,
+            "spd": 68,
+            "str": 70
+          },
+          "why": "史上首位全票 DPOY，3.1 BLK；身高極高但偏瘦，碰撞吃虧。",
+          "sprite": {
+            "trait": "誇張地高、細得像竹竿、手垂到膝蓋",
+            "height": 96,
+            "sw": 16,
+            "ww": 11,
+            "arm": 5,
+            "leg": 5,
+            "reach": 1.4,
+            "legRatio": 0.62,
+            "skin": "#5A3A28",
+            "hair": "curly",
+            "beard": "none",
+            "eyes": "normal",
+            "extras": []
+          }
+        }
+      ]
+    }
+  ]
+}

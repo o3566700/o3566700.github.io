@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PLAYCALL 骨架動畫測試</title>
+<style>
+  :root { --bg: #1b1d24; --fg: #f2efe8; --court: #d6a467; --accent: #f58426; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, sans-serif; }
+  header { padding: 12px 16px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  h1 { font-size: 16px; margin: 0 12px 0 0; }
+  button { background: #2c2f3a; color: var(--fg); border: 1px solid #444a5a; border-radius: 8px; padding: 8px 12px; font-size: 14px; }
+  button.on { background: var(--accent); border-color: var(--accent); color: #111; }
+  canvas { display: block; width: 100%; height: auto; background: var(--court); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Brunson 骨架動畫</h1>
+  <span id="buttons"></span>
+  <button id="flip">左右翻轉</button>
+</header>
+<canvas id="c" width="1200" height="760"></canvas>
+<script type="module">
+import { loadRig, drawRig } from '../src/render/rig.js';
+import { ANIMS, poseAt } from '../src/render/anims.js';
+
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const rig = await loadRig('../art/players/nyk_11');
+let anim = 'idle';
+let start = performance.now();
+let facing = 1;
+
+const bar = document.getElementById('buttons');
+for (const name of Object.keys(ANIMS)) {
+  const b = document.createElement('button');
+  b.textContent = { idle: '待機', run: '跑步', dribble: '運球', shoot: '投籃', defend: '防守' }[name];
+  b.onclick = () => { anim = name; start = performance.now(); sync(); };
+  b.dataset.anim = name;
+  bar.appendChild(b);
+}
+const sync = () => bar.querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.anim === anim));
+sync();
+document.getElementById('flip').onclick = () => (facing = -facing);
+
+function drawBall(x, y, r) {
+  ctx.save();
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.fillStyle = '#e2712a';
+  ctx.strokeStyle = '#2a1408';
+  ctx.lineWidth = Math.max(1, r * 0.12);
+  ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x - r, y); ctx.lineTo(x + r, y); ctx.moveTo(x, y - r); ctx.lineTo(x, y + r); ctx.stroke();
+  ctx.restore();
+}
+
+function shadow(x, y, w) {
+  ctx.save();
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.fillStyle = 'rgba(0,0,0,0.22)';
+  ctx.beginPath(); ctx.ellipse(x, y, w, w * 0.22, 0, 0, Math.PI * 2); ctx.fill();
+  ctx.restore();
+}
+
+// 畫一個角色加上球；回傳無
+function drawPlayer(x, y, scale, t) {
+  const pose = poseAt(anim, t);
+  shadow(x, y, 150 * scale);
+  const out = drawRig(ctx, rig, pose, x, y, scale, facing);
+  const ball = pose.ball;
+  if (!ball || ball.mode === 'gone') return;
+  const r = 62 * scale;
+  const toScreen = (p) => [out.screen[0] * p[0] + out.screen[2] * p[1] + out.screen[4], out.screen[1] * p[0] + out.screen[3] * p[1] + out.screen[5]];
+  const hA = toScreen(out.hands.A), hB = toScreen(out.hands.B);
+  if (ball.mode === 'hands') drawBall((hA[0] + hB[0]) / 2, (hA[1] + hB[1]) / 2 - r * 0.6, r);
+  if (ball.mode === 'dribble') drawBall(hB[0] + facing * r * 0.4, y - r + (hB[1] + r - (y - r)) * ball.t, r);
+  if (ball.mode === 'flight') {
+    const k = ball.t;
+    drawBall(hB[0] + facing * 900 * scale * k, hB[1] - r - 700 * scale * (k * 2 - k * k * 1.2), r);
+  }
+}
+
+function render(t) {
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = 'rgba(255,255,255,0.75)';
+  ctx.fillRect(0, 700, canvas.width, 3);
+  drawPlayer(420, 700, 0.5, t);
+  // 右側：實際遊戲大小（手機上約 2–3 公分）
+  ctx.fillStyle = '#3a2a18';
+  ctx.font = '16px system-ui';
+  ctx.fillText('遊戲中實際大小', 900, 560);
+  drawPlayer(960, 700, 0.13, t);
+}
+
+// 給自動截圖用：指定動作與時間直接畫一格
+window.renderAt = (name, t) => { anim = name; render(t); };
+window.animList = ANIMS;
+
+function loop(now) {
+  if (!window.__capture) render((now - start) / 1000);
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+window.ready = true;
+</script>
+</body>
+</html>
