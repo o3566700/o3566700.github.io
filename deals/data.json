@@ -1,6 +1,6 @@
 {
  "board": "Lifeismoney",
- "updated": "2026-10-30T18:00:38+00:00",
+ "updated": "2026-10-30T22:21:40+00:00",
  "posts": [
   {
    "id": "M.1793367656.A.59C",
@@ -20,7 +20,7 @@
    "title": "[情報] 拿坡里新品披薩490買一送一",
    "category": "情報",
    "reply": false,
-   "push": 5,
+   "push": 7,
    "author": "NEWOLD",
    "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1793366667.A.C96.html",
    "ts": 1793366667,
@@ -46,7 +46,7 @@
    "title": "[情報] 蝦皮直營 3M雙線牙線棒350入205元",
    "category": "情報",
    "reply": false,
-   "push": 28,
+   "push": 29,
    "author": "samwang7027",
    "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1793339838.A.D54.html",
    "ts": 1793339838,
@@ -59,7 +59,7 @@
    "title": "[情報] 石二鍋line集章任務最後一集",
    "category": "情報",
    "reply": false,
-   "push": 14,
+   "push": 13,
    "author": "lioucat",
    "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1793338739.A.7F4.html",
    "ts": 1793338739,
@@ -85,7 +85,7 @@
    "title": "[情報] 食二鍋看影片送肉豆腐水晶餃",
    "category": "情報",
    "reply": false,
-   "push": 20,
+   "push": 21,
    "author": "daoqu",
    "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1793332113.A.CBC.html",
    "ts": 1793332113,
@@ -157,7 +157,7 @@
    "title": "[情報] 2026 雙11檔期 OTT 優惠",
    "category": "情報",
    "reply": false,
-   "push": 34,
+   "push": 36,
    "author": "l98",
    "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1793241620.A.B4C.html",
    "ts": 1793241620,
@@ -187,7 +187,7 @@
    "title": "[情報] 萊爾富限時/7-11超值/全家康康10/28~11/3",
    "category": "情報",
    "reply": false,
-   "push": 23,
+   "push": 24,
    "author": "jeff888chang",
    "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1793206421.A.447.html",
    "ts": 1793206421,
@@ -2638,45 +2638,6 @@
    "links": [
     "https://momo.dm/rjJzjJ"
    ]
-  },
-  {
-   "id": "M.1790805843.A.27D",
-   "title": "[情報] 中油點數 2026/03/31前",
-   "category": "情報",
-   "reply": false,
-   "push": 7,
-   "author": "kfcpkcpc",
-   "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1790805843.A.27D.html",
-   "ts": 1790805843,
-   "snippet": "中油 pay 明年2027/03/31 點數 部分將結清 範圍 2024-0401----2026-0331 點數將結清 查詢 中油pay 點數專區 到期點數查詢 可用點數換衛生紙 舒潔1串12900點 春風1串12500點 發文時可用 Ctrl+Y 刪除以下提醒 發文需要有省錢點。",
-   "period": "",
-   "links": []
-  },
-  {
-   "id": "M.1790805503.A.82F",
-   "title": "[情報] 中油咖啡 電子劵 買6送3",
-   "category": "情報",
-   "reply": false,
-   "push": 6,
-   "author": "kfcpkcpc",
-   "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1790805503.A.82F.html",
-   "ts": 1790805503,
-   "snippet": "中油pay 中油票劵 限時優惠 咖啡 買6送3 大冰拿 510元/9杯 發文時可用 Ctrl+Y 刪除以下提醒 發文需要有省錢點。",
-   "period": "",
-   "links": []
-  },
-  {
-   "id": "M.1790793717.A.C1C",
-   "title": "[公告] 板規修正 推文投票：10/2-10/5截止",
-   "category": "公告",
-   "reply": false,
-   "push": 96,
-   "author": "psychohero",
-   "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1790793717.A.C1C.html",
-   "ts": 1790793717,
-   "snippet": "",
-   "period": "",
-   "links": []
   }
  ]
 }
